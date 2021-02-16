@@ -2,6 +2,9 @@
 
 @import "tailwindcss/components";
 
+
+@import "tailwindcss/utilities";
+
 @import "../../_includes/partials/header/header.css";
 @import "../../_includes/partials/footer/footer.css";
 @import "../../_includes/partials/heroCTA/heroCTA.css";
@@ -15,7 +18,6 @@
 
 
 
-@import "tailwindcss/utilities";
 
 /*Your Custom CSS Goes here*/
 
