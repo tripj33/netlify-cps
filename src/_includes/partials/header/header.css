@@ -62,7 +62,7 @@ header{
             items-center 
             lg:hidden;
 
-            &__phone{
+           .mobileHeader__phone{
                 @apply
                 flex
                 justify-start
@@ -82,7 +82,7 @@ header{
                 
             }
 
-            &__logo{
+            .mobileHeader__logo{
                 @apply
                 flex
                 justify-center
@@ -96,7 +96,7 @@ header{
                 }
             }
 
-            &__hamburgerContainer{
+            .mobileHeader__hamburgerContainer{
                 @apply 
                 flex 
                 justify-end
