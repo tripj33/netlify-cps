@@ -1,0 +1,98 @@
+---
+layout: default
+---
+<section class="service" x-data="{tab: 'tab1', faq: ''}">
+  <div class="service__container">
+    <div class="service__container__wrap">
+      <img alt="" class="serviceImg" src="https://dummyimage.com/400x400">
+      <div class="serviceInfo">
+
+        <h2>BRAND NAME</h2>
+
+        <h1>Animated Night Hill Illustrations</h1>
+
+        <div class="serviceInfo__tabs">
+          <a @click.prevent="tab = 'tab1'" :class="{'activeLink': tab === 'tab1'}" class="tabLink">Description</a>
+          <a @click.prevent="tab = 'tab2'" :class="{'activeLink': tab === 'tab2'}" class="tabLink">FAQs</a>
+          <a @click.prevent="tab = 'tab3'" :class="{'activeLink': tab === 'tab3'}" class="tabLink">Details</a>
+        </div>
+        <div class="serviceInfo__description" x-show="tab === 'tab1'">
+
+          <p>Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean.</p>
+          <div class="serviceInfo__description__icons">
+            <div class="icon">
+              <i class="fad fa-rabbit-fast"></i>
+              <span>Fast Installation</span>
+            </div>
+            <div class="icon">
+              <i class="fad fa-award"></i>
+              <span>Lifetime Warrant</span>
+            </div>
+          </div>
+
+          <div class="serviceInfo__description__buttons">
+            <button class="pricing">
+              <i class="fad fa-question-circle"></i> Get Service Pricing
+            </button>
+            <button class="scheduleService">
+              <i class="fad fa-calendar-alt"></i> Schedule Service
+            </button>
+          </div>
+
+        </div>
+        <div class="serviceInfo__faqs" x-show="tab === 'tab2'">
+
+          <div class="serviceInfo__faqs__container">
+            <div @click="faq = 'faq1'" class="faq">
+              <div class="faq__container">
+                Lorem ipsum dolor sit amet?
+                <span>
+                  <i class="far fa-plus"></i>
+                </span>
+              </div>
+              <div x-show="faq === 'faq1'" class="p-3">
+                <p class="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed nulla porttitor, porttitor arcu ut, dictum augue. Vestibulum consequat in urna in bibendum. Praesent sed magna risus. Nunc elementum in mauris ac pharetra. Ut blandit ut lorem sit amet rutrum. Vivamus ut purus fringilla, euismod nibh ut, blandit.</p>
+                <p class="text-gray-600">Nunc ac efficitur sapien. Mauris eu lectus odio. Mauris ac erat tortor. Nulla consectetur commodo justo. Pellentesque eget ornare quam. Pellentesque sodales metus non semper luctus. Praesent non ornare tellus, eget vulputate tellus. Donec luctus non sapien sed semper.</p>
+              </div>
+            </div>
+            <div @click="faq = 'faq2'" class="faq">
+              <div class="faq__container">
+                Lorem ipsum dolor sit amet?
+                <span>
+                  <i class="far fa-plus"></i>
+                </span>
+              </div>
+              <div x-show="faq === 'faq2'" class="p-3">
+                <p class="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed nulla porttitor, porttitor arcu ut, dictum augue. Vestibulum consequat in urna in bibendum. Praesent sed magna risus. Nunc elementum in mauris ac pharetra. Ut blandit ut lorem sit amet rutrum. Vivamus ut purus fringilla, euismod nibh ut, blandit.</p>
+                <p class="text-gray-600">Nunc ac efficitur sapien. Mauris eu lectus odio. Mauris ac erat tortor. Nulla consectetur commodo justo. Pellentesque eget ornare quam. Pellentesque sodales metus non semper luctus. Praesent non ornare tellus, eget vulputate tellus. Donec luctus non sapien sed semper.</p>
+              </div>
+            </div>
+            <div @click="faq = 'faq3'" class="faq">
+              <div class="faq__container">
+                Lorem ipsum dolor sit amet?
+                  <span>
+                    <i class="far fa-plus"></i>
+                  </span>
+              </div>
+              <div x-show="faq === 'faq3'" class="p-3">
+                <p class="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed nulla porttitor, porttitor arcu ut, dictum augue. Vestibulum consequat in urna in bibendum. Praesent sed magna risus. Nunc elementum in mauris ac pharetra. Ut blandit ut lorem sit amet rutrum. Vivamus ut purus fringilla, euismod nibh ut, blandit.</p>
+                <p class="text-gray-600">Nunc ac efficitur sapien. Mauris eu lectus odio. Mauris ac erat tortor. Nulla consectetur commodo justo. Pellentesque eget ornare quam. Pellentesque sodales metus non semper luctus. Praesent non ornare tellus, eget vulputate tellus. Donec luctus non sapien sed semper.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="serviceInfo__details" x-show="tab === 'tab3'">
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -4,19 +4,157 @@ title: Neat Starter
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+<!-- <section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center xl:w-3/4 2xl:w-3/4">
+      <h1 class="title-font text-6xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-4 sm:mt-4 font-medium text-gray-900 capitalize">Plumbers You Can
+        <br class="hidden 2xl:inline-block"><span class="italic font-bold">Actually</span> Trust
+      </h1>
+      <p class="mb-6 mt-6 md:mt-0 leading-relaxed xl:w-3/4 xl:mt-4 xl:text-xl 2xl:mt-6">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+      </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+    </div>
+  </div>
+</section> -->
 
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
+{% include "./_includes/partials/heroCTA/heroCTA.html" %}
 
-  {% include "./_includes/partials/content.html" %}
-</div>
+<section class="serviceCatCards">
+
+  <div class="serviceCatCards__container" >
+
+    <!--  Card  -->
+
+    <div class="serviceCatCards__card">
+      <a href="#">
+        <div class="serviceCatCards__card__wrapper">
+          <!--   Image   -->
+          <div class="serviceCatCards__card__wrapper__image">
+            <img src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-4-470x470-4ef82ef45a9598d24c4c951ead4d626a.png" alt="..." />
+          </div>
+          <!--    Text    -->
+          <div class="serviceCatCards__card__wrapper__bodyWrap">
+            <div class="serviceCatCards__card__wrapper__bodyWrap__content">
+              <div class="serviceCatCards__card__wrapper__bodyWrap__content__title">
+                  <h3>Residential Plumbing</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+            <div class="serviceCatCards__card__wrapper__bodyWrap__bottom">
+              <a href="#">
+                <span>
+                  Residential Services<i class="pl-4 fal fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="serviceCatCards__card">
+      <a href="#google">
+        <div class="serviceCatCards__card__wrapper">
+          <!--   Image   -->
+          <div class="serviceCatCards__card__wrapper__image">
+            <img src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-4-470x470-4ef82ef45a9598d24c4c951ead4d626a.png" alt="..." />
+          </div>
+          <!--    Text    -->
+          <div class="serviceCatCards__card__wrapper__bodyWrap">
+            <div class="serviceCatCards__card__wrapper__bodyWrap__content">
+              <div class="serviceCatCards__card__wrapper__bodyWrap__content__title">
+                  <h3>Commercial Plumbing</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+            <div class="serviceCatCards__card__wrapper__bodyWrap__bottom">
+  
+                <span>
+                  Commercial Services<i class="pl-4 fal fa-arrow-right"></i>
+                </span>
+        
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="serviceCatCards__card">
+      <a href="#">
+        <div class="serviceCatCards__card__wrapper">
+          <!--   Image   -->
+          <div class="serviceCatCards__card__wrapper__image">
+            <img src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-4-470x470-4ef82ef45a9598d24c4c951ead4d626a.png" alt="..." />
+          </div>
+          <!--    Text    -->
+          <div class="serviceCatCards__card__wrapper__bodyWrap">
+            <div class="serviceCatCards__card__wrapper__bodyWrap__content">
+              <div class="serviceCatCards__card__wrapper__bodyWrap__content__title">
+                  <h3>New Construction Plumbing</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+            <div class="serviceCatCards__card__wrapper__bodyWrap__bottom">
+              <a href="#">
+                <span>
+                  New Construction Services<i class="pl-4 fal fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+</section>
+
+
+<section class="container px-4 py-24 mx-auto">
+  <div class="grid items-center grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
+    <div>
+      <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Clear overview for efficient tracking</h2>
+      <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like the smart search option allow you to quickly find any data you’re looking for.
+      </p>
+      <button class="flex items-center text-xl rounded shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-400">
+        <a href="#">Learn More <i class="fal fa-arrow-right pl-4"></i></a>
+      </button>
+    </div>
+    <img src="https://via.placeholder.com/450" class="rounded" alt="">
+  </div>
+  <div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-32 md:gap-y-32 gap-x-10 md:gap-x-24">
+    <div class="order-none md:order-2">
+      <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Decide how you integrate Payments</h2>
+      <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        Love to code? Next to our ready-made and free plugins you can use our expansive yet simple API; decide how you integrate Payments and build advanced and reliable products yourself from
+        scratch.
+      </p>
+      <button class="flex items-center text-xl rounded shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-400">
+        <a href="#">Learn More <i class="fal fa-arrow-right pl-4"></i></a>
+      </button>
+
+    </div>
+    <img src="https://via.placeholder.com/450" class="rounded" alt="">
+  </div>
+  <div class="grid items-center grid-cols-1 mt-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
+    <div>
+      <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Clear overview for efficient tracking</h2>
+      <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like the smart search option allow you to quickly find any data you’re looking for.
+      </p>
+      <button class="flex items-center text-xl rounded shadow bg-blue-500 px-4 py-2 text-white hover:bg-blue-400">
+        <a href="#">Learn More <i class="fal fa-arrow-right pl-4"></i></a>
+      </button>
+    </div>
+    <div class="w-full h-full bg-gray-200 rounded shadow">
+      <img src="https://via.placeholder.com/450" class="rounded" alt="">
+    </div>
+  </div>
+</section>
+
+
+
+
+

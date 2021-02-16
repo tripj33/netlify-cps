@@ -1,0 +1,346 @@
+header{
+    @apply 
+        relative 
+        top-0
+        overflow-visible 
+        lg:bg-cps-blue-700;
+
+        .topHeader{
+            @apply 
+            hidden 
+            bg-cps-orange-500
+            mx-auto 
+            items-center 
+            overflow-hidden
+            lg:flex;
+
+            &__wrapper{
+                @apply 
+                container 
+                w-full 
+                flex 
+                justify-center 
+                mx-auto;
+
+                &__emergencyService{
+                    @apply 
+                    text-white 
+                    font-medium 
+                    w-full 
+                    py-2  
+                    text-xl 
+                    flex 
+                    items-center 
+                    justify-end
+                }
+
+                &__phoneNumbers{
+                    @apply 
+                    text-white 
+                    font-medium 
+                    mx-auto 
+                    py-2 
+                    mr-4 
+                    text-xl 
+                    flex 
+                    items-center 
+                    w-full 
+                    justify-center;
+                }
+            }
+        }
+
+        .mobileHeader{
+            @apply 
+            flex
+            justify-between 
+            h-14
+            px-2 
+            md:px-4 
+            overflow-visible
+            bg-cps-blue-700 
+            items-center 
+            lg:hidden;
+
+            &__phone{
+                @apply
+                flex
+                justify-start
+                w-1/4
+                pr-2
+                pl-4
+                sm:px-4;
+
+                a{
+                    i{
+                    @apply
+                    text-white
+                    text-3xl;
+                    z-index: 100;
+                }
+                }
+                
+            }
+
+            &__logo{
+                @apply
+                flex
+                justify-center
+                w-1/2;
+                img{
+                    @apply
+                    h-20
+                    -mt-7
+                    absolute;
+                    z-index: 100;
+                }
+            }
+
+            &__hamburgerContainer{
+                @apply 
+                flex 
+                justify-end
+                w-1/4
+                z-50 
+                px-2
+                sm:px-4;
+
+                .hamburger .line {
+                    width: 30px;
+                    height: 2px;
+                    background-color: #ecf0f1;
+                    display: block;
+                    margin: 8px auto;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                  }
+                  
+               
+                  .hamburger:hover {
+                    cursor: pointer;
+                  }
+                  
+                  #hamburger-1.is-active .line:nth-child(2) {
+                    opacity: 0;
+                  }
+                  
+                  #hamburger-1.is-active .line:nth-child(1) {
+                    -webkit-transform: translateY(13px) rotate(45deg);
+                    -ms-transform: translateY(13px) rotate(45deg);
+                    -o-transform: translateY(13px) rotate(45deg);
+                    transform: translateY(13px) rotate(45deg);
+                  }
+                  
+                  #hamburger-1.is-active .line:nth-child(3) {
+                    -webkit-transform: translateY(-13px) rotate(-45deg);
+                    -ms-transform: translateY(-13px) rotate(-45deg);
+                    -o-transform: translateY(-13px) rotate(-45deg);
+                    transform: translateY(-13px) rotate(-45deg);
+                    margin-top: 13px;
+                  }
+                  
+            }
+        }
+
+        nav{
+            @apply 
+            bg-cps-blue-700 
+            h-screen 
+            w-full 
+            z-50 
+            flex  
+
+            lg:h-auto 
+            lg:mt-0 
+            lg:mt-0 
+            lg:grid 
+            lg:grid-cols-8 
+            lg:container 
+            lg:mx-auto;
+
+            .logo{
+                @apply 
+                col-span-2 
+                hidden
+                lg:flex;
+
+                img{
+                    @apply
+                    lg:h-44
+                    lg:absolute
+                    lg:-mt-12; 
+                }
+            }
+
+            .navLinks{
+                @apply 
+                flex 
+                flex-col 
+                justify-center 
+                w-full 
+                lg:col-span-6 
+                lg:col-start-3;
+
+                &__wrapper{
+                    @apply
+                    flex 
+                    flex-col 
+                    w-full 
+                    h-auto 
+                    lg:flex-row;
+
+                    ul{
+                       @apply 
+                       text-white 
+                       flex 
+                       flex-col 
+                       mx-auto 
+                       h-auto 
+                       items-center 
+                       w-full 
+                       lg:flex-row 
+                       lg:justify-end 
+                       lg:px-8;
+
+                       li{
+                           @apply 
+                           flex 
+                           uppercase 
+                           text-2xl 
+                           lg:text-xl 
+                           w-full 
+                           lg:w-auto 
+                           lg:px-4;
+
+                           a{
+                            @apply 
+                            flex 
+                            w-full 
+                            items-center;
+
+                            .navLinks__wrapper__item{
+                                @apply
+                                flex 
+                                w-full 
+                                flex-wrap
+                                items-start;
+
+                                &__icon{
+                                    @apply
+                                    flex 
+                                    w-1/3 
+                                    justify-end 
+                                    items-center 
+                                    p-4 
+                                    lg:hidden;
+                                }
+                                
+                                &__container{
+                                    @apply
+                                    flex 
+                                    w-2/3 
+                                    flex-col 
+                                    lg:w-full 
+                                    lg:flex-row;
+
+                                    &__wrap{
+                                        @apply
+                                        flex 
+                                        items-center;
+
+                                        span{
+                                            @apply
+                                            py-4 
+                                            pl-4 
+                                            lg:mx-auto;
+                                        }
+                                    }
+
+                                    
+                                }
+                                ul{
+                                        @apply
+                                        flex 
+                                        flex-col 
+                                        w-full 
+                                        lg:absolute 
+                                        lg:w-auto 
+                                        lg:rounded-b 
+                                        lg:bg-cps-blue-700 
+                                        lg:p-0 
+                                        lg:justify-around 
+                                        lg:mt-12;
+                                        
+                                        @screen lg{
+                                            z-index: -1;
+                                        }
+
+                                        li{
+                                            @apply
+                                            flex 
+                                            w-full 
+                                            py-2 
+                                            lg:px-4 
+                                            lg:bg-cps-blue-700 
+                                            lg:hover:shadow-inner 
+                                            lg:hover:bg-cps-blue-500
+                                            lg:border-b
+                                            lg:border-cps-blue-600;
+
+                                            .subMenuItem{
+                                                @apply
+                                                w-full
+                                                flex 
+                                                lg:items-center;
+                                                
+                                                
+                                                &__icon{
+                                                    @apply
+                                                    flex
+                                                    items-center
+                                                    justify-end
+                                                    p-4
+                                                    w-1/3
+                                                    lg:w-1/4;
+
+                                                    i{
+                                                        @apply
+                                                        lg:px-2
+                                                        lg:block
+                                                        lg:pr-2;
+                                                    }
+                                                }
+                                                &__title{
+                                                    @apply
+                                                    flex 
+                                                    items-center
+                                                    pl-4;
+
+                                                    span{
+                                                        @apply
+                                                        lg:capitalize 
+                                                        font-light;
+                                                    }
+                                                }
+                                            }
+
+                                            &:first-child{
+                                                @apply 
+                                                lg:border-t;
+                                            }
+                                            &:last-child{
+                                                @apply lg:rounded-b;
+                                            }
+                                        }
+                                    }
+                            }
+                           }
+                       }
+                    }
+                    
+                }
+            }
+        }
+}
+

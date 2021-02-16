@@ -1,0 +1,172 @@
+<header x-data="responsiveHeader()" x-ref="navbar" x-on:resize.window="windowResize()" x-on:scroll.window="scroll()" class="z-50 w-full animate__animated animate__faster fixed" 
+x-bind:class="{
+                'animate__slideInDown': sticky,
+                'animate__slideOutUp': !sticky
+                }"
+>
+
+  <div class="topHeader">
+    <div class="topHeader__wrapper">
+      <div class="topHeader__wrapper__emergencyService">
+        <div class="animate__animated animate__fadeInUp">
+          <i class="fad fa-clock pr-2"></i>24 Hour Emergency Service
+        </div>
+
+      </div>
+      <div class="topHeader__wrapper__phoneNumbers">
+        <div class="animate__animated animate__slideInRight">
+          <i class="fas fa-mobile-alt text-2xl"></i>
+          <span class="px-4">
+            <a href="#">708-428-4600</a>
+          </span>
+          |
+          <span class="px-4">
+            <a href="#">815-463-1900</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobileHeader">
+    
+        <div class="mobileHeader__phone">
+            <a href="">
+            <i class="fas fa-mobile-alt"></i>
+            </a>
+        </div>
+    
+    <div class="mobileHeader__logo">
+      <img src="{{'/static/img/cps-logo.png' | url}}" alt="">
+    </div>
+    <div x-on:click="menuOpen = !menuOpen, hamburgerActive = !hamburgerActive" class="mobileHeader__hamburgerContainer">
+      <div class="three col">
+        <div class="hamburger" id="hamburger-1" x-bind:class="{'is-active' : hamburgerActive}">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav x-bind:class="{'animate__fadeOut': document.documentElement.clientWidth < '1023' && !menuOpen, 'animate__animated': document.documentElement.clientWidth < '1023'}" x-show.immediate=" menuOpen || document.documentElement.clientWidth > '1023' " x-transition:enter="animate__slideInDown animate__faster" x-transition:leave=" animate__faster">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="{{'/static/img/cps-logo.png' | url}}" alt="" x-bind:class="{
+                'animate__animated animate__faster animate__slideInDown': sticky,
+                'animate__animated animate__faster animate__slideOutUp': !sticky
+                }">
+    </div>
+    <div class="navLinks">
+      <div class="navLinks__wrapper">
+        <!-- Nav List -->
+        <ul>
+          <li>
+            <a>
+              <div class="navLinks__wrapper__item" x-on:click="dropdown = document.documentElement.clientWidth < '1023' && dropdown === '' ? 'dd1' : '' " x-on:click.away="dropdown = document.documentElement.clientWidth < '1023' ? '' : dropdown " x-on:mouseenter="dropdown = document.documentElement.clientWidth > '1023' && dropdown === '' ? 'dd1' : dropdown " x-on:mouseleave="dropdown = document.documentElement.clientWidth > '1023' ? '' : dropdown ">
+                <div class="navLinks__wrapper__item__icon">
+                  <i class="fad fa-wrench"></i>
+                </div>
+                <div class="navLinks__wrapper__item__container">
+                  <div class="navLinks__wrapper__item__container__wrap">
+                    <span>
+                      Services
+                      <i class="fal fa-chevron-down pl-4 lg:pl-2"></i>
+                    </span>
+
+                  </div>
+                </div>
+                <ul x-show="dropdown === 'dd1'" x-transition:enter="animate__animated animate__zoomIn animate__faster" x-transition:leave="animate__animated animate__zoomOut animate__faster">
+                    <li>
+                      <div class="subMenuItem">
+                        <div class="subMenuItem__icon">
+                            <i class="fad fa-home"></i>
+                        </div>
+                        <div class="subMenuItem__title">
+                            <span>Residential</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="subMenuItem">
+                        <div class="subMenuItem__icon">
+                            <i class="fad fa-city"></i>
+                        </div>
+                        <div class="subMenuItem__title">
+                            <span>Commercial</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="subMenuItem">
+                        <div class="subMenuItem__icon">
+                            <i class="fad fa-hammer"></i>
+                        </div>
+                        <div class="subMenuItem__title">
+                            <span>New Construction</span>
+                        </div>
+                      </div>
+                    </li>
+             
+                  </ul>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="navLinks__wrapper__item">
+                <div class="navLinks__wrapper__item__icon">
+                  <i class="fad fa-map-marked-alt"></i>
+                </div>
+                <div class="navLinks__wrapper__item__container">
+                  <div class="navLinks__wrapper__item__container__wrap">
+                    <span>
+                      Service Area
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="navLinks__wrapper__item">
+                <div class="navLinks__wrapper__item__icon">
+                  <i class="fad fa-newspaper"></i>
+                </div>
+                <div class="navLinks__wrapper__item__container">
+                  <div class="navLinks__wrapper__item__container__wrap">
+                    <span>
+                      Articles
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="navLinks__wrapper__item">
+                <div class="navLinks__wrapper__item__icon">
+                  <i class="fad fa-badge-percent"></i>
+                </div>
+                <div class="navLinks__wrapper__item__container">
+                  <div class="navLinks__wrapper__item__container__wrap">
+                    <span>
+                      Specials
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>

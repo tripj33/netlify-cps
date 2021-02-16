@@ -1,0 +1,109 @@
+.heroCTA{
+    @apply
+    text-gray-600;
+
+    .wrapper{
+        @apply
+        container 
+        mx-auto 
+        flex 
+        px-5 
+        py-24 
+        flex-col 
+        md:flex-row 
+        items-center;
+
+        .title{
+            @apply 
+            md:w-1/2 
+            lg:pr-24 
+            md:pr-16 
+            flex 
+            flex-col 
+            mb-16 md:mb-0 
+            items-center 
+            text-center 
+            md:items-start 
+            md:text-left 
+            xl:w-3/4 
+            2xl:w-3/4;
+
+            h1{
+                @apply
+                text-5xl 
+                sm:text-6xl
+                md:text-5xl 
+                lg:text-6xl 
+                xl:text-7xl 
+                2xl:text-8xl 
+                mb-4 
+                sm:mt-4 
+                font-medium 
+                capitalize
+                text-gray-800;
+
+                br{
+                    @apply
+                    hidden 
+                    2xl:inline-block
+                }
+                span{
+                    @apply
+                    italic 
+                    font-bold
+                    pl-4
+                }
+            }
+
+            p{
+                @apply
+                mb-6 
+                mt-6 
+                md:mt-0 
+                leading-relaxed 
+                xl:w-3/4 
+                xl:mt-4 
+                xl:text-xl 
+                2xl:mt-6
+            }
+        }
+
+        .buttons{
+            @apply
+            flex
+            justify-center
+            w-full;
+
+            button{
+                @apply
+                inline-flex 
+                text-white 
+                bg-cps-blue-700 
+                border-0 
+                py-2 
+                px-6 
+                transition
+                duration-300
+                focus:outline-none 
+                hover:bg-cps-orange-500 
+                rounded 
+                text-lg;
+            }
+        }
+
+        .heroImg{
+            @apply
+            lg:max-w-lg 
+            lg:w-full 
+            md:w-1/2 
+            w-5/6;
+
+            img{
+                @apply
+                object-cover 
+                object-center 
+                rounded
+            }
+        }
+    }
+}

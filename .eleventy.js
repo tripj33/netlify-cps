@@ -3,7 +3,30 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
+const eleventyResponsivePicturePlugin = require("eleventy-plugin-responsive-picture");
+
+const respimg = require("eleventy-plugin-sharp-respimg");
+
+
+
 module.exports = function (eleventyConfig) {
+
+  // JS Assets
+  eleventyConfig.addPassthroughCopy({
+    "./src/static/js/": "/static/js/",
+  });
+  
+
+  // Alpine JS
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/alpinejs/dist/alpine.js": "/static/js/alpine.js",
+  });
+
+  // Animate.css
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/animate.css/animate.min.css": "./static/css/animate.css",
+  });
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
@@ -16,6 +39,24 @@ module.exports = function (eleventyConfig) {
       "dd LLL yyyy"
     );
   });
+
+
+  eleventyConfig.addPlugin(respimg);
+  eleventyConfig.addPassthroughCopy("static/img");
+
+// Responsive Images
+
+eleventyConfig.addPlugin(eleventyResponsivePicturePlugin, {
+  ratios: [2, 1],
+  sources: [
+    { media: "(min-width: 1024px)", size: 824 },
+    { media: "(min-width: 768px)", size: 696 },
+    { media: "(min-width: 420px)", size: 568 },
+    { size: 348 },
+  ],
+  fallback: (src) => `${src}?w=1000`,
+  resize: (src, size) => `${src}?w=${size}`,
+});
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);

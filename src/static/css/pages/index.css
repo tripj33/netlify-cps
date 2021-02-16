@@ -1,0 +1,148 @@
+.serviceCatCards{
+    @apply
+    flex 
+    flex-wrap 
+    mx-auto 
+    justify-around 
+    bg-gray-100 
+    shadow-inner 
+    pt-8 
+    pb-12;
+
+    &__container{
+        @apply
+        container 
+        grid 
+        gap-8 
+        grid-cols-1 
+        md:grid-cols-3;
+
+    .serviceCatCards__card{
+        @apply
+        flex 
+        flex-col 
+        rounded-xl 
+        shadow-xl 
+        bg-white 
+        w-3/4 
+        sm:w-1/2 
+        md:w-full 
+        lg:w-10/12 
+        border-t-4 
+        mt-4
+        mx-auto
+        
+        transition
+        duration-300
+        border-cps-blue-500
+        bg-cps-blue-700
+        hover:border-cps-orange-500
+        hover:bg-cps-orange-500
+
+        transform 
+        hover:-translate-y-1 
+        hover:scale-105
+        group;
+
+        &__wrapper{
+            @apply
+            flex 
+            flex-col 
+            justify-center;
+
+            &__image{
+                @apply
+                w-full
+                py-4 
+                px-8 
+                bg-white
+                rounded-t;
+                margin-bottom: -2px;
+                
+                img{
+                    @apply
+                    shadow-lg 
+                    rounded-full 
+                    max-w-full 
+                    h-auto 
+                    align-middle 
+                    border-none;
+                }
+            }
+            
+            &__bodyWrap{
+                @apply
+                flex 
+                flex-col 
+                mx-auto;
+
+                &__content{
+                    @apply
+                    flex 
+                    flex-col 
+                    px-8 
+                    pb-4
+                    bg-white;
+
+                   &__title{
+                       @apply
+                       flex 
+                       justify-center 
+                       items-center 
+                       h-14 
+                       my-2;
+
+                    h3{
+                        @apply
+                        font-medium 
+                        capitalize 
+                        text-cps-blue-600 
+                            
+                        text-center 
+                        text-xl;
+                    }
+
+                    p{
+                        @apply
+                        h-24 
+                        xl:h-24 
+                        overflow-hidden 
+                        overflow-clip
+                    }
+                   }
+                }
+
+                &__bottom{
+                    @apply
+                    flex 
+                    w-full 
+                    justify-end 
+                    border-t-4 
+                    border-white
+                    border-opacity-50 
+                    rounded-b-xl 
+                    py-4 
+                    px-8
+                    md:px-3;
+
+                 
+                        span{
+                            @apply
+                            capitalize 
+                            font-light 
+                            text-white;
+                        }
+                  
+                }
+            }
+        }
+
+    }
+    
+
+    
+    }
+
+
+}
+

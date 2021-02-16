@@ -1,0 +1,402 @@
+.servicesHero{
+    &__wrapper{
+        @apply
+        container 
+        mx-auto 
+        flex 
+        px-4 
+        py-8 
+        md:flex-row 
+        flex-col 
+        items-center;
+
+        &__text{
+            @apply
+            lg:flex-grow 
+            md:w-1/2 
+            lg:pr-24 
+            md:pr-16 
+            flex 
+            flex-col 
+            md:items-start 
+            md:text-left 
+            mb-16 
+            md:mb-0 
+            items-center 
+            text-center;
+
+            h1{
+                @apply
+                sm:text-4xl 
+                text-3xl 
+                mb-4 
+                font-medium 
+                text-gray-900;
+            }
+            br{
+                @apply
+                hidden 
+                lg:inline-block;
+            }
+
+            p{
+                @apply
+                mb-8 
+                leading-relaxed;
+            }
+        }
+
+        &__img{
+            @apply
+            lg:max-w-lg 
+            lg:w-full 
+            md:w-1/2 
+            w-5/6;
+
+            img{
+                @apply
+                object-cover 
+                object-center 
+                rounded;
+            }
+        }
+    }
+}
+
+.serviceSearch{
+    h3{
+        @apply
+        flex 
+        w-full 
+        justify-center 
+        font-medium 
+        mt-12 
+        text-4xl;
+    }
+
+    &__wrapper{
+        @apply
+        container 
+        pt-8 
+        px-8 
+        mx-auto;
+
+        input{
+            @apply
+            block 
+            w-full 
+            bg-gray-200 
+            focus:outline-none 
+            focus:bg-white 
+            focus:shadow 
+            mb-8 
+            text-gray-700 
+            font-bold 
+            rounded-lg 
+            px-4 
+            py-3;
+        }
+
+        &__header{
+            @apply
+            flex 
+            w-full 
+            justify-center 
+            pt-4 
+            mb-8 
+            flex-col;
+
+            &__border{
+                @apply
+                h-1 
+                bg-gray-200 
+                rounded 
+                overflow-hidden;
+
+                &__filled{
+                    @apply
+                    w-24 
+                    h-full 
+                    bg-cps-orange-500;
+                }
+            }
+
+            &__title{
+                @apply
+                text-4xl 
+                w-full
+                mt-6;
+            }
+            
+        }
+
+        &__serviceResults{
+            @apply
+            mt-4 
+            grid 
+            grid-cols-1 
+            md:grid-cols-2 
+            xl:grid-cols-3 
+            gap-4;
+
+         
+                .serviceCard{
+                    @apply
+                    w-full 
+                    px-2;
+
+                    &__wrapper{
+                        @apply
+                        mb-2 
+                        w-full 
+                        flex 
+                        shadow 
+                        rounded 
+                        hover:bg-gray-100;
+
+                        img{
+                            @apply
+                            rounded-l 
+                            h-24;
+                        }
+
+                        &__content{
+                            @apply
+                            flex 
+                            items-center 
+                            justify-between 
+                            pl-3 
+                            pr-2 
+                            py-3 
+                            w-full 
+                            rounded-r 
+                            text-gray-600 
+                            font-bold 
+                            cursor-pointer 
+                            hover:bg-gray-100;
+
+                            &__container{
+                                @apply
+                                flex 
+                                flex-col 
+                                w-11/12 
+                                h-full;
+
+                                &__title{
+                                    @apply
+                                    flex 
+                                    justify-start 
+                                    items-center 
+                                    h-full 
+                                    w-full;
+
+                                    h5{
+                                        @apply
+                                        font-bold 
+                                        capitalize;
+                                    }
+                                }
+
+                                &__category{
+                                    @apply
+                                    flex 
+                                    justify-start 
+                                    items-center 
+                                    h-full 
+                                    w-full;
+                                    
+                                    h6{
+                                        @apply
+                                        font-light 
+                                        text-sm 
+                                        uppercase;
+                                    }
+                                }
+
+                                &__icon{
+                                    @apply
+                                    flex 
+                                    flex-col 
+                                    w-1/12;
+                                }
+                            }
+                        }
+                    }
+              
+            }
+        }
+
+        &__pag{
+            @apply
+            flex 
+            w-full;
+
+            &__spacer{
+                @apply
+                flex 
+                justify-center 
+                items-center 
+                w-1/4;
+            }
+            &__results{
+                @apply
+                flex 
+                w-1/2 
+                justify-center;
+
+                div{
+                    
+                    .resultsContainer{
+                        @apply
+                        mt-6 
+                        flex 
+                        flex-col 
+                        flex-wrap 
+                        justify-between 
+                        items-center 
+                        text-sm 
+                        leading-5 
+                        text-gray-700;
+
+                        &__count{
+                            @apply
+                            w-full 
+                            sm:w-auto 
+                            text-center 
+                            sm:text-left;
+                        }
+                        &__total{
+                            @apply
+                            w-full 
+                            sm:w-auto 
+                            text-center 
+                            sm:text-right;
+
+                            span{
+                                @apply
+                                font-bold;
+                            }
+                        }
+
+                        &__noResults{
+                            @apply
+                            mx-auto 
+                            flex 
+                            items-center 
+                            font-bold 
+                            text-red-500;
+
+                            span{
+                                @apply
+                                ml-4;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__buttons{
+                @apply
+                flex 
+                w-1/4 
+                mx-auto 
+                py-6 
+                justify-center 
+                items-center;
+                
+               button{
+                    @apply
+                    px-2
+                    text-3xl;
+                }
+            }
+        }
+
+        &__articleResults{
+            @apply
+            container 
+            px-2 
+            pt-4 
+            mx-auto;
+        
+            &__wrapper{
+                @apply
+                flex 
+                flex-wrap 
+                lg:mx-auto;
+
+                .articleCard{
+                    @apply
+                    p-4 
+                    md:w-1/3;
+
+                    &__container{
+                        @apply
+                        h-full 
+                        border-2 
+                        border-gray-200 
+                        border-opacity-60 
+                        rounded-lg 
+                        overflow-hidden;
+                        
+                        img{
+                            @apply
+                            lg:h-48 
+                            md:h-36 
+                            w-full 
+                            object-cover 
+                            object-center;
+                        }
+
+                        &__text{
+                            @apply
+                            p-6;
+
+                            h2{
+                               @apply
+                               tracking-widest 
+                               text-xs 
+                               font-medium 
+                               text-gray-400 
+                               mb-1; 
+                            }
+                            h1{
+                                @apply
+                                text-lg 
+                                font-medium 
+                                text-gray-900
+                                mb-3; 
+                            }
+                            p{
+                                @apply
+                                leading-relaxed 
+                                mb-3;
+                            }
+                            &__read{
+                                @apply
+                                flex 
+                                items-center 
+                                justify-end 
+                                flex-wrap;
+
+                                a{
+                                    @apply
+                                    text-cps-blue-500 
+                                    inline-flex 
+                                    items-center 
+                                    md:mb-2 
+                                    lg:mb-0;
+
+                                    i{
+                                        @apply
+                                        pl-2
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

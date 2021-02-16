@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="/static/js/alpine.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/animate.css"/>
     <title>
       {{title}}
     </title>
@@ -17,19 +20,21 @@
     {% endif %}
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+ {% include "./partials/header/header.html" %}
 
-    {{ content | safe }}
+    <div class="mt-40">
+            {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+    </div>
+    {% include "./partials/footer/footer.html" %}
 
-    <script src="/static/js/alpine.js"></script>
+
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
       <!-- Needed only if you are using Netlify Identity feature -->
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
-
+    <script src="/static/js/header.js"></script>
   </body>
 </html>

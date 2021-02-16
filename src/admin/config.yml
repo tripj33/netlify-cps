@@ -4,7 +4,7 @@ backend:
   branch: master
   ### enable below lines for github integration ###
   # name: github
-  # repo: surjithctly/neat-starter
+  repo: tripj/neat-starter
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
@@ -12,24 +12,127 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
+  - label: "Articles"
+    name: "article"
     folder: "src/posts"
     create: true
-    editor:
-      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "date", format: "MMMM Do YYYY" }
+      - { label: "Intro Section", name: "intro", widget: "markdown"}
+      - label: "Article Section"
+        name: "articleSection"
+        widget: "list"
+        label_singular: "Article Section"
+        collapsed: true
+        fields: 
+          - { label: "Section Name", name: "sectionName", widget: "string" }
+          - { label: "Section Quick Link", name: "sectionLink", widget: "string" }
+          - { label: "Section Content", name: "sectionContent", widget: "markdown"}
       - widget: select
         label: "tags"
         name: "tags"
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+
+  - label: "Commercial Services"
+    name: "commercial-services"
+    folder: "src/services/commercial-services"
+    file: "src/services/commercial-services_index.json"
+    identifier_field: name
+    extension: "json"
+    slug: "{{fields.slug}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "slug", widget: "string"}
+      - { label: "Snippet", name: "snippet", widget: "string"}
+      - { label: "Description", name: "description", widget: "markdown"}
+      - { label: "Service Images", name: "image", widget: "image"}
+     
+      - label: "Features"
+        name: "serviceIncludes"
+        widget: "list"
+        label_singular: "Service Feature"
+        collapsed: true
+        fields: 
+          - { label: "Service Feature", name: "serviceFeature", widget: "string" }
+
+      - label: "Icons"
+        name: "serviceIcons"
+        widget: "list"
+        label_singular: "icon"
+        collapsed: true
+        fields: 
+          - { label: "Service Icon", name: "serviceIcon", widget: "string" }
+          - { label: "Icon Title", name: "iconTitle", widget: "string" }
+
+  - label: "Residential Services"
+    name: "residential-services"
+    folder: "src/services/residential-services"
+    slug: "{{pageURL}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "pageURL", widget: "string"}
+      - { label: "Snippet", name: "snippet", widget: "string"}
+      - { label: "Description", name: "description", widget: "markdown"}
+      - { label: "Service Images", name: "image", widget: "image"}
+     
+      - label: "Features"
+        name: "serviceIncludes"
+        widget: "list"
+        label_singular: "Service Feature"
+        collapsed: true
+        fields: 
+          - { label: "Service Feature", name: "serviceFeature", widget: "string" }
+
+      - label: "Icons"
+        name: "serviceIcons"
+        widget: "list"
+        label_singular: "icon"
+        collapsed: true
+        fields: 
+          - { label: "Service Icon", name: "serviceIcon", widget: "string" }
+          - { label: "Icon Title", name: "iconTitle", widget: "string" }
+
+  - label: "New Construction Services"
+    name: "new-construction-services"
+    folder: "src/services/new-construction-services"
+    slug: "{{fields.slug}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "slug", widget: "string"}
+      - { label: "Snippet", name: "snippet", widget: "string"}
+      - { label: "Description", name: "description", widget: "markdown"}
+      - { label: "Service Images", name: "image", widget: "image"}
+     
+      - label: "Features"
+        name: "serviceIncludes"
+        widget: "list"
+        label_singular: "Service Feature"
+        collapsed: true
+        fields: 
+          - { label: "Service Feature", name: "serviceFeature", widget: "string" }
+
+      - label: "Icons"
+        name: "serviceIcons"
+        widget: "list"
+        label_singular: "icon"
+        collapsed: true
+        fields: 
+          - { label: "Service Icon", name: "serviceIcon", widget: "string" }
+          - { label: "Icon Title", name: "iconTitle", widget: "string" }
+
+  
+
+          
+  
+
   - label: "Settings"
     name: "settings"
     editor:
@@ -66,3 +169,27 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+
+  - label: "All Widgets"
+    name: "allWidgets"
+    files:
+      - label: "Blog Post Hero Image"
+        name: "blogPostHeroImage"
+        widget: "list"
+        file: "src/_data/settings.yaml"
+        fields: 
+          - label: Hero Image
+            name: heroImage
+            widget: object
+            minimized_collapsed: true
+            allow_add: true
+            collapsed: true
+            fields:
+              - {label: Hero Image, name: image, widget: image}
+              - { label: Image Title, name: title, widget: string}
+          - label: Post Title
+            name: postTitle
+            widget: string
+          
+
+        

@@ -1,0 +1,690 @@
+---
+layout: default
+---
+<section class="servicesHero">
+    <div class="servicesHero__wrapper">
+        <div class="servicesHero__wrapper__text">
+            <h1>Before they sold out
+            <br>readymade gluten
+            </h1>
+            <p>Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+        </div>
+        <div class="servicesHero__wrapper__img">
+            <img alt="" src="https://dummyimage.com/720x600">
+        </div>
+    </div>
+</section>
+
+<section class="serviceSearch">
+    <h3>Search Our Services</h3>
+
+<div class="serviceSearch__wrapper" x-data="loadEmployees()">
+  <input x-ref="searchField" 
+        x-model="results.services.search" 
+        x-bind:value="results.articles.search" 
+        x-on:input="results.articles.search = $event.target.value" 
+        x-on:click="results.services.viewPage(0), results.articles.viewPage(0)" 
+        x-on:keydown.window.prevent.slash=" results.services.viewPage(0), results.articles.viewPage(0), $refs.searchField.focus()" 
+        placeholder="How can we help you?" type="search" />
+
+  <div class="serviceSearch__wrapper__header">
+    <div class="serviceSearch__wrapper__header__border">
+      <div class="serviceSearch__wrapper__header__border__filled"></div>
+    </div>
+    <div class="serviceSearch__wrapper__header__title">Commercial Servies</div>
+  </div>
+
+  <div class="serviceSearch__wrapper__serviceResults">
+    <template x-for="item in results.services.filteredResults" :key="item">
+
+      <div class="serviceCard">
+        <div class="serviceCard__wrapper">
+          <img :src="`${item.profile_image}`" alt="">
+
+          <div class="serviceCard__wrapper__content">
+            <div class="serviceCard__wrapper__content__container">
+              <div class="serviceCard__wrapper__content__container__title">
+                <h5 x-text="item.employee_name"></h5>
+              </div>
+              <div class="serviceCard__wrapper__content__container__category">
+                <h6>Commercial Services</h6>
+              </div>
+            </div>
+            <div class="serviceCard__wrapper__content__container__icon">
+              <i class="fal fa-arrow-right"></i>
+            </div>
+
+          </div>
+        </div>
+
+    </template>
+  </div>
+
+  <div class="serviceSearch__wrapper__pag">
+    <div class="serviceSearch__wrapper__pag__spacer"></div>
+    <div class="serviceSearch__wrapper__pag__results">
+      <div>
+        <div class="resultsContainer">
+          <div class="resultsContainer__count" x-show="results.services.pageCount() > 1">
+            Page <span x-text="results.services.pageNumber+1"> </span> of
+            <span x-text="results.services.pageCount()"></span> | Showing
+            <span x-text="results.services.startResults()"></span> to
+            <span x-text="results.services.endResults()"></span>
+          </div>
+
+          <div class="resultsContainer__total" x-show="results.services.total > 0">
+            Total
+            <span x-text="results.services.total"></span> results
+          </div>
+
+          <!--Message to display when no results-->
+          <div class="resultsContainer__noResults" x-show="results.services.total===0">
+            <svg class="h-8 w-8 text-red-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <circle cx="12" cy="12" r="9" />
+              <line x1="9" y1="10" x2="9.01" y2="10" />
+              <line x1="15" y1="10" x2="15.01" y2="10" />
+              <path d="M9.5 16a10 10 0 0 1 6 -1.5" />
+            </svg>
+
+            <span> No results!!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="serviceSearch__wrapper__pag__buttons" x-show="results.services.pageCount() > 1">
+      <!--Previous Button-->
+      <button x-on:click="results.services.prevPage()" 
+            :disabled="results.services.pageNumber==0" 
+            :class="{ 'disabled cursor-not-allowed text-gray-600' : results.services.pageNumber==0 }" >
+
+        <i class="far fa-arrow-square-left"></i>
+      </button>
+
+      <!--Next Button-->
+      <button x-on:click="results.services.nextPage()" 
+            :disabled="results.services.pageNumber >= results.services.pageCount() -1" 
+            :class="{ 'disabled cursor-not-allowed text-gray-600' : results.services.pageNumber >= results.services.pageCount() -1 }">
+        <i class="far fa-arrow-square-right"></i>
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="serviceSearch__wrapper__header">
+    <div class="serviceSearch__wrapper__header__border">
+      <div class="serviceSearch__wrapper__header__border__filled"></div>
+    </div>
+
+    <div class="serviceSearch__wrapper__header__title">Articles</div>
+  </div>
+  <div class="serviceSearch__wrapper__articleResults">
+    <div class="serviceSearch__wrapper__articleResults__wrapper">
+      <template x-for="item in results.articles.filteredResults" :key="item">
+        <div class="articleCard">
+          <div class="articleCard__container">
+            <img :src="`${item.profile_image}`" alt="blog">
+            <div class="articleCard__container__text">
+              <h2>CATEGORY</h2>
+              <h1 x-text="item.employee_name"></h1>
+              <p>Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <div class="articleCard__container__text__read">
+                <a>Read More
+                  <i class="far fa-arrow-right"></i>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<div class="serviceSearch__wrapper__pag">
+    <div class="serviceSearch__wrapper__pag__spacer"></div>
+    <div class="serviceSearch__wrapper__pag__results">
+      <div>
+        <div class="resultsContainer">
+          <div class="resultsContainer__count" x-show="results.articles.pageCount() > 1">
+            Page <span x-text="results.articles.pageNumber+1"> </span> of
+            <span x-text="results.articles.pageCount()"></span> | Showing
+            <span x-text="results.articles.startResults()"></span> to
+            <span x-text="results.articles.endResults()"></span>
+          </div>
+
+          <div class="resultsContainer__total" x-show="results.articles.total > 0">
+            Total
+            <span x-text="results.articles.total"></span> results
+          </div>
+
+          <!--Message to display when no results-->
+          <div class="resultsContainer__noResults" x-show="results.articles.total===0">
+            <svg class="h-8 w-8 text-red-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <circle cx="12" cy="12" r="9" />
+              <line x1="9" y1="10" x2="9.01" y2="10" />
+              <line x1="15" y1="10" x2="15.01" y2="10" />
+              <path d="M9.5 16a10 10 0 0 1 6 -1.5" />
+            </svg>
+
+            <span> No results!!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="serviceSearch__wrapper__pag__buttons" x-show="results.articles.pageCount() > 1">
+      <!--Previous Button-->
+      <button x-on:click="results.articles.prevPage()" 
+            :disabled="results.articles.pageNumber==0" 
+            :class="{ 'disabled cursor-not-allowed text-gray-600' : results.articles.pageNumber==0 }" >
+
+        <i class="far fa-arrow-square-left"></i>
+      </button>
+
+      <!--Next Button-->
+      <button x-on:click="results.articles.nextPage()" 
+            :disabled="results.articles.pageNumber >= results.articles.pageCount() -1" 
+            :class="{ 'disabled cursor-not-allowed text-gray-600' : results.articles.pageNumber >= results.articles.pageCount() -1 }">
+        <i class="far fa-arrow-square-right"></i>
+      </button>
+    </div>
+  </div>
+
+
+</div>
+</section>
+<script>
+  var sourceData = [{
+      id: "1",
+      employee_name: "Tiger Nixon",
+      employee_salary: "320800",
+      employee_age: "61",
+      profile_image: "https://randomuser.me/api/portraits/men/1.jpg",
+    },
+    {
+      id: "2",
+      employee_name: "Garrett Winters",
+      employee_salary: "170750",
+      employee_age: "63",
+      profile_image: "https://randomuser.me/api/portraits/men/2.jpg",
+    },
+    {
+      id: "3",
+      employee_name: "Ashton Cox",
+      employee_salary: "86000",
+      employee_age: "66",
+      profile_image: "https://randomuser.me/api/portraits/men/3.jpg",
+    },
+    {
+      id: "4",
+      employee_name: "Cedric Kelly",
+      employee_salary: "433060",
+      employee_age: "22",
+      profile_image: "https://randomuser.me/api/portraits/men/4.jpg",
+    },
+    {
+      id: "5",
+      employee_name: "Airi Satou",
+      employee_salary: "162700",
+      employee_age: "33",
+      profile_image: "https://randomuser.me/api/portraits/women/5.jpg",
+    },
+    {
+      id: "6",
+      employee_name: "Brielle Williamson",
+      employee_salary: "372000",
+      employee_age: "61",
+      profile_image: "https://randomuser.me/api/portraits/women/6.jpg",
+    },
+    {
+      id: "7",
+      employee_name: "Herrod Chandler",
+      employee_salary: "137500",
+      employee_age: "59",
+      profile_image: "https://randomuser.me/api/portraits/men/7.jpg",
+    },
+    {
+      id: "8",
+      employee_name: "Rhona Davidson",
+      employee_salary: "327900",
+      employee_age: "55",
+      profile_image: "https://randomuser.me/api/portraits/women/8.jpg",
+    },
+    {
+      id: "9",
+      employee_name: "Colleen Hurst",
+      employee_salary: "205500",
+      employee_age: "39",
+      profile_image: "https://randomuser.me/api/portraits/women/9.jpg",
+    },
+    {
+      id: "10",
+      employee_name: "Sonya Frost",
+      employee_salary: "103600",
+      employee_age: "23",
+      profile_image: "https://randomuser.me/api/portraits/women/10.jpg",
+    },
+    {
+      id: "11",
+      employee_name: "Jena Gaines",
+      employee_salary: "90560",
+      employee_age: "30",
+      profile_image: "https://randomuser.me/api/portraits/women/11.jpg",
+    },
+    {
+      id: "12",
+      employee_name: "Quinn Flynn",
+      employee_salary: "342000",
+      employee_age: "22",
+      profile_image: "https://randomuser.me/api/portraits/men/12.jpg",
+    },
+    {
+      id: "13",
+      employee_name: "Charde Marshall",
+      employee_salary: "470600",
+      employee_age: "36",
+      profile_image: "https://randomuser.me/api/portraits/women/12.jpg",
+    },
+    {
+      id: "14",
+      employee_name: "Haley Kennedy",
+      employee_salary: "313500",
+      employee_age: "43",
+      profile_image: "https://randomuser.me/api/portraits/women/14.jpg",
+    },
+    {
+      id: "15",
+      employee_name: "Tatyana Fitzpatrick",
+      employee_salary: "385750",
+      employee_age: "19",
+      profile_image: "https://randomuser.me/api/portraits/women/15.jpg",
+    },
+    {
+      id: "16",
+      employee_name: "Michael Silva",
+      employee_salary: "198500",
+      employee_age: "66",
+      profile_image: "https://randomuser.me/api/portraits/men/16.jpg",
+    },
+    {
+      id: "17",
+      employee_name: "Paul Byrd",
+      employee_salary: "725000",
+      employee_age: "64",
+      profile_image: "https://randomuser.me/api/portraits/men/17.jpg",
+    },
+    {
+      id: "18",
+      employee_name: "Gloria Little",
+      employee_salary: "237500",
+      employee_age: "59",
+      profile_image: "https://randomuser.me/api/portraits/women/18.jpg",
+    },
+    {
+      id: "19",
+      employee_name: "Bradley Greer",
+      employee_salary: "132000",
+      employee_age: "41",
+      profile_image: "https://randomuser.me/api/portraits/men/19.jpg",
+    },
+    {
+      id: "20",
+      employee_name: "Dai Rios",
+      employee_salary: "217500",
+      employee_age: "35",
+      profile_image: "https://randomuser.me/api/portraits/men/20.jpg",
+    },
+    {
+      id: "21",
+      employee_name: "Jenette Caldwell",
+      employee_salary: "345000",
+      employee_age: "30",
+      profile_image: "https://randomuser.me/api/portraits/women/21.jpg",
+    },
+    {
+      id: "22",
+      employee_name: "Yuri Berry",
+      employee_salary: "675000",
+      employee_age: "40",
+      profile_image: "https://randomuser.me/api/portraits/men/22.jpg",
+    },
+    {
+      id: "23",
+      employee_name: "Caesar Vance",
+      employee_salary: "106450",
+      employee_age: "21",
+      profile_image: "https://randomuser.me/api/portraits/men/23.jpg",
+    },
+    {
+      id: "24",
+      employee_name: "Doris Wilder",
+      employee_salary: "85600",
+      employee_age: "23",
+      profile_image: "https://randomuser.me/api/portraits/women/24.jpg",
+    },
+  ];
+  var sourceData1 = [{
+      id: "1",
+      employee_name: "Tiger ",
+      employee_salary: "320800",
+      employee_age: "61",
+      profile_image: "https://randomuser.me/api/portraits/men/1.jpg",
+    },
+    {
+      id: "2",
+      employee_name: "Garrett ",
+      employee_salary: "170750",
+      employee_age: "63",
+      profile_image: "https://randomuser.me/api/portraits/men/2.jpg",
+    },
+    {
+      id: "3",
+      employee_name: "Ashton ",
+      employee_salary: "86000",
+      employee_age: "66",
+      profile_image: "https://randomuser.me/api/portraits/men/3.jpg",
+    },
+    {
+      id: "4",
+      employee_name: "Cedric ",
+      employee_salary: "433060",
+      employee_age: "22",
+      profile_image: "https://randomuser.me/api/portraits/men/4.jpg",
+    },
+    {
+      id: "5",
+      employee_name: "Airi S",
+      employee_salary: "162700",
+      employee_age: "33",
+      profile_image: "https://randomuser.me/api/portraits/women/5.jpg",
+    },
+    {
+      id: "6",
+      employee_name: "Briell",
+      employee_salary: "372000",
+      employee_age: "61",
+      profile_image: "https://randomuser.me/api/portraits/women/6.jpg",
+    },
+    {
+      id: "7",
+      employee_name: "Herrod",
+      employee_salary: "137500",
+      employee_age: "59",
+      profile_image: "https://randomuser.me/api/portraits/men/7.jpg",
+    },
+    {
+      id: "8",
+      employee_name: "Rhona ",
+      employee_salary: "327900",
+      employee_age: "55",
+      profile_image: "https://randomuser.me/api/portraits/women/8.jpg",
+    },
+    {
+      id: "9",
+      employee_name: "Coll Hurst",
+      employee_salary: "205500",
+      employee_age: "39",
+      profile_image: "https://randomuser.me/api/portraits/women/9.jpg",
+    },
+    {
+      id: "10",
+      employee_name: "Son Frost",
+      employee_salary: "103600",
+      employee_age: "23",
+      profile_image: "https://randomuser.me/api/portraits/women/10.jpg",
+    },
+    {
+      id: "11",
+      employee_name: "Jena Gaines",
+      employee_salary: "90560",
+      employee_age: "30",
+      profile_image: "https://randomuser.me/api/portraits/women/11.jpg",
+    },
+    {
+      id: "12",
+      employee_name: "Quinn Flynn",
+      employee_salary: "342000",
+      employee_age: "22",
+      profile_image: "https://randomuser.me/api/portraits/men/12.jpg",
+    },
+    {
+      id: "13",
+      employee_name: "Charde Marshall",
+      employee_salary: "470600",
+      employee_age: "36",
+      profile_image: "https://randomuser.me/api/portraits/women/12.jpg",
+    },
+    {
+      id: "14",
+      employee_name: "Haley Kennedy",
+      employee_salary: "313500",
+      employee_age: "43",
+      profile_image: "https://randomuser.me/api/portraits/women/14.jpg",
+    },
+    {
+      id: "15",
+      employee_name: "Tatyana Fitzpatrick",
+      employee_salary: "385750",
+      employee_age: "19",
+      profile_image: "https://randomuser.me/api/portraits/women/15.jpg",
+    },
+    {
+      id: "16",
+      employee_name: "Michael Silva",
+      employee_salary: "198500",
+      employee_age: "66",
+      profile_image: "https://randomuser.me/api/portraits/men/16.jpg",
+    },
+    {
+      id: "17",
+      employee_name: "Paul Byrd",
+      employee_salary: "725000",
+      employee_age: "64",
+      profile_image: "https://randomuser.me/api/portraits/men/17.jpg",
+    },
+    {
+      id: "18",
+      employee_name: "Gloria Little",
+      employee_salary: "237500",
+      employee_age: "59",
+      profile_image: "https://randomuser.me/api/portraits/women/18.jpg",
+    },
+    {
+      id: "19",
+      employee_name: "Bradley Greer",
+      employee_salary: "132000",
+      employee_age: "41",
+      profile_image: "https://randomuser.me/api/portraits/men/19.jpg",
+    },
+    {
+      id: "20",
+      employee_name: "Dai Rios",
+      employee_salary: "217500",
+      employee_age: "35",
+      profile_image: "https://randomuser.me/api/portraits/men/20.jpg",
+    },
+    {
+      id: "21",
+      employee_name: "Jenette Caldwell",
+      employee_salary: "345000",
+      employee_age: "30",
+      profile_image: "https://randomuser.me/api/portraits/women/21.jpg",
+    },
+    {
+      id: "22",
+      employee_name: "Yuri Berry",
+      employee_salary: "675000",
+      employee_age: "40",
+      profile_image: "https://randomuser.me/api/portraits/men/22.jpg",
+    },
+    {
+      id: "23",
+      employee_name: "Caesar Vance",
+      employee_salary: "106450",
+      employee_age: "21",
+      profile_image: "https://randomuser.me/api/portraits/men/23.jpg",
+    },
+    {
+      id: "24",
+      employee_name: "Doris Wilder",
+      employee_salary: "85600",
+      employee_age: "23",
+      profile_image: "https://randomuser.me/api/portraits/women/24.jpg",
+    },
+  ];
+  let text = "";
+
+  function loadEmployees() {
+    return {
+      search: "",
+      test: "test",
+      results: {
+        services: {
+          search: "",
+          pageNumber: 0,
+          size: 10,
+          total: "",
+          myForData: sourceData,
+          get filteredResults() {
+            const start = this.pageNumber * this.size,
+              end = start + this.size;
+            if (this.search === "") {
+              this.total = this.myForData.length;
+              return this.myForData.slice(start, end);
+            }
+            console.log(this.search)
+            //Return the total results of the filters
+            this.total = this.myForData.filter((item) => {
+              return item.employee_name
+                .toLowerCase()
+                .includes(this.search.toLowerCase());
+            }).length;
+            console.log("this.total = " + this.total)
+            //Return the filtered data
+            return this.myForData
+              .filter((item) => {
+                return item.employee_name
+                  .toLowerCase()
+                  .includes(this.search.toLowerCase());
+              })
+              .slice(start, end);
+          },
+          //Create array of all pages (for loop to display page numbers)
+          pages() {
+            return Array.from({
+              length: Math.ceil(this.total / this.size),
+            });
+          },
+          //Next Page
+          nextPage() {
+            this.pageNumber++;
+          },
+          //Previous Page
+          prevPage() {
+            this.pageNumber--;
+          },
+          //Total number of pages
+          pageCount() {
+            return Math.ceil(this.total / this.size);
+          },
+          //Return the start range of the paginated results
+          startResults() {
+            return this.pageNumber * this.size + 1;
+          },
+          //Return the end range of the paginated results
+          endResults() {
+            let resultsOnPage = (this.pageNumber + 1) * this.size;
+            if (resultsOnPage <= this.total) {
+              return resultsOnPage;
+            }
+            return this.total;
+          },
+          //Link to navigate to page
+          viewPage(index) {
+            this.pageNumber = index;
+          },
+        },
+        articles: {
+          search: "",
+          pageNumber: 0,
+          size: 3,
+          total: "",
+          myForData: sourceData1,
+          get filteredResults() {
+            const start = this.pageNumber * this.size,
+              end = start + this.size;
+            if (this.search === "") {
+              this.total = this.myForData.length;
+              return this.myForData.slice(start, end);
+            }
+            console.log(this.search)
+            //Return the total results of the filters
+            this.total = this.myForData.filter((item) => {
+              return item.employee_name
+                .toLowerCase()
+                .includes(this.search.toLowerCase());
+            }).length;
+            console.log("this.total = " + this.total)
+            //Return the filtered data
+            return this.myForData
+              .filter((item) => {
+                return item.employee_name
+                  .toLowerCase()
+                  .includes(this.search.toLowerCase());
+              })
+              .slice(start, end);
+          },
+          //Create array of all pages (for loop to display page numbers)
+          pages() {
+            return Array.from({
+              length: Math.ceil(this.total / this.size),
+            });
+          },
+          //Next Page
+          nextPage() {
+            this.pageNumber++;
+          },
+          //Previous Page
+          prevPage() {
+            this.pageNumber--;
+          },
+          //Total number of pages
+          pageCount() {
+            return Math.ceil(this.total / this.size);
+          },
+          //Return the start range of the paginated results
+          startResults() {
+            return this.pageNumber * this.size + 1;
+          },
+          //Return the end range of the paginated results
+          endResults() {
+            let resultsOnPage = (this.pageNumber + 1) * this.size;
+            if (resultsOnPage <= this.total) {
+              return resultsOnPage;
+            }
+            return this.total;
+          },
+          //Link to navigate to page
+          viewPage(index) {
+            this.pageNumber = index;
+          },
+        },
+        searchResults() {
+          let search = "";
+          this.services.search = search;
+        }
+      }
+    };
+  }
+</script>

@@ -1,0 +1,211 @@
+.service{
+    @apply
+    text-gray-600 
+    overflow-hidden;
+
+    &__container{
+        @apply
+        container 
+        px-5 
+        lg:px-0 
+        py-24 
+        mx-auto;
+
+        &__wrap{
+            @apply
+            xl:w-4/5 
+            mx-auto 
+            flex 
+            flex-wrap;
+
+            .serviceImg{
+                @apply
+                lg:w-1/2 
+                w-full 
+                lg:h-auto 
+                h-1/5 
+                lg:object-cover 
+                object-center 
+                rounded;
+                max-height: 400px;
+            }
+
+            .serviceInfo{
+                @apply
+                lg:w-1/2 
+                w-full 
+                lg:pl-10 
+                lg:py-6 
+                mb-6 
+                lg:mb-0;
+
+                h2{
+                    @apply
+                    text-sm 
+                    text-gray-500 
+                    tracking-widest 
+                    mt-4;
+                }
+
+                h1{
+                    @apply
+                    text-gray-900 
+                    text-3xl 
+                    font-medium 
+                    mb-4;
+                }
+
+                &__tabs{
+                    @apply 
+                    flex
+                    mb-4;
+
+                    .tabLink{
+                        @apply
+                        flex-grow 
+                        border-b-2 
+                        border-gray-300 
+                        py-2 
+                        text-lg 
+                        px-1; 
+                    }
+
+                    .activeLink{
+                        @apply
+                        border-cps-blue-700 
+                        text-cps-blue-700 
+                        font-medium;
+                    }
+
+                    
+                }
+                
+                &__description{
+
+                    p{
+                        @apply
+                        leading-relaxed 
+                        mb-4;
+                    }
+
+                    &__icons{
+                        @apply
+                        flex 
+                        flex-wrap 
+                        border-t 
+                        border-b 
+                        border-gray-200 
+                        py-2 
+                        justify-around; 
+
+                        .icon{
+                            @apply
+                            flex 
+                            flex-col 
+                            text-gray-500;
+
+                            i{
+                                @apply
+                                text-4xl 
+                                w-full 
+                                m-auto 
+                                text-cps-blue-600
+                                flex 
+                                justify-center;
+                            }
+                            
+                        }
+                    }
+
+                    &__buttons{
+                        @apply
+                        flex 
+                        mt-4 
+                        justify-around;
+                        
+                        button{
+                            @apply
+                            flex 
+                            items-center 
+                            text-xl 
+                            rounded 
+                            shadow 
+                            px-4 
+                            py-2 
+                            text-white; 
+
+                            i{
+                                @apply
+                                px-2;
+                            }
+                        }
+                        .pricing{
+                                @apply
+                                bg-cps-orange-500 
+                                hover:bg-cps-orange-400
+                            }
+
+                            .scheduleService{
+                                @apply
+                                bg-cps-blue-700 
+                                hover:bg-cps-blue-600
+                            }
+                    }
+                }
+
+                &__faqs{
+
+                    &__container{
+                        @apply
+                        bg-white 
+                        mx-auto 
+                        p-6;
+
+                        .faq{
+                            @apply
+                            mb-4;
+
+                            &__container{
+                                @apply
+                                flex 
+                                items-center 
+                                justify-between 
+                                bg-gray-50
+                                shadow
+                                border-t-4
+                                border-cps-blue-700
+                                pl-3 
+                                pr-2 
+                                py-3 
+                                w-full 
+                                rounded 
+                                text-gray-800 
+                                font-medium 
+                                cursor-pointer 
+                                hover:bg-gray-100;
+
+                                span{
+                                    @apply
+                                    h-6 
+                                    w-6 
+                                    flex 
+                                    items-center 
+                                    justify-center;
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+
+                &__details{
+                     p{
+
+                     }
+                }
+            }
+        }
+
+    }
+}
