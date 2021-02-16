@@ -14,7 +14,7 @@ header{
             overflow-hidden
             lg:flex;
 
-            &__wrapper{
+            .topHeader__wrapper{
                 @apply 
                 container 
                 w-full 
@@ -22,7 +22,7 @@ header{
                 justify-center 
                 mx-auto;
 
-                &__emergencyService{
+                .topHeader__wrapper__emergencyService{
                     @apply 
                     text-white 
                     font-medium 
@@ -34,7 +34,7 @@ header{
                     justify-end
                 }
 
-                &__phoneNumbers{
+                .topHeader__wrapper__phoneNumbers{
                     @apply 
                     text-white 
                     font-medium 
