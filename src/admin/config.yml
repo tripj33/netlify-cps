@@ -53,7 +53,17 @@ collections:
       - { label: "Snippet", name: "snippet", widget: "string"}
       - { label: "Details", name: "details", widget: "text"}
       - { label: "Service Images", name: "image", widget: "image"}
-     
+      - label: "Service FAQs"
+        name: "service-faqs"
+        widget: "list"
+        summary: '{{fields.quote}} - {{fields.author.name}}'
+        fields:
+          - label: "FAQs"
+            name: "faqs"
+            widget: object
+            fields:
+              - {label: "Question", name: "question", widget: string}
+              - {label: "Answer", name: "answer", widget: string}
       - label: "Features"
         name: "feature"
         widget: "select"

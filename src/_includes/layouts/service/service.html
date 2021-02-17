@@ -11,8 +11,6 @@ layout: default
 
         <h2>{{serviceCategory}}</h2>
 
-        <h1>{{description}}</h1>
-
         <div class="serviceInfo__tabs">
           <a @click.prevent="tab = 'tab1'" :class="{'activeLink': tab === 'tab1'}" class="tabLink">Description</a>
           <a @click.prevent="tab = 'tab2'" :class="{'activeLink': tab === 'tab2'}" class="tabLink">FAQs</a>
@@ -21,10 +19,94 @@ layout: default
         <div class="serviceInfo__description" x-show="tab === 'tab1'">
 
           <p>{{snippet}}</p>
-          <h1>{{feature}}</h1>
           <div class="serviceInfo__description__icons">
             {% for icon in feature %}
-                1
+
+                    {% if icon === 'Fast Installation' %}
+                        <div class="icon">
+                            <i class="fad fa-rabbit-fast"></i>
+                            <span>Fast Installation</span>
+                        </div>
+
+                    {% elseif icon === 'Lower Energy Cost' %} 
+                        <div class="icon">
+                            <i class="fad fa-lightbulb-dollar"></i>
+                            <span>Lower Energy Cost</span>
+                        </div>
+
+                    {% elseif icon === 'Eco-Friendly' %} 
+                        <div class="icon">
+                            <i class="fad fa-seedling"></i>
+                            <span>Eco Friendly</span>
+                        </div>
+
+                    {% elseif icon === 'Annual Inspection Req.' %} 
+                        <div class="icon">
+                            <i class="fad fa-calendar-check"></i>
+                            <span>Annual Inspection Req.</span>
+                        </div>
+
+                    {% elseif icon === 'Special Savings' %} 
+                        <div class="icon">
+                            <i class="fad fa-usd-circle"></i>
+                            <span>Special Savings</span>
+                        </div>
+
+                    {% elseif icon === 'Cleaner Water' %} 
+                        <div class="icon">
+                            <i class="fad fa-tint"></i>
+                            <span>Cleaner Water</span>
+                        </div>
+
+                    {% elseif icon === 'Instant Hot Water' %} 
+                        <div class="icon">
+                            <i class="fad fa-thermometer-three-quarters"></i>
+                            <span>Instant Hot Water</span>
+                        </div>
+
+                    {% elseif icon === '1 Year Warranty' %} 
+                        <div class="icon">
+                            <i class="fad fa-badge-check"></i>
+                            <span>1 Year Warranty</span>
+                        </div>
+
+                    {% elseif icon === '2 Year Warranty' %} 
+                        <div class="icon">
+                            <i class="fad fa-badge-check"></i>
+                            <span>2 Year Warranty</span>
+                        </div>
+
+                    {% elseif icon === '3 Year Warranty' %} 
+                        <div class="icon">
+                            <i class="fad fa-badge-check"></i>
+                            <span>3 Year Warranty</span>
+                        </div>
+
+                    {% elseif icon === '4 Year Warranty' %} 
+                        <div class="icon">
+                            <i class="fad fa-badge-check"></i>
+                            <span>4 Year Warranty</span>
+                        </div>
+
+                    {% elseif icon === '5 Year Warranty' %} 
+                        <div class="icon">
+                            <i class="fad fa-badge-check"></i>
+                            <span>5 Year Warranty</span>
+                        </div>
+
+                    {% elseif icon === 'Premium Quality' %} 
+                        <div class="icon">
+                            <i class="fad fa-award"></i>
+                            <span>Premium Quality</span>
+                        </div>
+
+                    {% elseif icon === 'Wifi Enabled' %} 
+                        <div class="icon">
+                            <i class="fad fa-wifi"></i>
+                            <span>Wifi Enabled</span>
+                        </div>
+
+                    {% endif %}
             {% endfor %}
           </div>
 
