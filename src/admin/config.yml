@@ -51,16 +51,30 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Description", name: "description", widget: "markdown"}
+      - { label: "Details", name: "details", widget: "text"}
       - { label: "Service Images", name: "image", widget: "image"}
      
       - label: "Features"
-        name: "serviceIncludes"
-        widget: "list"
-        label_singular: "Service Feature"
-        collapsed: true
-        fields: 
-          - { label: "Service Feature", name: "serviceFeature", widget: "string" }
+        name: "service-feature"
+        widget: "select"
+        options:
+          - { label: "Fast Installation", value: "Fast Installation" }
+          - { label: "Lower Energy Cost", value: "Lower Energy Cost" }
+          - { label: "Eco-Friendly", value: " Eco-Friendly" }
+          - { label: "Annual Inspection Req.", value: "Annual Inspection Req." }
+          - { label: "Special Savings", value: "Special Savings" }
+          - { label: "Cleaner Water", value: "Cleaner Water" }
+          - { label: "Instant Hot Water", value: "Instant Hot Water" }
+          - { label: "Lifetime Warranty", value: "Lifetime Warranty" }
+          - { label: "1 Year Warranty", value: "1 Year Warranty" }
+          - { label: "2 Year Warranty", value: "2 Year Warranty" }
+          - { label: "3 Year Warranty", value: "3 Year Warranty" }
+          - { label: "4 Year Warranty", value: "4 Year Warranty" }
+          - { label: "5 Year Warranty", value: "1 Year Warranty" }
+          - { label: "Premium Quality", value: "Premium Quality" }
+          - { label: "Wifi Enabled", value: "Wifi Enabled" }
+
+
 
       - label: "Icons"
         name: "serviceIcons"

@@ -9,7 +9,7 @@ layout: default
 
         <h2>BRAND NAME</h2>
 
-        <h1>Animated Night Hill Illustrations</h1>
+        <h1>{{title}}</h1>
 
         <div class="serviceInfo__tabs">
           <a @click.prevent="tab = 'tab1'" :class="{'activeLink': tab === 'tab1'}" class="tabLink">Description</a>
@@ -18,7 +18,7 @@ layout: default
         </div>
         <div class="serviceInfo__description" x-show="tab === 'tab1'">
 
-          <p>Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean.</p>
+          <p>{{snippet}}</p>
           <div class="serviceInfo__description__icons">
             <div class="icon">
               <i class="fad fa-rabbit-fast"></i>
