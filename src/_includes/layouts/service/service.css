@@ -8,7 +8,7 @@
         container 
         px-5 
         lg:px-0 
-        py-24 
+        py-16 
         mx-auto;
 
         .service__container__wrap{
@@ -35,7 +35,7 @@
                 lg:w-1/2 
                 w-full 
                 lg:pl-10 
-                lg:py-6 
+                lg:pb-6 
                 mb-6 
                 lg:mb-0;
 
@@ -43,8 +43,7 @@
                     @apply
                     text-sm 
                     text-gray-500 
-                    tracking-widest 
-                    mt-4;
+                    tracking-widest;
                 }
 
                 h1{
@@ -137,8 +136,10 @@
                             rounded 
                             shadow 
                             px-4 
-                            py-2 
+                            py-2
+                            lg:py-3 
                             mx-4
+                            lg:mx-0
                             text-white; 
 
                             i{
