@@ -182,7 +182,7 @@ header{
                 lg:col-span-6 
                 lg:col-start-3;
 
-                &__wrapper{
+                .navLinks__wrapper{
                     @apply
                     flex 
                     flex-col 
@@ -226,7 +226,7 @@ header{
                                 flex-wrap
                                 items-start;
 
-                                &__icon{
+                                .navLinks__wrapper__item__icon{
                                     @apply
                                     flex 
                                     w-1/3 
@@ -236,7 +236,7 @@ header{
                                     lg:hidden;
                                 }
                                 
-                                &__container{
+                                .navLinks__wrapper__item__container{
                                     @apply
                                     flex 
                                     w-2/3 
@@ -244,7 +244,7 @@ header{
                                     lg:w-full 
                                     lg:flex-row;
 
-                                    &__wrap{
+                                    .navLinks__wrapper__item__container__wrap{
                                         @apply
                                         flex 
                                         items-center;
@@ -295,7 +295,7 @@ header{
                                                 lg:items-center;
                                                 
                                                 
-                                                &__icon{
+                                                .subMenuItem__icon{
                                                     @apply
                                                     flex
                                                     items-center
@@ -311,7 +311,7 @@ header{
                                                         lg:pr-2;
                                                     }
                                                 }
-                                                &__title{
+                                                .subMenuItem__title{
                                                     @apply
                                                     flex 
                                                     items-center
@@ -325,11 +325,11 @@ header{
                                                 }
                                             }
 
-                                            &:first-child{
+                                            li:first-child{
                                                 @apply 
                                                 lg:border-t;
                                             }
-                                            &:last-child{
+                                            li:last-child{
                                                 @apply lg:rounded-b;
                                             }
                                         }
