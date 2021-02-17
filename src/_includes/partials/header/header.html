@@ -49,7 +49,7 @@ x-bind:class="{
     </div>
   </div>
 
-  <nav x-bind:class="{'animate__fadeOut': document.documentElement.clientWidth < '1023' && !menuOpen, 'animate__animated': document.documentElement.clientWidth < '1023'}" x-show.immediate=" menuOpen || document.documentElement.clientWidth > '1023' " x-transition:enter="animate__slideInDown animate__faster" x-transition:leave=" animate__faster">
+  <nav x-bind:class="{'animate__fadeOut': document.documentElement.clientWidth <= '1023' && !menuOpen, 'animate__animated': document.documentElement.clientWidth <= '1023'}" x-show.immediate=" menuOpen || document.documentElement.clientWidth > '1023' " x-transition:enter="animate__slideInDown animate__faster" x-transition:leave=" animate__faster">
 
     <!-- Logo -->
     <div class="logo">

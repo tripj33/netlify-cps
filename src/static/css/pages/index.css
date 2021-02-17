@@ -9,7 +9,7 @@
     pt-8 
     pb-12;
 
-    &__container{
+    .serviceCatCards__container{
         @apply
         container 
         grid 
@@ -44,13 +44,13 @@
         hover:scale-105
         group;
 
-        &__wrapper{
+        .serviceCatCards__card__wrapper{
             @apply
             flex 
             flex-col 
             justify-center;
 
-            &__image{
+            .serviceCatCards__card__wrapper__image{
                 @apply
                 w-full
                 py-4 
@@ -70,13 +70,13 @@
                 }
             }
             
-            &__bodyWrap{
+            .serviceCatCards__card__wrapper__bodyWrap{
                 @apply
                 flex 
                 flex-col 
                 mx-auto;
 
-                &__content{
+                .serviceCatCards__card__wrapper__bodyWrap__content{
                     @apply
                     flex 
                     flex-col 
@@ -84,7 +84,7 @@
                     pb-4
                     bg-white;
 
-                   &__title{
+                   .serviceCatCards__card__wrapper__bodyWrap__content__title{
                        @apply
                        flex 
                        justify-center 
@@ -112,7 +112,7 @@
                    }
                 }
 
-                &__bottom{
+                .serviceCatCards__card__wrapper__bodyWrap__bottom{
                     @apply
                     flex 
                     w-full 

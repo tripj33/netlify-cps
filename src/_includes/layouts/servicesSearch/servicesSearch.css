@@ -1,5 +1,5 @@
 .servicesHero{
-    &__wrapper{
+    .servicesHero__wrapper{
         @apply
         container 
         mx-auto 
@@ -10,7 +10,7 @@
         flex-col 
         items-center;
 
-        &__text{
+        .servicesHero__wrapper__text{
             @apply
             lg:flex-grow 
             md:w-1/2 
@@ -46,7 +46,7 @@
             }
         }
 
-        &__img{
+        .servicesHero__wrapper__img{
             @apply
             lg:max-w-lg 
             lg:w-full 
@@ -74,7 +74,7 @@
         text-4xl;
     }
 
-    &__wrapper{
+    .serviceSearch__wrapper{
         @apply
         container 
         pt-8 
@@ -97,7 +97,7 @@
             py-3;
         }
 
-        &__header{
+        .serviceSearch__wrapper__header{
             @apply
             flex 
             w-full 
@@ -130,7 +130,7 @@
             
         }
 
-        &__serviceResults{
+        .serviceSearch__wrapper__serviceResults{
             @apply
             mt-4 
             grid 
@@ -226,19 +226,19 @@
             }
         }
 
-        &__pag{
+        .serviceSearch__wrapper__pag{
             @apply
             flex 
             w-full;
 
-            &__spacer{
+            .serviceSearch__wrapper__pag__spacer{
                 @apply
                 flex 
                 justify-center 
                 items-center 
                 w-1/4;
             }
-            &__results{
+            .serviceSearch__wrapper__pag__results{
                 @apply
                 flex 
                 w-1/2 
@@ -258,14 +258,14 @@
                         leading-5 
                         text-gray-700;
 
-                        &__count{
+                        .resultsContainer__count{
                             @apply
                             w-full 
                             sm:w-auto 
                             text-center 
                             sm:text-left;
                         }
-                        &__total{
+                        .resultsContainer__total{
                             @apply
                             w-full 
                             sm:w-auto 
@@ -278,7 +278,7 @@
                             }
                         }
 
-                        &__noResults{
+                        .resultsContainer__noResults{
                             @apply
                             mx-auto 
                             flex 
@@ -295,7 +295,7 @@
                 }
             }
 
-            &__buttons{
+            .serviceSearch__wrapper__pag__buttons{
                 @apply
                 flex 
                 w-1/4 
@@ -312,14 +312,14 @@
             }
         }
 
-        &__articleResults{
+        .serviceSearch__wrapper__articleResults{
             @apply
             container 
             px-2 
             pt-4 
             mx-auto;
         
-            &__wrapper{
+            .serviceSearch__wrapper__articleResults__wrapper{
                 @apply
                 flex 
                 flex-wrap 
@@ -330,7 +330,7 @@
                     p-4 
                     md:w-1/3;
 
-                    &__container{
+                    .articleCard__container{
                         @apply
                         h-full 
                         border-2 
@@ -348,7 +348,7 @@
                             object-center;
                         }
 
-                        &__text{
+                        .articleCard__container__text{
                             @apply
                             p-6;
 
@@ -372,7 +372,7 @@
                                 leading-relaxed 
                                 mb-3;
                             }
-                            &__read{
+                            .articleCard__container__text__read{
                                 @apply
                                 flex 
                                 items-center 
