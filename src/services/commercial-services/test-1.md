@@ -5,10 +5,7 @@ snippet: test-1-snippet
 description: test-1-markdown
 details: test-details
 image: /static/img/space.jpg
-service-feature:
-  - Fast Installation
-  - Annual Inspection Req.
-  - Lifetime Warranty
+service-feature: Lower Energy Cost
 serviceIcons:
   - serviceIcon: z
     iconTitle: z
