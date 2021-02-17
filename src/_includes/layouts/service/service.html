@@ -19,6 +19,7 @@ layout: default
         <div class="serviceInfo__description" x-show="tab === 'tab1'">
 
           <p>{{snippet}}</p>
+          {{service-faqs[0].faqs.question}}
           <div class="serviceInfo__description__icons">
             {% for icon in feature %}
 

@@ -53,6 +53,12 @@ collections:
       - { label: "Snippet", name: "snippet", widget: "string"}
       - { label: "Details", name: "details", widget: "text"}
       - { label: "Service Images", name: "image", widget: "image"}
+      - { label: "Chat Link", name: "chatLink", widget: "string"}
+      - label: "Features"
+        name: "feature"
+        widget: "select"
+        multiple: true
+        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
       - label: "Service FAQs"
         name: "service-faqs"
         widget: "list"
@@ -64,13 +70,7 @@ collections:
             fields:
               - {label: "Question", name: "question", widget: string}
               - {label: "Answer", name: "answer", widget: string}
-      - label: "Features"
-        name: "feature"
-        widget: "select"
-        multiple: true
-        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
-
-
+      
       # - label: "Icons"
       #   name: "serviceIcons"
       #   widget: "list"
@@ -84,61 +84,65 @@ collections:
     serviceCategory: "Residential Service"
     name: "residential-services"
     folder: "src/services/residential-services"
-    slug: "{{pageURL}}"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Page URL", name: "pageURL", widget: "string"}
-      - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Description", name: "description", widget: "markdown"}
-      - { label: "Service Images", name: "image", widget: "image"}
-     
-      - label: "Features"
-        name: "serviceIncludes"
-        widget: "list"
-        label_singular: "Service Feature"
-        collapsed: true
-        fields: 
-          - { label: "Service Feature", name: "serviceFeature", widget: "string" }
-
-      - label: "Icons"
-        name: "serviceIcons"
-        widget: "list"
-        label_singular: "icon"
-        collapsed: true
-        fields: 
-          - { label: "Service Icon", name: "serviceIcon", widget: "string" }
-          - { label: "Icon Title", name: "iconTitle", widget: "string" }
-
-  - label: "New Construction Services"
-    serviceCategory: "New Construction Service"
-    name: "new-construction-services"
-    folder: "src/services/new-construction-services"
+    identifier_field: name
+    # extension: "json"
     slug: "{{fields.slug}}"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Description", name: "description", widget: "markdown"}
+      - { label: "Details", name: "details", widget: "text"}
       - { label: "Service Images", name: "image", widget: "image"}
-     
+      - { label: "Chat Link", name: "chatLink", widget: "string"}
       - label: "Features"
-        name: "serviceIncludes"
+        name: "feature"
+        widget: "select"
+        multiple: true
+        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
+      - label: "Service FAQs"
+        name: "service-faqs"
         widget: "list"
-        label_singular: "Service Feature"
-        collapsed: true
-        fields: 
-          - { label: "Service Feature", name: "serviceFeature", widget: "string" }
+        summary: '{{fields.quote}} - {{fields.author.name}}'
+        fields:
+          - label: "FAQs"
+            name: "faqs"
+            widget: object
+            fields:
+              - {label: "Question", name: "question", widget: string}
+              - {label: "Answer", name: "answer", widget: string}
 
-      - label: "Icons"
-        name: "serviceIcons"
+  - label: "New Construction Services"
+    serviceCategory: "New Construction Service"
+    name: "new-construction-services"
+    folder: "src/services/new-construction-services"
+    identifier_field: name
+    # extension: "json"
+    slug: "{{fields.slug}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "slug", widget: "string"}
+      - { label: "Snippet", name: "snippet", widget: "string"}
+      - { label: "Details", name: "details", widget: "text"}
+      - { label: "Service Images", name: "image", widget: "image"}
+      - { label: "Chat Link", name: "chatLink", widget: "string"}
+      - label: "Features"
+        name: "feature"
+        widget: "select"
+        multiple: true
+        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
+      - label: "Service FAQs"
+        name: "service-faqs"
         widget: "list"
-        label_singular: "icon"
-        collapsed: true
-        fields: 
-          - { label: "Service Icon", name: "serviceIcon", widget: "string" }
-          - { label: "Icon Title", name: "iconTitle", widget: "string" }
+        summary: '{{fields.quote}} - {{fields.author.name}}'
+        fields:
+          - label: "FAQs"
+            name: "faqs"
+            widget: object
+            fields:
+              - {label: "Question", name: "question", widget: string}
+              - {label: "Answer", name: "answer", widget: string}
 
   
 
