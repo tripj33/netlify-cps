@@ -42,9 +42,9 @@ collections:
     serviceCategory: "Commercial Service"
     name: "commercial-services"
     folder: "src/services/commercial-services"
-    file: "src/services/commercial-services_index.json"
+    # file: "src/services/commercial-services_index.json"
     identifier_field: name
-    extension: "json"
+    # extension: "json"
     slug: "{{fields.slug}}"
     create: true
     fields:

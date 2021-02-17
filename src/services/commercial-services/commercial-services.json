@@ -1,6 +1,6 @@
 {
-    "layout": "layouts/service/service.html",
+    "layout": "services",
     "tags": [
-        "service"
+        "commercialServices"
     ]
 }
