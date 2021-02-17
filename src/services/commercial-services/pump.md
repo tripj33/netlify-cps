@@ -4,5 +4,8 @@ slug: pump
 snippet: pump snippet
 details: pump details
 image: /static/img/unnamed.jpg
-feature: Instant Hot Water
+feature:
+  - Fast Installation
+  - Lower Energy Cost
+  - Eco-Friendly
 ---
