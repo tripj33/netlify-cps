@@ -64,12 +64,8 @@ collections:
         widget: "list"
         summary: '{{fields.quote}} - {{fields.author.name}}'
         fields:
-          - label: "FAQs"
-            name: "faqs"
-            widget: object
-            fields:
-              - {label: "Question", name: "question", widget: string}
-              - {label: "Answer", name: "answer", widget: string}
+            - {label: "Question", name: "question", widget: string}
+            - {label: "Answer", name: "answer", widget: string}
       
       # - label: "Icons"
       #   name: "serviceIcons"
