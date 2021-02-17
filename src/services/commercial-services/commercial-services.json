@@ -1,5 +1,5 @@
 {
-    "layout": "layouts/service/service",
+    "layout": "layouts/service/service.html",
     "tags": [
         "service"
     ]
