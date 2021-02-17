@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% import "../../components/serviceIcons/serviceIcons.html" as icons %}
+
+
 <section class="service" x-data="{tab: 'tab1', faq: ''}">
   <div class="service__container">
     <div class="service__container__wrap">
@@ -20,14 +23,7 @@ layout: default
 
           <p>{{snippet}}</p>
           <div class="serviceInfo__description__icons">
-            <div class="icon">
-              <i class="fad fa-rabbit-fast"></i>
-              <span>Fast Installation</span>
-            </div>
-            <div class="icon">
-              <i class="fad fa-award"></i>
-              <span>Lifetime Warrant</span>
-            </div>
+            {{icons.icons(serviceFeature)}}
           </div>
 
           <div class="serviceInfo__description__buttons">

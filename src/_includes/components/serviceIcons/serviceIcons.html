@@ -1,4 +1,6 @@
-{% for feature in service-feature %}
+{% macro icons(serviceIcons) %}
+
+{% for feature in serviceIcons %}
 
 {% if feature === 'Fast Installation' %}
     <div class="icon">
@@ -86,3 +88,5 @@
 
 
 {% endfor %}
+
+{% endmacro %}
