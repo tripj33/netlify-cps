@@ -132,13 +132,13 @@ collections:
         widget: "select"
         multiple: true
         options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
-      - label: "Service FAQs"
-        name: "service-faqs"
-        widget: "list"
-        summary: '{{fields.question}}'
-        fields:
-            - {label: "Question", name: "question", widget: string}
-            - {label: "Answer", name: "answer", widget: string}
+      # - label: "Service FAQs"
+      #   name: "service-faqs"
+      #   widget: "list"
+      #   summary: '{{fields.question}}'
+      #   fields:
+      #       - {label: "Question", name: "question", widget: string}
+      #       - {label: "Answer", name: "answer", widget: string}
 
   
 
