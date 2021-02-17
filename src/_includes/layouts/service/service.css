@@ -90,16 +90,17 @@
 
                     .serviceInfo__description__icons{
                         @apply
-                        flex 
                         flex-wrap 
                         border-t 
                         border-b 
+                        flex
                         border-gray-200 
                         py-2 
                         justify-around; 
 
                         .icon{
                             @apply
+                            
                             flex 
                             flex-col 
                             text-gray-500;
