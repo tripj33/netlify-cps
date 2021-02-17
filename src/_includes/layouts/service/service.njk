@@ -6,10 +6,10 @@ layout: default
 <section class="service" x-data="{tab: 'tab1', faq: ''}">
   <div class="service__container">
     <div class="service__container__wrap">
-      <img alt="" class="serviceImg" src="https://dummyimage.com/400x400">
+      <img alt="" class="serviceImg" src="{{image}}">
       <div class="serviceInfo">
 
-        <h2>BRAND NAME</h2>
+        <h2>{{serviceCategory}}</h2>
 
         <h1>{{title}}</h1>
 
@@ -21,8 +21,10 @@ layout: default
         <div class="serviceInfo__description" x-show="tab === 'tab1'">
 
           <p>{{snippet}}</p>
+          <h1>{{serviceIcons}}</h1>
+          
           <div class="serviceInfo__description__icons">
-            {% for feature in service-feature %}
+            {% for feature in serviceIcons %}
 
             {% if feature === 'Fast Installation' %}
                 <div class="icon">
@@ -165,13 +167,7 @@ layout: default
 
         </div>
         <div class="serviceInfo__details" x-show="tab === 'tab3'">
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+            {{details}}
         </div>
       </div>
 
