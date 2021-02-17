@@ -122,7 +122,12 @@
                         @apply
                         flex 
                         mt-4 
-                        justify-around;
+                        justify-around
+                        flex-col
+                        sm:flex-row
+                        w-4/5
+                        m-auto
+                        sm:w-full;
                         
                         button{
                             @apply
@@ -133,6 +138,7 @@
                             shadow 
                             px-4 
                             py-2 
+                            mx-4
                             text-white; 
 
                             i{
