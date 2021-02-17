@@ -66,7 +66,9 @@
                     max-w-full 
                     h-auto 
                     align-middle 
-                    border-none;
+                    border-none
+                    lg:w-4/5
+                    lg:mx-auto;
                 }
             }
             
@@ -123,7 +125,8 @@
                     rounded-b-xl 
                     py-4 
                     px-8
-                    md:px-3;
+                    md:px-3
+                    xl:px-8;
 
                  
                         span{

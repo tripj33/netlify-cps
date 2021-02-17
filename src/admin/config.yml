@@ -39,6 +39,7 @@ collections:
         options: ["Tags", "created", "from", "config.yml"]
 
   - label: "Commercial Services"
+    serviceCategory: "Commercial Service"
     name: "commercial-services"
     folder: "src/services/commercial-services"
     file: "src/services/commercial-services_index.json"
@@ -71,6 +72,7 @@ collections:
           - { label: "Icon Title", name: "iconTitle", widget: "string" }
 
   - label: "Residential Services"
+    serviceCategory: "Residential Service"
     name: "residential-services"
     folder: "src/services/residential-services"
     slug: "{{pageURL}}"
@@ -100,6 +102,7 @@ collections:
           - { label: "Icon Title", name: "iconTitle", widget: "string" }
 
   - label: "New Construction Services"
+    serviceCategory: "New Construction Service"
     name: "new-construction-services"
     folder: "src/services/new-construction-services"
     slug: "{{fields.slug}}"
