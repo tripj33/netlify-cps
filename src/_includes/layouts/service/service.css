@@ -3,7 +3,7 @@
     text-gray-600 
     overflow-hidden;
 
-    &__container{
+    .service__container{
         @apply
         container 
         px-5 
@@ -11,7 +11,7 @@
         py-24 
         mx-auto;
 
-        &__wrap{
+        .service__container__wrap{
             @apply
             xl:w-4/5 
             mx-auto 
@@ -55,7 +55,7 @@
                     mb-4;
                 }
 
-                &__tabs{
+                .serviceInfo__tabs{
                     @apply 
                     flex
                     mb-4;
@@ -80,7 +80,7 @@
                     
                 }
                 
-                &__description{
+                .serviceInfo__description{
 
                     p{
                         @apply
@@ -88,7 +88,7 @@
                         mb-4;
                     }
 
-                    &__icons{
+                    .serviceInfo__description__icons{
                         @apply
                         flex 
                         flex-wrap 
@@ -117,7 +117,7 @@
                         }
                     }
 
-                    &__buttons{
+                    .serviceInfo__description__buttons{
                         @apply
                         flex 
                         mt-4 
@@ -153,9 +153,9 @@
                     }
                 }
 
-                &__faqs{
+                .serviceInfo__faqs{
 
-                    &__container{
+                    .serviceInfo__faqs__container{
                         @apply
                         bg-white 
                         mx-auto 
@@ -165,7 +165,7 @@
                             @apply
                             mb-4;
 
-                            &__container{
+                            .faq__container{
                                 @apply
                                 flex 
                                 items-center 
@@ -199,7 +199,7 @@
 
                 }
 
-                &__details{
+                .serviceInfo__details{
                      p{
 
                      }
