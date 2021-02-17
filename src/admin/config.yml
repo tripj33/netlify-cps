@@ -57,6 +57,7 @@ collections:
       - label: "Features"
         name: "service-feature"
         widget: "select"
+        multiple: true
         options:
           - { label: "Fast Installation", value: "Fast Installation" }
           - { label: "Lower Energy Cost", value: "Lower Energy Cost" }
