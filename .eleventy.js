@@ -43,7 +43,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(respimg);
   eleventyConfig.addPassthroughCopy("static/img");
-  eleventyConfig.addPassthroughCopy({"./src/services":"./_site/services"});
+  eleventyConfig.addPassthroughCopy({"/services"});
 
 // Responsive Images
 
