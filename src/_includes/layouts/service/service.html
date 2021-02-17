@@ -10,6 +10,7 @@ layout: default
       <div class="serviceInfo">
 
         <h2>{{serviceCategory}}</h2>
+        <h1>{{title}}</h1>
 
         <div class="serviceInfo__tabs">
           <a @click.prevent="tab = 'tab1'" :class="{'activeLink': tab === 'tab1'}" class="tabLink">Description</a>
@@ -19,7 +20,9 @@ layout: default
         <div class="serviceInfo__description" x-show="tab === 'tab1'">
 
           <p>{{snippet}}</p>
-          {{service-faqs[0].faqs.question}}
+
+          {{service-faqs.faqs[0].answer}}
+
           <div class="serviceInfo__description__icons">
             {% for icon in feature %}
 

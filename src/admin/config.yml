@@ -135,14 +135,10 @@ collections:
       - label: "Service FAQs"
         name: "service-faqs"
         widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
+        summary: '{{fields.question}}'
         fields:
-          - label: "FAQs"
-            name: "faqs"
-            widget: object
-            fields:
-              - {label: "Question", name: "question", widget: string}
-              - {label: "Answer", name: "answer", widget: string}
+            - {label: "Question", name: "question", widget: string}
+            - {label: "Answer", name: "answer", widget: string}
 
   
 
