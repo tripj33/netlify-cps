@@ -57,6 +57,7 @@ collections:
       - label: "Features"
         name: "feature"
         widget: "select"
+        multiple: true
         options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
 
 
