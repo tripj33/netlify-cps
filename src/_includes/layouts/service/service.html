@@ -10,6 +10,9 @@ layout: default
       <div class="serviceInfo">
 
         <h2>{{serviceCategory}}</h2>
+
+            <h3>{{service}}</h3>
+
         <h1>{{title}}</h1>
 
         <div class="serviceInfo__tabs">
@@ -21,8 +24,7 @@ layout: default
 
           <p>{{snippet}}</p>
 
-          {{service-faqs.faqs[0].answer}}
-
+       
           <div class="serviceInfo__description__icons">
             {% for icon in feature %}
 
@@ -127,42 +129,24 @@ layout: default
         <div class="serviceInfo__faqs" x-show="tab === 'tab2'">
 
           <div class="serviceInfo__faqs__container">
-            <div @click="faq = 'faq1'" class="faq">
+            
+
+             {% for faq in serviceFaqs %}
+                <div @click="faq = 'faq{{loop.index}}'" class="faq">
               <div class="faq__container">
-                Lorem ipsum dolor sit amet?
+                {{faq.question}}
+                
                 <span>
                   <i class="far fa-plus"></i>
                 </span>
               </div>
-              <div x-show="faq === 'faq1'" class="p-3">
-                <p class="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed nulla porttitor, porttitor arcu ut, dictum augue. Vestibulum consequat in urna in bibendum. Praesent sed magna risus. Nunc elementum in mauris ac pharetra. Ut blandit ut lorem sit amet rutrum. Vivamus ut purus fringilla, euismod nibh ut, blandit.</p>
-                <p class="text-gray-600">Nunc ac efficitur sapien. Mauris eu lectus odio. Mauris ac erat tortor. Nulla consectetur commodo justo. Pellentesque eget ornare quam. Pellentesque sodales metus non semper luctus. Praesent non ornare tellus, eget vulputate tellus. Donec luctus non sapien sed semper.</p>
+              <div x-show="faq === 'faq{{loop.index}}'" class="p-3">
+                {{faq.answer}}
               </div>
             </div>
-            <div @click="faq = 'faq2'" class="faq">
-              <div class="faq__container">
-                Lorem ipsum dolor sit amet?
-                <span>
-                  <i class="far fa-plus"></i>
-                </span>
-              </div>
-              <div x-show="faq === 'faq2'" class="p-3">
-                <p class="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed nulla porttitor, porttitor arcu ut, dictum augue. Vestibulum consequat in urna in bibendum. Praesent sed magna risus. Nunc elementum in mauris ac pharetra. Ut blandit ut lorem sit amet rutrum. Vivamus ut purus fringilla, euismod nibh ut, blandit.</p>
-                <p class="text-gray-600">Nunc ac efficitur sapien. Mauris eu lectus odio. Mauris ac erat tortor. Nulla consectetur commodo justo. Pellentesque eget ornare quam. Pellentesque sodales metus non semper luctus. Praesent non ornare tellus, eget vulputate tellus. Donec luctus non sapien sed semper.</p>
-              </div>
-            </div>
-            <div @click="faq = 'faq3'" class="faq">
-              <div class="faq__container">
-                Lorem ipsum dolor sit amet?
-                  <span>
-                    <i class="far fa-plus"></i>
-                  </span>
-              </div>
-              <div x-show="faq === 'faq3'" class="p-3">
-                <p class="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed nulla porttitor, porttitor arcu ut, dictum augue. Vestibulum consequat in urna in bibendum. Praesent sed magna risus. Nunc elementum in mauris ac pharetra. Ut blandit ut lorem sit amet rutrum. Vivamus ut purus fringilla, euismod nibh ut, blandit.</p>
-                <p class="text-gray-600">Nunc ac efficitur sapien. Mauris eu lectus odio. Mauris ac erat tortor. Nulla consectetur commodo justo. Pellentesque eget ornare quam. Pellentesque sodales metus non semper luctus. Praesent non ornare tellus, eget vulputate tellus. Donec luctus non sapien sed semper.</p>
-              </div>
-            </div>
+            {% endfor %}
+
+            
           </div>
 
         </div>

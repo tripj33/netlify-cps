@@ -62,7 +62,7 @@ collections:
       - label: "Service FAQs"
         name: "service-faqs"
         widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
+        summary: '{{fields.Question}}}'
         fields:
             - {label: "Question", name: "question", widget: string}
             - {label: "Answer", name: "answer", widget: string}
@@ -97,16 +97,12 @@ collections:
         multiple: true
         options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
       - label: "Service FAQs"
-        name: "service-faqs"
+        name: "serviceFaqs"
         widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
+        summary: '{{fields.question}}'
         fields:
-          - label: "FAQs"
-            name: "faqs"
-            widget: object
-            fields:
-              - {label: "Question", name: "question", widget: string}
-              - {label: "Answer", name: "answer", widget: string}
+            - {label: "Question", name: "question", widget: string}
+            - {label: "Answer", name: "answer", widget: string}
 
   - label: "New Construction Services"
     serviceCategory: "New Construction Service"
