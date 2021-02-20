@@ -1,7 +1,7 @@
 backend:
   # Use netlify identity as backend
   name: git-gateway
-  branch: master
+  # branch: master
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
@@ -9,7 +9,12 @@ media_folder: "src/static/img"
 public_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
-local_backend: true
+local_backend:
+  # when using a custom proxy server port
+  url: http://localhost:8082/api/v1
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+  allowed_hosts: ['https://8080-azure-termite-9na9sy9h.ws-us03.gitpod.io/']
+
 # publish_mode: editorial_workflow
 collections:
   - label: "Articles"
@@ -226,7 +231,7 @@ collections:
     encoding: "ascii"
     clean_accents: true
     sanitize_replacement: "-"
-    nested: { depth: 100 } # accepts an optional summary template
+    nested: { depth: 100, summary: '{{title}}' } # accepts an optional summary template
     fields:
       - label: Title
         name: title
@@ -234,7 +239,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
   
           
 
