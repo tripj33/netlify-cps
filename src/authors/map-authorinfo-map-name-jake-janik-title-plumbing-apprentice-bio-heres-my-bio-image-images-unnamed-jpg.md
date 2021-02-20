@@ -2,6 +2,6 @@
 authorInfo:
   name: Jake Janik
   title: Plumbing Apprentice
-  bio: This is my Bio
+  bio: Heres My Bio
   image: /images/unnamed.jpg
 ---
