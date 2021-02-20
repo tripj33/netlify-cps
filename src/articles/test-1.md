@@ -6,7 +6,6 @@ description: test 1 description
 snippet: test 1 snippet
 image: /static/img/space.jpg
 author: Jake Janik
-date: February 19th 2021
 intro: Post 1 markdown
 articleSection:
   - sectionName: Section 1
@@ -15,3 +14,4 @@ articleSection:
 tags:
   - waterFiltration
 ---
+{{tags}}

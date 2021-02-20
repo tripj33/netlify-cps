@@ -14,7 +14,7 @@ local_backend: true
 collections:
   - label: "Articles"
     name: "article"
-    folder: "src/articles"
+    folder: "src/articles/{{fields.tags[0]}}"
     slug: "{{fields.slug}}"
     create: true
     fields:
