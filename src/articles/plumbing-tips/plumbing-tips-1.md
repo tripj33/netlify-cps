@@ -5,7 +5,7 @@ slug: tips1
 tags: plumbing-tips
 description: sf
 snippet: sdfg
-image: space.jpeg
+image: plumber-working-on-water-lines.jpeg
 intro: etrty
 articleSection:
   - sectionName: rt
