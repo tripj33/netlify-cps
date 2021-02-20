@@ -6,7 +6,7 @@ backend:
   # name: github
   # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
-public_folder: "static/img"
+public_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -18,6 +18,8 @@ collections:
     label_singular: "Article"
     folder: "src/articles"
     path: "{{tags}}/{{slug}}"
+    media_folder: '/images'
+    public_folder: '/images'
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -35,7 +37,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Snippet", name: "snippet", widget: "string" }
       - { label: "Header Image", name: "image", widget: "image"}
-      # - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["authorInfo.name"], value_field: "nameInfo"}
+      - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name"}
       # - { label: "Publish Date", name: "date", widget: "date", format: "DD MM YYYY hh:mm:ss" }
       - { label: "Intro Section", name: "intro", widget: "markdown"}
       - label: "Article Section"
@@ -146,19 +148,16 @@ collections:
   - label: "Authors"
     name: "authors"
     folder: "src/authors"
+    identifier_field: name
     create: true
-    identifier_field: "authorInfo"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Author Info"
-        name: "authorInfo"
-        widget: "object"
-        collapsed: true
-        fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Title", name: "title", widget: "string"}
-          - { label: "Bio", name: "bio", widget: "text"}
-          - { label: "Service Images", name: "image", widget: "image", media_folder: "/images" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Bio", name: "bio", widget: "text"}
+      -  label: "Service Images" 
+         name: "image"
+         widget: "image"
+         media_folder: "/images"
 
           
   
