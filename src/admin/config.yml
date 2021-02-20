@@ -9,21 +9,18 @@ media_folder: "src/static/img"
 public_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
-local_backend:
-  # when using a custom proxy server port
-  url: http://localhost:8082/api/v1
-  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
-  allowed_hosts: ['https://8080-azure-termite-9na9sy9h.ws-us03.gitpod.io/']
+local_backend: true
 
 # publish_mode: editorial_workflow
 collections:
   - label: "Articles"
     name: "article"
+    label_singular: "Article"
     folder: "src/articles"
     path: "src/articles/{{tags}}/{{slug}}"
+    media_folder: ''
+    public_folder: ''
     create: true
-    allow_nesting: true
-    label_singular: "article-test"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Featured Article", name: "featured", widget: "boolean"}
@@ -32,7 +29,7 @@ collections:
       - { label: "Snippet", name: "snippet", widget: "string" }
       - { label: "Header Image", name: "image", widget: "image"}
       - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name"}
-      # - { label: "Publish Date", name: "date", widget: "date", format: "MMMM Do YYYY" }
+      - { label: "Publish Date", name: "date", widget: "date", format: "DD MM YYYY hh:mm:ss" }
       - { label: "Intro Section", name: "intro", widget: "markdown"}
       - label: "Article Section"
         name: "articleSection"
@@ -48,10 +45,10 @@ collections:
         name: "tags"
         multiple: false
         options: 
-          -  { label: "Water Filtration", value: "waterFiltration" }
-          -  { label: "Plumbing Tips", value: "plumbingTips" }
+          -  { label: "Water Filtration", value: "water-filtration" }
+          -  { label: "Plumbing Tips", value: "plumbing-tips" }
           -  { label: "DIY", value: "diy" }
-          -  { label: "Ask A Plumber", value: "askAPlumber" }
+          -  { label: "Ask A Plumber", value: "ask-a-plumber" }
 
   - label: "Commercial Services"
     serviceCategory: "Commercial Service"
