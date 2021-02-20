@@ -4,7 +4,7 @@ backend:
   branch: master
   ### enable below lines for github integration ###
   # name: github
-  # repo: tripj/neat-starter
+  # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
@@ -14,7 +14,7 @@ local_backend: true
 collections:
   - label: "Articles"
     name: "article"
-    folder: "src/articles/{{fields.tags[0]}}"
+    folder: "src/articles"
     slug: "{{fields.slug}}"
     create: true
     fields:
