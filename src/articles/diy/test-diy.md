@@ -5,7 +5,7 @@ slug: diy-test
 tags: diy
 description: jjhjhgljg
 snippet: lhgljgjh
-image: static/img/zoeller-m53-sump-pump.png
+image: static/img/commercial-plumbing-services.jpg
 intro: fgiuuh;k;
 articleSection:
   - sectionName: oiuhh
