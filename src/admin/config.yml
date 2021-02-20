@@ -19,8 +19,8 @@ local_backend:
 collections:
   - label: "Articles"
     name: "article"
-    folder: "src/articles/"
-    slug: "{{fields.slug}}"
+    folder: "src/articles"
+    path: "src/articles/{{tags}}/{{slug}}"
     create: true
     allow_nesting: true
     label_singular: "article-test"
