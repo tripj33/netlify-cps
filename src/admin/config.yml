@@ -140,12 +140,16 @@ collections:
   - label: "Authors"
     name: "authors"
     folder: "src/authors"
+    identifier_field: name
     create: true
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Bio", name: "bio", widget: "text"}
-      - { label: "Service Images", name: "image", widget: "image"}
+      -  label: "Service Images" 
+         name: "image"
+         widget: "image"
+         media_folder: "/images"
 
           
   
