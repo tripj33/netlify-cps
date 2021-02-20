@@ -149,7 +149,7 @@ collections:
     name: "authors"
     folder: "src/authors"
     create: true
-    identifier_field: authorInfo
+    identifier_field: authorInfo.fields.name
     fields:
       - label: "Author Info"
         name: "authorInfo"
