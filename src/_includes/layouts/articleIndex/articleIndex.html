@@ -4,8 +4,16 @@ layout: default
 {%set length = collections.article | length%}
 <ul>
     
-    {{collections.article[length - 1].data.title}}
-<h2></h2>
+    <!-- {{collections.article[length - 1].data.title}} -->
+{%for post in collections.article%}
+
+    <h1 class="text-2xl">{{post.data.title}}</h1>
+    
+
+{%endfor%}
+{{collections.article | length}}
+{{collections.article[length - 1].data.title}}
+    <h2></h2>
 </ul>
 
 
@@ -22,7 +30,7 @@ layout: default
   <div class="featuredArticle">
     <div class="featuredArticle__card">
         <div class="featuredArticle__card__img">
-            <img src="/static/img/{{collections.article[length - 1].data.image}}"
+            <img src="{{collections.article[length - 1].url}}{{collections.article[length - 1].data.image}}"
                 alt="" />
             <svg viewBox="0 0 20 104"
                 fill="currentColor">
