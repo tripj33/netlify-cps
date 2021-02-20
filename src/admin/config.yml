@@ -32,7 +32,7 @@ collections:
       - { label: "Snippet", name: "snippet", widget: "string" }
       - { label: "Header Image", name: "image", widget: "image"}
       - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name"}
-      - { label: "Publish Date", name: "date", widget: "date", format: "MMMM Do YYYY" }
+      # - { label: "Publish Date", name: "date", widget: "date", format: "MMMM Do YYYY" }
       - { label: "Intro Section", name: "intro", widget: "markdown"}
       - label: "Article Section"
         name: "articleSection"
