@@ -20,6 +20,10 @@ module.exports = function (eleventyConfig) {
     "./src/services": "/services",
   });
   
+    eleventyConfig.addPassthroughCopy({
+    "./src/articles": "/articles",
+  });
+  
 
   // Alpine JS
   eleventyConfig.addPassthroughCopy({
@@ -30,6 +34,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/animate.css/animate.min.css": "./static/css/animate.css",
   });
+
+
 
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
