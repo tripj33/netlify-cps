@@ -18,8 +18,8 @@ collections:
     label_singular: "Article"
     folder: "src/articles"
     path: "{{tags}}/{{slug}}"
-    media_folder: "../../static/img"
-    public_folder: "../../static/img"
+    media_folder: "{{media_folder}}/articles"
+    public_folder: "{{media_folder}}/articles"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
