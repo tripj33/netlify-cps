@@ -37,7 +37,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Snippet", name: "snippet", widget: "string" }
       - { label: "Header Image", name: "image", widget: "image"}
-      - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: "name", value_field: "name"}
+      - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: "authorInfo", value_field: "nameInfo"}
       # - { label: "Publish Date", name: "date", widget: "date", format: "DD MM YYYY hh:mm:ss" }
       - { label: "Intro Section", name: "intro", widget: "markdown"}
       - label: "Article Section"
@@ -148,7 +148,6 @@ collections:
   - label: "Authors"
     name: "authors"
     folder: "src/authors"
-    identifier_field: name
     create: true
     fields:
       - label: "Author Info"
@@ -159,7 +158,10 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Bio", name: "bio", widget: "text"}
-          - { label: "Service Images", name: "image", widget: "image", media_folder: "/images"}
+          -  label: "Service Images" 
+             name: "image"
+             widget: "image"
+             media_folder: "/images"
 
           
   
