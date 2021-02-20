@@ -223,6 +223,9 @@ collections:
     label_singular: 'Page'
     folder: source/handbook
     create: true
+    encoding: "ascii"
+    clean_accents: true
+    sanitize_replacement: "-"
     nested: { depth: 100 } # accepts an optional summary template
     fields:
       - label: Title
@@ -231,7 +234,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: select, label: 'Article Category', index_file: '_index', name: 'articleCategory', options: [{label: 'Water Filtration', value: 'waterFiltration'}, {label: 'DIY', value: 'diy'}] } }
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
   
           
 
