@@ -231,7 +231,17 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: '_index' } }
+    meta: 
+      - path: 
+        - widget: select 
+          label: 'Article Category'
+          name: 'articleCategory'
+          index_file: '_index'  
+          options:
+            - { label: "Water Filtration", value: "water-filtration" }
+            - { label: "DIY", value: "diy" }
+            - { label: "Ask A Plumber", value: "ask-a-plumber" }
+            - { label: "Plumbing Tips", value: "plumbing-tips" }
   
           
 
