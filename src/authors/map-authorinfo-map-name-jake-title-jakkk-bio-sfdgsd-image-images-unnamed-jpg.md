@@ -1,7 +1,7 @@
 ---
 authorInfo:
   name: Jake
-  title: Plumber
-  bio: Test
+  title: Jakkk
+  bio: sfdgsd
   image: /images/unnamed.jpg
 ---
