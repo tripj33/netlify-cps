@@ -43,7 +43,11 @@
                     @apply
                     text-sm 
                     text-gray-500 
-                    tracking-widest;
+                    tracking-widest
+                    uppercase 
+                    mb-4
+                    mt-6
+                    lg:my-0;
                 }
 
                 h1{
@@ -139,6 +143,7 @@
                             py-2
                             lg:py-3 
                             mx-4
+                            my-2
                             lg:mx-0
                             text-white; 
 

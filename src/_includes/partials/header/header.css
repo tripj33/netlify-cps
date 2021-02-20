@@ -213,7 +213,7 @@ header{
                            lg:w-auto 
                            lg:px-4;
 
-                           a{
+                           div.navlink{
                             @apply 
                             flex 
                             w-full 
@@ -295,7 +295,12 @@ header{
                                                 lg:items-center;
                                                 
                                                 
-                                                .subMenuItem__icon{
+                                               a{
+                                                   @apply 
+                                                   flex
+                                                   w-full;
+
+                                                    .subMenuItem__icon{
                                                     @apply
                                                     flex
                                                     items-center
@@ -323,19 +328,22 @@ header{
                                                         font-light;
                                                     }
                                                 }
+                                               }
                                             }
 
-                                            li:first-child{
+                                            
+                                        }
+                                        li:first-child{
                                                 @apply 
-                                                lg:border-t;
+                                                lg:border-t
+                                                lg:pt-4;
                                             }
                                             li:last-child{
                                                 @apply lg:rounded-b;
                                             }
-                                        }
                                     }
                             }
-                           }
+                        }
                        }
                     }
                     

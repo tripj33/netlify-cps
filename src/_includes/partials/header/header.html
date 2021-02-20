@@ -63,7 +63,7 @@ x-bind:class="{
         <!-- Nav List -->
         <ul>
           <li>
-            <a>
+            <div class="navlink">
               <div class="navLinks__wrapper__item" x-on:click="dropdown = document.documentElement.clientWidth < '1023' && dropdown === '' ? 'dd1' : '' " x-on:click.away="dropdown = document.documentElement.clientWidth < '1023' ? '' : dropdown " x-on:mouseenter="dropdown = document.documentElement.clientWidth > '1023' && dropdown === '' ? 'dd1' : dropdown " x-on:mouseleave="dropdown = document.documentElement.clientWidth > '1023' ? '' : dropdown ">
                 <div class="navLinks__wrapper__item__icon">
                   <i class="fad fa-wrench"></i>
@@ -80,42 +80,48 @@ x-bind:class="{
                 <ul x-show="dropdown === 'dd1'" x-transition:enter="animate__animated animate__zoomIn animate__faster" x-transition:leave="animate__animated animate__zoomOut animate__faster">
                     <li>
                       <div class="subMenuItem">
-                        <div class="subMenuItem__icon">
+                        <a href="/services/residential-services">
+                            <div class="subMenuItem__icon">
                             <i class="fad fa-home"></i>
                         </div>
                         <div class="subMenuItem__title">
                             <span>Residential</span>
                         </div>
+                        </a>
                       </div>
                     </li>
                     <li>
                       <div class="subMenuItem">
-                        <div class="subMenuItem__icon">
-                            <i class="fad fa-city"></i>
-                        </div>
-                        <div class="subMenuItem__title">
-                            <span>Commercial</span>
-                        </div>
+                        <a href="/services/commercial-services">
+                            <div class="subMenuItem__icon">
+                                <i class="fad fa-city"></i>
+                            </div>
+                            <div class="subMenuItem__title">
+                                <span>Commercial</span>
+                            </div>
+                        </a>
                       </div>
                     </li>
                     <li>
                       <div class="subMenuItem">
-                        <div class="subMenuItem__icon">
+                        <a href="/services/new-construction-services">
+                            <div class="subMenuItem__icon">
                             <i class="fad fa-hammer"></i>
                         </div>
                         <div class="subMenuItem__title">
                             <span>New Construction</span>
                         </div>
+                        </a>
                       </div>
                     </li>
              
                   </ul>
               </div>
-            </a>
+            </div>
           </li>
 
           <li>
-            <a href="#">
+            <div class="navlink">
               <div class="navLinks__wrapper__item">
                 <div class="navLinks__wrapper__item__icon">
                   <i class="fad fa-map-marked-alt"></i>
@@ -128,11 +134,11 @@ x-bind:class="{
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </li>
 
           <li>
-            <a href="#">
+            <div class="navlink">
               <div class="navLinks__wrapper__item">
                 <div class="navLinks__wrapper__item__icon">
                   <i class="fad fa-newspaper"></i>
@@ -145,11 +151,11 @@ x-bind:class="{
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </li>
 
           <li>
-            <a href="#">
+            <div class="navlink">
               <div class="navLinks__wrapper__item">
                 <div class="navLinks__wrapper__item__icon">
                   <i class="fad fa-badge-percent"></i>
@@ -162,7 +168,7 @@ x-bind:class="{
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </li>
         </ul>
       </div>

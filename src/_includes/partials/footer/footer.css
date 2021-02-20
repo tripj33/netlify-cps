@@ -1,12 +1,16 @@
 footer{
     @apply
-    text-gray-600;
+    text-gray-600
+    absolute
+    mx-auto
+    w-full
+    bg-cps-blue-700;
     
     .footer__container{
         @apply
         container 
         px-5 
-        py-8 
+        py-2 
         mx-auto 
         flex 
         items-center 
@@ -22,13 +26,11 @@ footer{
             items-center 
             md:justify-start 
             justify-center 
-            text-gray-900;
+            text-white;
 
             img{
                 @apply
-                h-20
-                md:h-24
-                lg:h-28;
+                h-20;
             }
 
 
@@ -39,19 +41,19 @@ footer{
             text-sm 
             flex
             font-medium
-            text-gray-500 
+            text-white 
             sm:ml-4 
             sm:pl-4 
             sm:border-l-2 
-            sm:border-gray-200 
+            sm:border-white 
             sm:py-2 
             sm:mt-0 
             mt-4;
 
             a{
                 @apply
-                text-gray-500 
-                hover:text-cps-orange-500
+                text-white 
+                hover:text-cps-orange-400
                 ml-1;
             }
         }
@@ -67,8 +69,8 @@ footer{
 
             a{
                 @apply
-                text-gray-500
-                hover:text-cps-orange-500
+                text-white
+                hover:text-cps-orange-400
                 p-4
                 md:text-xl;
 

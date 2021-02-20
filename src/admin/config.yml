@@ -14,12 +14,17 @@ local_backend: true
 collections:
   - label: "Articles"
     name: "article"
-    folder: "src/posts"
+    folder: "src/articles"
+    slug: "{{fields.slug}}"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Article", name: "featured", widget: "boolean"}
+      - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Snippet", name: "snippet", widget: "string" }
+      - { label: "Header Image", name: "image", widget: "image"}
+      - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["name"], value_field: "name"}
       - { label: "Publish Date", name: "date", widget: "date", format: "MMMM Do YYYY" }
       - { label: "Intro Section", name: "intro", widget: "markdown"}
       - label: "Article Section"
@@ -32,11 +37,11 @@ collections:
           - { label: "Section Quick Link", name: "sectionLink", widget: "string" }
           - { label: "Section Content", name: "sectionContent", widget: "markdown"}
       - widget: select
-        label: "tags"
+        label: "Categroy"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["Water Filtration", "Plumbing Tips", "DIY", "Ask A Plumber", ]
 
   - label: "Commercial Services"
     serviceCategory: "Commercial Service"
@@ -132,7 +137,15 @@ collections:
             - {label: "Question", name: "question", widget: string}
             - {label: "Answer", name: "answer", widget: string}
 
-  
+  - label: "Authors"
+    name: "authors"
+    folder: "src/authors"
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Bio", name: "bio", widget: "text"}
+      - { label: "Service Images", name: "image", widget: "image"}
 
           
   

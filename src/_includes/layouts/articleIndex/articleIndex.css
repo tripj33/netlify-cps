@@ -1,0 +1,475 @@
+.articleIndex{
+    @apply
+    py-12;
+
+    .articleIndex__container{
+        @apply
+        container 
+        flex 
+        flex-col 
+        items-center 
+        justify-center 
+        px-4 
+        pt-2 
+        pb-8 
+        mx-auto 
+        sm:px-6 
+        lg:px-8;
+
+        section{
+
+            h2{
+                @apply
+                flex 
+                justify-center 
+                font-sans 
+                text-3xl 
+                font-bold 
+                leading-none 
+                tracking-tight 
+                text-center 
+                text-gray-900 
+                sm:text-4xl 
+                md:mx-auto;
+
+                span{
+                    @apply
+                    relative;
+                }
+            }
+
+            .featuredArticle{
+                @apply
+                px-4 
+                py-12 
+                mx-auto 
+                sm:max-w-xl 
+                md:max-w-full 
+                lg:max-w-screen-xl 
+                md:px-24 
+                lg:px-8 
+                lg:py-16;
+
+                .featuredArticle__card{
+                    @apply
+                    flex 
+                    flex-col 
+                    max-w-screen-lg 
+                    overflow-hidden 
+                    bg-white 
+                    border 
+                    rounded-lg 
+                    shadow-xl 
+                    lg:flex-row 
+                    sm:mx-auto;
+
+                    .featuredArticle__card__img{
+                        @apply
+                        relative
+                        lg:w-1/2;
+
+                        img{
+                            @apply
+                            object-cover 
+                            w-full 
+                            lg:absolute 
+                            h-80 
+                            lg:h-full;
+                        }
+
+                        svg{
+                            @apply
+                            absolute 
+                            top-0 
+                            right-0 
+                            hidden 
+                            h-full 
+                            text-white 
+                            lg:inline-block;
+                        }
+
+                    }
+
+                    .featuredArticle__card__content{
+                        @apply 
+                        flex 
+                        flex-col 
+                        justify-center 
+                        p-8 
+                        bg-white 
+                        lg:p-16 
+                        lg:pl-10 
+                        lg:w-1/2;
+
+                        .featuredArticle__category{
+                            p{
+                                @apply
+                                inline-block 
+                                px-3 
+                                py-1 
+                                mb-4 
+                                text-xs 
+                                font-medium 
+                                tracking-wider 
+                                text-purple-600 
+                                uppercase 
+                                bg-purple-200 
+                                rounded-full;
+                            }
+                        }
+
+                        .featuredArticle__title{
+                            @apply
+                            mb-3 
+                            text-3xl 
+                            font-extrabold 
+                            leading-none 
+                            sm:text-4xl;
+                        }
+
+                        .featuredArticle__snippet{
+                            @apply
+                            py-5 
+                            mb-5 
+                            text-gray-800;
+                        }
+
+                        .featuredArticle__link{
+                            @apply
+                            flex 
+                            items-center;
+
+                            a{
+                                button{
+                                    @apply
+                                    inline-flex 
+                                    items-center 
+                                    justify-center 
+                                    h-12 
+                                    px-6 
+                                    mr-6 
+                                    font-medium 
+                                    tracking-wide 
+                                    text-white 
+                                    transition 
+                                    duration-200 
+                                    bg-purple-500 
+                                    rounded-lg 
+                                    hover:bg-purple-700 
+                                    focus:outline-none;
+                                }
+
+                            }
+                        }
+                    }
+            }
+        
+            
+        
+        
+                }
+            .recentArticles{
+                    @apply
+                    grid 
+                    max-w-lg 
+                    gap-5 
+                    mx-auto 
+                    my-12 
+                    md:grid-cols-2  
+                    md:max-w-none;
+
+                    .recentArticles__card{
+                        @apply
+                        flex 
+                        flex-col 
+                        overflow-hidden 
+                        rounded-lg 
+                        shadow-lg;
+
+                        .recentArticles__card__img{
+                            @apply
+                            relative 
+                            flex-shrink-0;
+
+                            img{
+                                @apply
+                                object-cover 
+                                w-full 
+                                h-56;
+                            }
+                        }
+
+                        .recentArticles__content{
+                            @apply
+                            flex 
+                            flex-col 
+                            justify-between 
+                            flex-1;
+                            .recentArticles__content__container{
+                                @apply
+                                flex 
+                                flex-col 
+                                justify-between 
+                                flex-1 
+                                bg-white
+                                p-6;
+
+                                .recentArticles__content__container__wrap{
+                                 
+
+                                    a{
+                                        @apply
+                                        block 
+                                        text-xl 
+                                        font-semibold 
+                                        leading-7 
+                                        text-gray-900;
+                                    }
+
+                                    p{
+                                        @apply
+                                        mt-3 
+                                        text-base 
+                                        leading-6 
+                                        text-gray-500;
+                                    }
+                                }
+                                .recentArticles__category{
+                                    @apply
+                                    my-3 
+                                    text-sm 
+                                    font-medium 
+                                    leading-5;
+
+                                    a{
+                                        @apply
+                                        inline-block;
+
+                                        span{
+                                            @apply
+                                            inline-flex 
+                                            items-center 
+                                            px-3 
+                                            py-1 
+                                            text-xs 
+                                            font-medium 
+                                            leading-tight 
+                                            text-blue-800 
+                                            bg-blue-100 
+                                            rounded-full;
+                                        }
+                                    }
+                                }
+                            }
+                            .recentArticles__bottom{
+                                    @apply
+                                    flex 
+                                    items-center 
+                                    p-6 
+                                    lg:py-3
+                                    bg-gray-100 
+                                    justify-end;
+                                    
+                                    .recentArticles__bottom__author{
+                                        @apply
+                                        flex-shrink-0;
+
+                                        a{
+                                            img{
+                                                @apply
+                                                w-10
+                                                h-10
+                                                lg:w-16 
+                                                lg:h-16 
+                                                rounded-full;
+                                            }
+                                        }
+                                    }
+
+                                    .recentArticles__bottom__authorInfo{
+                                        @apply
+                                        mx-4;
+
+                                        p{
+                                            @apply 
+                                            font-medium 
+                                            leading-5 
+                                            text-gray-900;
+
+                                            a{
+                                                @apply
+                                                hover:underline;
+                                            }
+                                        }
+                                        .recentArticles__bottom__date{
+                                            @apply
+                                            text-xs 
+                                            leading-5 
+                                            text-gray-600;
+                                            
+                                        }
+                                    }
+                                }
+                        }
+
+                    }
+                }
+            .articleCard{
+                @apply
+                grid 
+                max-w-lg 
+                gap-5 
+                mx-auto 
+                my-12 
+                md:grid-cols-2 
+                lg:grid-cols-3 
+                md:max-w-none;
+
+                .articleCard__container{
+                    @apply
+                    flex 
+                    flex-col 
+                    overflow-hidden 
+                    rounded-lg 
+                    shadow-lg;
+
+                    .articleCard__img{
+                        @apply
+                        relative 
+                        flex-shrink-0;
+
+                        img{
+                            @apply
+                            object-cover 
+                            w-full 
+                            h-56;
+                        }
+                    }
+
+                    .articleCard__body{
+                        @apply
+                        flex 
+                        flex-col 
+                        justify-between 
+                        flex-1;
+
+                        .articleCard__body__container{
+                            @apply
+                            flex 
+                            flex-col 
+                            justify-between 
+                            flex-1 
+                            p-6 
+                            bg-white;
+
+                            .articleCard__info{
+                                @apply
+                                flex 
+                                flex-col 
+                                justify-between 
+                                flex-1 
+                                lg:p-3 
+                                xl:p-6
+                                bg-white;
+
+                                a{
+                                    @apply
+                                    block 
+                                    text-xl 
+                                    font-semibold 
+                                    leading-7 
+                                    text-gray-900;
+                                }
+
+                                p{
+                                    @apply
+                                    mt-3 
+                                    text-base 
+                                    leading-6 
+                                    text-gray-500;
+                                }
+                            }
+
+                            .articleCard__category{
+                                @apply
+                                mt-3 
+                                lg:mt-0
+                                text-sm 
+                                font-medium 
+                                leading-5
+                                lg:px-3
+                                xl:px-6;
+
+                                a{
+                                    @apply
+                                    inline-block;
+
+                                    span{
+                                        @apply
+                                        inline-flex 
+                                        items-center 
+                                        px-3 
+                                        py-1 
+                                        text-xs 
+                                        font-medium 
+                                        leading-tight 
+                                        text-blue-800 
+                                        bg-blue-100 
+                                        rounded-full;
+                                    }
+                                }
+                            }
+                        }
+
+                        .articleCard__bottom{
+                            @apply
+                            flex 
+                            items-center 
+                            p-6 
+                            bg-gray-100 
+                            justify-end;
+
+                            .articleCard__authorImg{
+                                @apply
+                                flex-shrink-0;
+
+                                a{
+                                    img{
+                                        @apply
+                                        w-10 
+                                        h-10 
+                                        rounded-full;
+                                    }
+                                }
+                            }
+
+                            .articleCard__authorInfo{
+                                @apply
+                                ml-3;
+                                p{
+                                    @apply
+                                    text-sm 
+                                    font-medium 
+                                    leading-5 
+                                    text-gray-900;
+
+                                    a{
+                                        @apply
+                                        hover:underline;
+                                    }
+                                }
+                                .articleCard__date{
+                                    @apply
+                                    text-xs 
+                                    leading-5 
+                                    text-gray-600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+}
+}

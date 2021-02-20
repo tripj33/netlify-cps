@@ -12,6 +12,8 @@
 /* LAYOUTS */
 @import "../../_includes/layouts/service/service.css";
 @import "../../_includes/layouts/servicesSearch/servicesSearch.css";
+@import "../../_includes/layouts/article/article.css";
+@import "../../_includes/layouts/articleIndex/articleIndex.css";
 
 /* PAGES */
 @import "./pages/index.css";
@@ -21,3 +23,11 @@
 
 /*Your Custom CSS Goes here*/
 
+.pageContainer{
+    @apply
+    relative
+    mt-24
+    lg:mt-40
+    lg:-mb-24;
+    min-height:calc(100vh - 9.5rem - 8px);
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+title: Fish Paged
+pagination:
+    data: fishList.fish
+    size: 2
+permalink: "fishes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+
+<h1>{{ title }}</h1>
+<ul>
+    {% for fish in pagination.items -%}
+    <li>{{ fish }}</li>
+    {% endfor -%}
+</ul>
+<hr>
+<ul>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+</ul>

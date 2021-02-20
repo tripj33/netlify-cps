@@ -106,14 +106,14 @@
             mb-8 
             flex-col;
 
-            &__border{
+            .serviceSearch__wrapper__header__border{
                 @apply
                 h-1 
                 bg-gray-200 
                 rounded 
                 overflow-hidden;
 
-                &__filled{
+                .serviceSearch__wrapper__header__border__filled{
                     @apply
                     w-24 
                     h-full 
@@ -121,7 +121,7 @@
                 }
             }
 
-            &__title{
+            .serviceSearch__wrapper__header__title{
                 @apply
                 text-4xl 
                 w-full
@@ -145,7 +145,7 @@
                     w-full 
                     px-2;
 
-                    &__wrapper{
+                    .serviceCard__wrapper{
                         @apply
                         mb-2 
                         w-full 
@@ -160,7 +160,7 @@
                             h-24;
                         }
 
-                        &__content{
+                        .serviceCard__wrapper__content{
                             @apply
                             flex 
                             items-center 
@@ -175,14 +175,14 @@
                             cursor-pointer 
                             hover:bg-gray-100;
 
-                            &__container{
+                            .serviceCard__wrapper__container{
                                 @apply
                                 flex 
                                 flex-col 
                                 w-11/12 
                                 h-full;
 
-                                &__title{
+                                .serviceCard__wrapper__container__title{
                                     @apply
                                     flex 
                                     justify-start 
@@ -197,7 +197,7 @@
                                     }
                                 }
 
-                                &__category{
+                                .serviceCard__wrapper__container__category{
                                     @apply
                                     flex 
                                     justify-start 
@@ -213,7 +213,7 @@
                                     }
                                 }
 
-                                &__icon{
+                                .serviceCard__wrapper__container__icon{
                                     @apply
                                     flex 
                                     flex-col 

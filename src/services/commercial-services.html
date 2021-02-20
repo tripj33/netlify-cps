@@ -1,15 +1,15 @@
 ---
 layout: layouts/servicesSearch/servicesSearch
 eleventyExcludeFromCollections: true
-serviceType: Residential Plumbing
+serviceType: Commercial Plumbing
 tags:
-    - residentialServices
+    - commercialServices
 ---
 
 <script>
   var sourceData = [
   
-  {% for service in collections.residentialServices %}
+  {% for service in collections.commercialServices %}
       
         {
         service_name: "{{service.data.title}}",

@@ -1,0 +1,7 @@
+{
+    "layout": "layouts/service/service",
+    "serviceType": "Residential Plumbing",
+    "tags": [
+        "residentialServices"
+    ]
+}

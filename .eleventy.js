@@ -15,6 +15,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/static/js/": "/static/js/",
   });
+
+   eleventyConfig.addPassthroughCopy({
+    "./src/services": "/services",
+  });
   
 
   // Alpine JS
