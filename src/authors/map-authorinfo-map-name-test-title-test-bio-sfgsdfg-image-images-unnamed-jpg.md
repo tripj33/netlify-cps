@@ -1,7 +1,7 @@
 ---
 authorInfo:
-  name: Jake
-  title: Jakkk
-  bio: sfdgsd
+  name: test
+  title: test
+  bio: sfgsdfg
   image: /images/unnamed.jpg
 ---
