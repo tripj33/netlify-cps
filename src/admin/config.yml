@@ -41,7 +41,11 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Water Filtration", "Plumbing Tips", "DIY", "Ask A Plumber", ]
+        options: 
+          -  { label: "Water Filtration", value: "waterFiltration" }
+          -  { label: "Plumbing Tips", value: "plumbingTips" }
+          -  { label: "DIY", value: "diy" }
+          -  { label: "Ask A Plumber", value: "askAPlumber" }
 
   - label: "Commercial Services"
     serviceCategory: "Commercial Service"
