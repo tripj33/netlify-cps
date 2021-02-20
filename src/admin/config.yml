@@ -37,7 +37,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Snippet", name: "snippet", widget: "string" }
       - { label: "Header Image", name: "image", widget: "image"}
-      - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["authorInfo"], value_field: "nameInfo"}
+      - { label: "Post Author", name: "author", widget: "relation", collection: "authors", search_fields: ["authorInfo.name"], value_field: "nameInfo"}
       # - { label: "Publish Date", name: "date", widget: "date", format: "DD MM YYYY hh:mm:ss" }
       - { label: "Intro Section", name: "intro", widget: "markdown"}
       - label: "Article Section"

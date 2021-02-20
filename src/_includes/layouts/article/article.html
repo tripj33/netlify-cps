@@ -23,7 +23,7 @@ layout: default
         {{intro}}
 
             {% for section in articleSection %}
-                <h3><a href="#{{section.sectionLink}}">{{section.sectionName}}</a></h3>
+                <h3 id="#{{section.sectionLink}}">{{section.sectionName}}</h3>
                 <p>{{section.sectionContent}}</p>
             {% endfor %}
       </div>
