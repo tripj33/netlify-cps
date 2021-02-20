@@ -46,8 +46,7 @@ collections:
       - widget: select
         label: "Categroy"
         name: "tags"
-        multiple: true
-        create: true
+        multiple: false
         options: 
           -  { label: "Water Filtration", value: "waterFiltration" }
           -  { label: "Plumbing Tips", value: "plumbingTips" }
