@@ -19,7 +19,7 @@ local_backend:
 collections:
   - label: "Articles"
     name: "article"
-    folder: "src/articles/{{tags}}"
+    folder: "src/articles/"
     slug: "{{fields.slug}}"
     create: true
     allow_nesting: true
