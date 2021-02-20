@@ -227,11 +227,11 @@ collections:
     label: Pages
     label_singular: 'Page'
     folder: source/handbook
-    create: true
+    create: false
     encoding: "ascii"
     clean_accents: true
     sanitize_replacement: "-"
-    nested: { depth: 1, summary: '{{title}}' } # accepts an optional summary template
+    nested: { depth: 2, summary: '{{title}}' } # accepts an optional summary template
     fields:
       - label: Title
         name: title
