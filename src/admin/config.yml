@@ -18,8 +18,6 @@ collections:
     label_singular: "Article"
     folder: "src/articles"
     path: "{{tags}}/{{slug}}"
-    media_folder: '/images'
-    public_folder: '/images'
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -149,8 +147,9 @@ collections:
     name: "authors"
     folder: "src/authors"
     create: true
-    identifier_field: "authorInfo.fields.name"
+    identifier_field: "authorInfo"
     fields:
+      - { label: "Title", name: "title", widget: "string" }
       - label: "Author Info"
         name: "authorInfo"
         widget: "object"
