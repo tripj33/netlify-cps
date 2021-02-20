@@ -1,8 +1,12 @@
 ---
 layout: default
 ---
-
-
+{%set length = collections.article | length%}
+<ul>
+    
+    {{collections.article[length - 1].data.title}}
+<h2></h2>
+</ul>
 
 
 
@@ -13,6 +17,8 @@ layout: default
     <h2>
       <span>Featured Article</span>
     </h2>
+
+
   <div class="featuredArticle">
     <div class="featuredArticle__card">
         <div class="featuredArticle__card__img">
@@ -30,15 +36,13 @@ layout: default
                 </p>
             </div>
             <h5 class="featuredArticle__title">
-                Your Next Great Idea
+                {{collections.article[length - 1].data.title}}
             </h5>
             <p class="featuredArticle__snippet">
-                Our Platform will help you craft and build your next idea. Utilize our
-                drag and
-                drop components to build the application of your dreams.
+                {{collections.article[length - 1].data.snippet}}
             </p>
             <div class="featuredArticle__link">
-                <a href="#">
+                <a href="{{collections.article[length - 1].url}}">
                     <button type="submit">
                     Keep Reading
                 </button>
@@ -46,8 +50,7 @@ layout: default
             </div>
         </div>
     </div>
-</div>
-
+  </div>
 </section>
     
     
