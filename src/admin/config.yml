@@ -17,7 +17,7 @@ collections:
     name: "article"
     label_singular: "Article"
     folder: "src/articles"
-    path: "src/articles/{{tags}}/{{slug}}"
+    path: "{{tags}}/{{slug}}"
     media_folder: ''
     public_folder: ''
     create: true
@@ -25,6 +25,15 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Featured Article", name: "featured", widget: "boolean"}
       - { label: "Page URL", name: "slug", widget: "string"}
+      - widget: select
+        label: "Categroy"
+        name: "tags"
+        multiple: false
+        options: 
+          -  { label: "Water Filtration", value: "water-filtration" }
+          -  { label: "Plumbing Tips", value: "plumbing-tips" }
+          -  { label: "DIY", value: "diy" }
+          -  { label: "Ask A Plumber", value: "ask-a-plumber" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Snippet", name: "snippet", widget: "string" }
       - { label: "Header Image", name: "image", widget: "image"}
@@ -40,15 +49,7 @@ collections:
           - { label: "Section Name", name: "sectionName", widget: "string" }
           - { label: "Section Quick Link", name: "sectionLink", widget: "string" }
           - { label: "Section Content", name: "sectionContent", widget: "markdown"}
-      - widget: select
-        label: "Categroy"
-        name: "tags"
-        multiple: false
-        options: 
-          -  { label: "Water Filtration", value: "water-filtration" }
-          -  { label: "Plumbing Tips", value: "plumbing-tips" }
-          -  { label: "DIY", value: "diy" }
-          -  { label: "Ask A Plumber", value: "ask-a-plumber" }
+      
 
   - label: "Commercial Services"
     serviceCategory: "Commercial Service"
