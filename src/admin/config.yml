@@ -14,9 +14,11 @@ local_backend: true
 collections:
   - label: "Articles"
     name: "article"
-    folder: "src/articles"
+    folder: "src/articles/{{tags}}"
     slug: "{{fields.slug}}"
     create: true
+    allow_nesting: true
+    label_singular: "article-test"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Featured Article", name: "featured", widget: "boolean"}

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+hello
+
+
+<ul>
+{%- for post in collections.waterFiltration -%}
+  <li>{{ post.data.title }} | {{post.data.tags}}</li>
+{%- endfor -%}
+</ul>
