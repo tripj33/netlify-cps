@@ -1,7 +1,8 @@
 .service{
     @apply
     text-gray-600 
-    overflow-hidden;
+    overflow-hidden
+    lg:mt-40;
 
     .service__container{
         @apply
@@ -17,18 +18,53 @@
             mx-auto 
             flex 
             flex-wrap;
+            .serviceImg__wrap{
+                
+                margin: 0 auto;
 
-            .serviceImg{
-                @apply
-                lg:w-1/2 
-                w-full 
-                lg:h-auto 
-                h-1/5 
-                lg:object-cover 
-                object-center 
-                rounded;
-                max-height: 400px;
+                .serviceImg{
+               @apply
+                    w-full 
+                    lg:h-auto 
+                    h-1/5 
+                    lg:object-cover 
+                    object-cover 
+                    rounded;
+                img{
+                     max-height: 325px;
+                    }
             }
+            }
+
+            	@media (min-width: 640px) { 
+                    .serviceImg__wrap{
+                    .serviceImg{
+                        img{
+                            max-height: 375px
+                        }
+                    }
+                }
+                 }
+            
+            @media (min-width: 768px) { 
+                .serviceImg__wrap{
+                    .serviceImg{
+                        img{
+                            max-height: 400px
+                        }
+                    }
+                }
+             }	
+
+            @media (min-width: 1024px) { 
+                 .serviceImg__wrap{
+                    .serviceImg{
+                        img{
+                            max-height: 500px
+                        }
+                    }
+                }
+             }	
 
             .serviceInfo{
                 @apply

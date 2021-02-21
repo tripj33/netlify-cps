@@ -1,6 +1,7 @@
 .heroCTA{
     @apply
-    text-gray-600;
+    bg-cps-blue-700
+    text-white;
 
     .wrapper{
         @apply
@@ -8,16 +9,19 @@
         mx-auto 
         flex 
         px-5 
-        py-24 
+        py-6
+        md:py-12
+        xl:py-16 
         flex-col 
         md:flex-row 
         items-center;
 
         .title{
             @apply 
-            md:w-1/2 
+            lg:w-1/2 
             lg:pr-24 
-            md:pr-16 
+            md:pr-16
+            xl:pr-12 
             flex 
             flex-col 
             mb-16 md:mb-0 
@@ -25,8 +29,7 @@
             text-center 
             md:items-start 
             md:text-left 
-            xl:w-3/4 
-            2xl:w-3/4;
+            xl:w-7/12;
 
             h1{
                 @apply
@@ -36,11 +39,11 @@
                 lg:text-6xl 
                 xl:text-7xl 
                 2xl:text-8xl 
-                mb-4 
+                lg:mb-4 
                 sm:mt-4 
                 font-medium 
                 capitalize
-                text-gray-800;
+                text-white;
 
                 br{
                     @apply
@@ -57,14 +60,15 @@
 
             p{
                 @apply
-                mb-6 
-                mt-6 
-                md:mt-0 
+                mb-3 
+                mt-3 
+                mx-auto
+                md:my-3 
                 leading-relaxed 
-                xl:w-3/4 
-                xl:mt-4 
-                xl:text-xl 
-                2xl:mt-6
+                xl:w-3/4
+                lg:my-6 
+                lg:text-xl
+                
             }
         }
 
@@ -72,20 +76,21 @@
             @apply
             flex
             justify-center
-            w-full;
+            w-full
+            xl:mt-4;
 
             button{
                 @apply
                 inline-flex 
                 text-white 
-                bg-cps-blue-700 
+                bg-cps-orange-500 
                 border-0 
                 py-2 
                 px-6 
                 transition
                 duration-300
                 focus:outline-none 
-                hover:bg-cps-orange-500 
+                hover:bg-cps-orange-400 
                 rounded 
                 text-lg;
             }
@@ -93,17 +98,29 @@
 
         .heroImg{
             @apply
+            mt-12
+            lg:mt-0
             lg:max-w-lg 
             lg:w-full 
             md:w-1/2 
-            w-5/6;
+            w-5/6
+            order-first
+            rounded-full
+            shadow-xl
+            md:order-none;
 
             img{
                 @apply
                 object-cover 
                 object-center 
-                rounded
+                rounded-full
+                shadow-xl
+                
             }
         }
     }
+    .curveBottom{
+            @apply
+            bg-gray-100  
+        }
 }

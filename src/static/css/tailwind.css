@@ -26,8 +26,16 @@
 .pageContainer{
     @apply
     relative
-    mt-24
+    mt-11
     lg:mt-40
-    lg:-mb-24;
-    min-height:calc(100vh - 9.5rem - 8px);
+    lg:-mb-20;
+    
 }
+
+@media (min-width: 1024px) {
+    .pageContainer{
+        margin-top: 6.75rem;
+        min-height: calc(100vh - 12.75rem);
+        margin-bottom: 0;
+    }
+ }
