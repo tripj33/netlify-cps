@@ -1,6 +1,6 @@
 ---
-title: Ejector Pumps
-slug: /ejector-pumps
+title: Ejector Pump Installation
+slug: /ejector-pumps-installation
 snippet: Ejector pumps lift the waste water from lower levels to the height of
   the gravity fed sewer system.
 details: Your ejector pump handles the waste water the occures below your sewer,
