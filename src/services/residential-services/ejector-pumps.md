@@ -20,10 +20,11 @@ chatLink: <!--Start of Tawk.to Script--> <script type="text/javascript"> var
   s1.charset='UTF-8'; s1.setAttribute('crossorigin','*');
   s0.parentNode.insertBefore(s1,s0); })(); </script> <!--End of Tawk.to
   Script-->
-feature:
-  - Fast Installation
-  - 3 Year Warranty
-  - Premium Quality
+serviceFaqs:
+  - question: Question1
+    answer: Answer 1
+  - question: Question 2
+    answer: Answer 2
 service-faqs:
   - faqs:
       answer: The best we could find! All pumps come with a minimum of 3 years, with
@@ -40,4 +41,8 @@ service-faqs:
         furnace in your basment its condincation line will discharge to the
         floor drain. Water generated inside the home can not go to a sump pump
         and must be directed to an ejector pump attached to the sewage system.
+feature:
+  - Fast Installation
+  - 3 Year Warranty
+  - Premium Quality
 ---
