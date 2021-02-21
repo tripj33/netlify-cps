@@ -1,6 +1,6 @@
 ---
-title: Sump Pump
-slug: /sump-pump
+title: Sump Pump Installation
+slug: /sump-pump-installation
 snippet: A strong and quality sump pump is your home's solution to removing
   ground water and preventing flooding.
 details: >2
@@ -8,14 +8,7 @@ details: >2
 
   Your sump pump is responsible for keeping your home dry and safe from flooding, you only deserve the best protection, and we are here to install it.
 image: https://mobileimages.lowes.com/product/converted/053514/053514023607.jpg?size=pdhi
-chatLink: <!--Start of Tawk.to Script--> <script type="text/javascript"> var
-  Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date(); (function(){ var
-  s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/602d5945918aa261273fddab/1euqmltmm';
-  s1.charset='UTF-8'; s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0); })(); </script> <!--End of Tawk.to
-  Script-->
+chatLink: https://tawk.to/chat/602d5945918aa261273fddab/1euqmltmm
 feature:
   - 3 Year Warranty
   - Fast Installation
