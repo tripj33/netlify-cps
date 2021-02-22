@@ -64,7 +64,7 @@ x-bind:class="{
         <ul>
           <li>
             <div class="navlink">
-              <div class="navLinks__wrapper__item" x-on:click="dropdown = document.documentElement.clientWidth < '1023' && dropdown === '' ? 'dd1' : '' " x-on:click.away="dropdown = document.documentElement.clientWidth < '1023' ? '' : dropdown " x-on:mouseenter="dropdown = document.documentElement.clientWidth > '1023' && dropdown === '' ? 'dd1' : dropdown " x-on:mouseleave="dropdown = document.documentElement.clientWidth > '1023' ? '' : dropdown ">
+              <div class="navLinks__wrapper__item" x-on:click="dropdown = document.documentElement.clientWidth < '1023' && dropdown === '' ? 'dd1' : '' " x-on:click.away="dropdown = document.documentElement.clientWidth < '1023' ? '' : dropdown " x-on:mouseenter="dropdown = document.documentElement.clientWidth > '1023' && dropdown === '' ? 'dd1' : dropdown " x-on:mouseleave.debounce.500="dropdown = document.documentElement.clientWidth > '1023' ? '' : dropdown ">
                 <div class="navLinks__wrapper__item__icon">
                   <i class="fad fa-wrench"></i>
                 </div>

@@ -1,19 +1,24 @@
 .servicesHero{
+    @apply bg-cps-blue-700;
     .servicesHero__wrapper{
         @apply
         container 
         mx-auto 
         flex 
         px-4 
-        py-8 
+        pb-8 
+        pt-24
+        lg:pt-8
+        mt-8
         md:flex-row 
         flex-col 
         items-center;
 
         .servicesHero__wrapper__text{
             @apply
-            lg:flex-grow 
-            md:w-1/2 
+            md:w-2/3
+            lg:w-7/12 
+            xl:w-7/12
             lg:pr-24 
             md:pr-16 
             flex 
@@ -29,9 +34,13 @@
                 @apply
                 sm:text-4xl 
                 text-3xl 
+                lg:text-4xl
+                xl:text-5xl
+                2xl:text-6xl
+                capitalize
                 mb-4 
                 font-medium 
-                text-gray-900;
+                text-white;
             }
             br{
                 @apply
@@ -42,6 +51,7 @@
             p{
                 @apply
                 mb-8 
+                text-white
                 leading-relaxed;
             }
         }
@@ -49,15 +59,24 @@
         .servicesHero__wrapper__img{
             @apply
             lg:max-w-lg 
-            lg:w-full 
-            md:w-1/2 
-            w-5/6;
+            lg:w-5/12 
+            md:w-1/3 
+            xl:w-5/12
+            lg:mx-auto;
 
             img{
                 @apply
+                w-3/4
+                sm:w-1/2
+                mx-auto
+                md:w-full
                 object-cover 
                 object-center 
-                rounded;
+                rounded-full
+                border-4
+                lg:border-8
+                border-white
+                shadow-xl;
             }
         }
     }

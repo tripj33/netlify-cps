@@ -119,8 +119,9 @@
             }
         }
     }
-    .curveBottom{
+    
+}
+.curveBottom{
             @apply
             bg-gray-100  
         }
-}

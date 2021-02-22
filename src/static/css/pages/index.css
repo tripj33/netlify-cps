@@ -8,6 +8,29 @@
     pt-8 
     pb-12;
 
+
+    .serviceCatCards__title{
+            @apply 
+            flex
+            w-full
+            pb-8
+            lg:pb-16
+            container
+            text-center;
+
+            h2{
+                @apply
+                font-bold 
+                tracking-tight 
+                text-center
+                text-3xl
+                lg:text-5xl
+                text-cps-blue-700
+                text-center
+                mx-auto;
+            }
+        }
+
     .serviceCatCards__container{
         @apply
         container 
@@ -17,6 +40,8 @@
         xl:w-4/5
         lg:mx-auto
         md:grid-cols-3;
+
+        
 
     .serviceCatCards__card{
         @apply
@@ -152,3 +177,214 @@
 
 }
 
+.cpsFeatured{
+    .cpsFeatured__container{
+        @apply
+        container 
+        max-w-xl 
+        p-6 
+        mx-auto 
+        space-y-24 
+        lg:px-8 
+        lg:max-w-7xl;
+    
+        .cpsFeatured__title{
+            h2{
+                @apply
+                font-bold 
+                tracking-tight 
+                text-center
+                text-3xl
+                lg:text-5xl
+                text-cps-blue-700;
+            }
+
+            p{
+                @apply
+                max-w-3xl 
+                mx-auto 
+                mt-4 
+                text-xl
+                lg:text-2xl
+                text-center;
+            }
+        }
+
+        .cpsFeatured__imgRight{
+            @apply
+            grid 
+            lg:gap-8 
+            lg:grid-cols-2 
+            lg:items-center;
+
+            .cpsFeatured__imgRight__wrapper{
+                h3{
+                    @apply 
+                    font-bold 
+                    tracking-tight
+                    capitalize
+                    lg:text-xl;
+                }
+                p{
+                    @apply
+                    mt-3
+                }
+
+                .cpsFeatured__features{
+                    @apply
+                    mt-12 
+                    space-y-12;
+
+                    .cpsFeatued__singleFeature{
+                        @apply 
+                        flex;
+
+                        .singleFeature__iconWrapper{
+                            @apply
+                            flex-shrink-0;
+
+                            .singleFeature__icon{
+                                @apply
+                                flex 
+                                items-center 
+                                justify-center 
+                                w-12 
+                                h-12 
+                                rounded-md;
+                                i{
+                                    @apply
+                                    text-cps-blue-600
+                                    text-2xl;
+                                }
+                            }
+                        }
+                        .singleFeature__text{
+                            @apply
+                            ml-4;
+
+                            h4{
+                                @apply
+                                font-medium 
+                                capitalize
+                                leading-6; 
+                            }
+                            p{
+                                @apply
+                                mt-2;
+                            }
+                        }
+                    }
+                }
+
+
+                }
+
+            .cpsFeatured__img{
+                    @apply
+                    mt-10 
+                    lg:mt-0;
+
+                    img{
+                        @apply
+                        mx-auto 
+                        rounded-lg 
+                        shadow-lg;
+                    }
+            }
+
+        }
+
+
+        .cpsFeatured__imgLeft{
+
+            .cpsFeatured__imgLeft__container{
+                @apply
+                grid 
+                lg:gap-8 
+                lg:grid-cols-2 
+                lg:items-center;
+
+                .cpsFeatured__imgLeft__wrapper{
+                    @apply
+                    lg:col-start-2;
+
+                    h3{
+                    @apply 
+                    capitalize
+                    font-bold 
+                    lg:text-xl
+                    tracking-tight;
+                    }
+
+                    p{
+                        @apply
+                        mt-3
+                    }
+
+                  .cpsFeatured__features{
+                    @apply
+                    mt-12 
+                    space-y-12;
+
+                    .cpsFeatued__singleFeature{
+                        @apply 
+                        flex;
+
+                        .singleFeature__iconWrapper{
+                            @apply
+                            flex-shrink-0;
+
+                            .singleFeature__icon{
+                                @apply
+                                flex 
+                                items-center 
+                                justify-center 
+                                w-12 
+                                h-12 
+                                rounded-md;
+                                i{
+                                    @apply
+                                    text-2xl
+                                    text-cps-blue-600;
+                                }
+                            }
+                        }
+                        .singleFeature__text{
+                            @apply
+                            ml-4;
+
+                            h4{
+                                @apply
+                                font-medium 
+                                capitalize
+                                leading-6; 
+                            }
+                            p{
+                                @apply
+                                mt-2;
+                            }
+                        }
+                    }
+                }
+                }
+
+                .cpsFeatured__img{
+                    @apply
+                    mt-10 
+                    lg:mt-0 
+                    lg:col-start-1 
+                    lg:row-start-1;
+
+                    img{
+                        @apply
+                        mx-auto 
+                        rounded-lg 
+                        shadow-lg;
+                    }
+                }
+
+            }
+
+        }
+    }
+}

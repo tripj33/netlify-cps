@@ -1,20 +1,22 @@
 ---
 layout: default
+title: {{serviceType}}
 ---
 <section class="servicesHero">
     <div class="servicesHero__wrapper">
         <div class="servicesHero__wrapper__text">
-            <h1>Before they sold out
-            <br>readymade gluten
+            <h1>{{headingText}}
             </h1>
             <p>Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
         </div>
         <div class="servicesHero__wrapper__img">
-            <img alt="" src="https://dummyimage.com/720x600">
+            <img alt="" src="{{serviceImage}}">
         </div>
     </div>
 </section>
-
+<div class="bg-white">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#004f9e" fill-opacity="1" d="M0,96L120,90.7C240,85,480,75,720,90.7C960,107,1200,149,1320,170.7L1440,192L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+</div>
 <section class="serviceSearch">
     <h3>Search Our Services</h3>
 
@@ -197,6 +199,3 @@ layout: default
 
 </div>
 </section>
-
-
-{{content|safe}}
