@@ -15,7 +15,7 @@ details: >-
   replace your unit with a new professional grade water heater. 
 
   New water heaters are more energy efficent and user friendly than ever before. This save you money in the long term life of these water heaters.
-image: https://img.tineye.com/result/221b49dd4d284836446d64931dbe79bb534e89bc378152e59dc9ef276ea0a298?size=160
+image: http://www.northraleighplumbing.com/raleighplumber/wp-content/uploads/2015/12/water-heater-repair-raleigh-1-1200x650_c.jpg
 chatLink: ok
 feature:
   - 3 Year Warranty
