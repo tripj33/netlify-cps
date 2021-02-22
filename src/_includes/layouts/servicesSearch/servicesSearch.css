@@ -10,6 +10,7 @@
         pt-24
         lg:pt-8
         mt-8
+        xl:pb-0
         md:flex-row 
         flex-col 
         items-center;
@@ -39,6 +40,7 @@
                 2xl:text-6xl
                 capitalize
                 mb-4 
+                lg:mb-10
                 font-medium 
                 text-white;
             }
@@ -52,8 +54,42 @@
                 @apply
                 mb-8 
                 text-white
+                text-xl
                 leading-relaxed;
             }
+
+            .buttons{
+            @apply
+            flex
+            justify-center
+            w-full
+            xl:mt-4;
+
+            button{
+                @apply
+                inline-flex 
+                text-white 
+                bg-cps-orange-500 
+                border-0 
+                py-2 
+                px-6 
+                shadow-xl
+                border
+                border-cps-orange-800
+                transition
+                duration-300
+                focus:outline-none 
+                hover:bg-cps-orange-400 
+                rounded 
+                text-lg
+                items-center;
+
+                i{
+                    @apply
+                    px-2
+                }
+            }
+        }
         }
 
         .servicesHero__wrapper__img{
@@ -83,14 +119,16 @@
 }
 
 .serviceSearch{
+    @apply bg-gray-100;
     h3{
         @apply
         flex 
         w-full 
         justify-center 
-        font-medium 
-        mt-12 
-        text-4xl;
+        font-medium
+        text-4xl
+        lg:text-5xl
+        xl:text-6xl;
     }
 
     .serviceSearch__wrapper{
@@ -98,7 +136,8 @@
         container 
         pt-8 
         px-8 
-        mx-auto;
+        mx-auto
+        2xl:w-10/12;
 
         input{
             @apply
@@ -162,7 +201,8 @@
                 .serviceCard{
                     @apply
                     w-full 
-                    px-2;
+                    rounded-l
+                    bg-white;
 
                     .serviceCard__wrapper{
                         @apply
@@ -184,9 +224,9 @@
                             flex 
                             items-center 
                             justify-between 
-                            pl-3 
+                            /* pl-3 
                             pr-2 
-                            py-3 
+                            py-3  */
                             w-full 
                             rounded-r 
                             text-gray-600 
@@ -194,14 +234,15 @@
                             cursor-pointer 
                             hover:bg-gray-100;
 
-                            .serviceCard__wrapper__container{
+                            .serviceCard__wrapper__content__container{
                                 @apply
                                 flex 
                                 flex-col 
-                                w-11/12 
+                                w-11/12
+                                p-2 
                                 h-full;
 
-                                .serviceCard__wrapper__container__title{
+                                .serviceCard__wrapper__content__container__title{
                                     @apply
                                     flex 
                                     justify-start 
@@ -216,12 +257,13 @@
                                     }
                                 }
 
-                                .serviceCard__wrapper__container__category{
+                                .serviceCard__wrapper__content__container__category{
                                     @apply
                                     flex 
                                     justify-start 
                                     items-center 
                                     h-full 
+                                    font-light
                                     w-full;
                                     
                                     h6{
@@ -232,13 +274,20 @@
                                     }
                                 }
 
-                                .serviceCard__wrapper__container__icon{
+                               
+                            }
+                             .serviceCard__wrapper__content__container__icon{
                                     @apply
                                     flex 
+                                    h-full
+                                    justify-center
+                                    items-center
+                                    rounded-r
+                                    bg-cps-blue-700
+                                    text-white
                                     flex-col 
                                     w-1/12;
                                 }
-                            }
                         }
                     }
               

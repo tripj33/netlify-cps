@@ -36,7 +36,7 @@ x-bind:class="{
         </div>
     
     <div class="mobileHeader__logo">
-      <img src="{{'/static/img/cps-logo.png' | url}}" alt="">
+      <a href="/"><img src="{{'/static/img/cps-logo.png' | url}}" alt=""></a>
     </div>
     <div x-on:click="menuOpen = !menuOpen, hamburgerActive = !hamburgerActive" class="mobileHeader__hamburgerContainer">
       <div class="three col">
@@ -53,10 +53,12 @@ x-bind:class="{
 
     <!-- Logo -->
     <div class="logo">
+        <a href="/">
       <img src="{{'/static/img/cps-logo.png' | url}}" alt="" x-bind:class="{
                 'animate__animated animate__faster animate__slideInDown': sticky,
                 'animate__animated animate__faster animate__slideOutUp': !sticky
                 }">
+        </a>
     </div>
     <div class="navLinks">
       <div class="navLinks__wrapper">
@@ -64,7 +66,7 @@ x-bind:class="{
         <ul>
           <li>
             <div class="navlink">
-              <div class="navLinks__wrapper__item" x-on:click="dropdown = document.documentElement.clientWidth < '1023' && dropdown === '' ? 'dd1' : '' " x-on:click.away="dropdown = document.documentElement.clientWidth < '1023' ? '' : dropdown " x-on:mouseenter="dropdown = document.documentElement.clientWidth > '1023' && dropdown === '' ? 'dd1' : dropdown " x-on:mouseleave.debounce.500="dropdown = document.documentElement.clientWidth > '1023' ? '' : dropdown ">
+              <div class="navLinks__wrapper__item" x-on:click="dropdown = document.documentElement.clientWidth < '1023' && dropdown === '' ? 'dd1' : '' " x-on:click.away="dropdown = document.documentElement.clientWidth < '1023' ? '' : dropdown " x-on:mouseenter="dropdown = document.documentElement.clientWidth > '1023' && dropdown === '' ? 'dd1' : dropdown " x-on:mouseleave="dropdown = document.documentElement.clientWidth > '1023' ? '' : dropdown ">
                 <div class="navLinks__wrapper__item__icon">
                   <i class="fad fa-wrench"></i>
                 </div>

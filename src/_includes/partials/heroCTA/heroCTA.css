@@ -87,6 +87,7 @@
                 border-0 
                 py-2 
                 px-6 
+                shadow-xl
                 transition
                 duration-300
                 focus:outline-none 
@@ -119,9 +120,8 @@
             }
         }
     }
-    
-}
-.curveBottom{
+    .curveBottom{
             @apply
             bg-gray-100  
         }
+}
