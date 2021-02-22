@@ -15,8 +15,8 @@ details: Our company prides itself on only using quality materials backed by
   water. Our systems are maintenance free, will alarm you if anything goes
   wrong, and are able to be monitored from your smart phone anywhere in the
   world. Contact us today to protect your basement from future flooding.
-image: https://img.tineye.com/result/2dcb3f2845f740072c027416dde7ad300758825cc0df3daa3a512f04e882fe25?size=160
-chatLink: kj
+image: https://www.stopflooding.com/assets/2/6/MainFCKEditorDimension/2400_v2017_SM.png
+chatLink: ok
 feature:
   - Lower Energy Cost
   - Wifi Enabled
