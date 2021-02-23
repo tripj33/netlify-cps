@@ -61,6 +61,7 @@ header{
             overflow-visible
             bg-cps-blue-700 
             items-center 
+            shadow-lg
             lg:hidden;
 
            .mobileHeader__phone{
@@ -88,12 +89,19 @@ header{
                 flex
                 justify-center
                 w-1/2;
-                img{
+                z-index:9999;
+                a{
+                    @apply
+                    flex-col
+                    justify-center;
+
+                    img{
                     @apply
                     h-20
-                    -mt-7
-                    absolute;
+                    mt-7
+                    mx-auto;
                     z-index: 100;
+                }
                 }
             }
 
