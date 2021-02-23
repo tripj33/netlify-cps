@@ -7,7 +7,7 @@ details: >2
       Our company prides itself on only supplying quality materials by trusted brands! Our sump pumps are no exception to this philosophy. We primarily offer Zoller brand sump pumps in all sizes from 1/3 HP, 1/2 HP, and beyond. Zoller offers pumps with some of the highest and output capacities on the market. These pump's motors can stay cool and functional under the hardest conditions due to their encased oil system within the pump. The motor is controlled by a mechanical float directly attached, meaning no more failures and replacements of floats. All of these features are wrapped within a cast iron pump housing making the pump strong and durable. 
 
   Your sump pump is responsible for keeping your home dry and safe from flooding, you only deserve the best protection, and we are here to install it.
-image: https://mobileimages.lowes.com/product/converted/053514/053514023607.jpg?size=pdhi
+image: /static/img/zoeller-m53-sump-pump.jpg
 chatLink: https://tawk.to/chat/602d5945918aa261273fddab/1euqmltmm
 feature:
   - 3 Year Warranty
