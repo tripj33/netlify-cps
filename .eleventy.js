@@ -45,7 +45,7 @@ module.exports = function (eleventyConfig) {
                     /static/img/responsive/${src}-lg.webp 4x, 
                     /static/img/responsive/${src}-xl.webp 5x,"`;
    });
-
+   
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
