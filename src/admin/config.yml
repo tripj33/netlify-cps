@@ -10,8 +10,8 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: process.env.CLOUDINARY_CLOUDNAME
-    api_key: process.env.CLOUDINARY_API_KEY
+    cloud_name: chicagoland-plumbing
+    api_key: 231229224968195
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
