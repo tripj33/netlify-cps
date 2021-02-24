@@ -5,7 +5,7 @@
     "debug": "set DEBUG=* & eleventy",
     "build-images": "ipp",
     "css": "postcss src/static/css/tailwind.css --o _tmp/static/css/style.css --watch",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css"
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css build-images"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
