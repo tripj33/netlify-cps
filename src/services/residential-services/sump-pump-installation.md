@@ -9,10 +9,19 @@ details: >2
   Your sump pump is responsible for keeping your home dry and safe from flooding, you only deserve the best protection, and we are here to install it.
 image: /static/img/zoeller-m53-sump-pump.jpg
 chatLink: https://tawk.to/chat/602d5945918aa261273fddab/1euqmltmm
-feature:
-  - 3 Year Warranty
-  - Fast Installation
-  - Premium Quality
+serviceFaqs:
+  - question: What is the difference between a sump pump and an ejector pump?
+    answer: This is a common question asked by many people. The purpose of the sump
+      pump is to remove water from around the exterior of your home to prevent
+      water seeping into your basement. While an ejector pump is responsible for
+      removing the waste from your homes drainage system and moving it into a
+      sewer.
+  - question: Why do you use Zoller Pumps?
+    answer: At Chicagoland Plumbing, we believe in utilizing the highest quality
+      materials to get the job done right. We have found that Zoeller pumps are
+      some of the best that many can by. They have many features that set them
+      apart from other pumps such as the cast iron housing and oil-cooled
+      components. Both of which help to extend the life of the pump.
 service-faqs:
   - faqs:
       answer: A sump pump handles ground water that collects around your foundation
@@ -36,4 +45,8 @@ service-faqs:
         pull it out and replace it directly. That’s it, we handle the rest, so
         you don’t have to even call the manufacture.  As good as this warranty
         is, we rarely see it used do to the quality of these pumps.
+feature:
+  - 3 Year Warranty
+  - Fast Installation
+  - Premium Quality
 ---
