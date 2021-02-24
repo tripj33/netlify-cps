@@ -11,17 +11,6 @@ public_folder: "/static/img"
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 
-media_library:
-  name: uploadcare
-  config:
-    publicKey: a73a170cb5cdef662983
-    multiple: false
-    tabs: 'file camera url facebook gdrive'
-    effects: 'crop,rotate,enhance,grayscale'
-    imageShrink: '2000x2000'
-    previewStep: true
-    clearable: true
-
 # publish_mode: editorial_workflow
 collections:
   - label: "Articles"
