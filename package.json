@@ -10,7 +10,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@ipp/cli": "^1.2.0",
+    "@ipp/cli": "^1.2.2",
     "@tailwindcss/typography": "^0.3.1",
     "alpinejs": "^2.8.0",
     "cross-env": "^7.0.2",
@@ -29,7 +29,7 @@
     "@fec/eleventy-plugin-remark": "^2.1.0",
     "@fec/remark-images": "^0.4.0-alpha",
     "@ipp/compress": "^1.1.4",
-    "@ipp/core": "^1.1.6",
+    "@ipp/core": "^1.0.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10.1.0",

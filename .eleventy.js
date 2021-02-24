@@ -35,7 +35,16 @@ module.exports = function (eleventyConfig) {
     "./node_modules/animate.css/animate.min.css": "./static/css/animate.css",
   });
 
-
+    // Nunjucks Shortcode
+  eleventyConfig.addShortcode("sourceSet", function(src, filetype) { 
+    return `
+            src="/static/img/${src}.${filetype}" 
+            srcset="/static/img/responsive/${src}-xs.webp 1x, 
+                    /static/img/responsive/${src}-sm.webp 2x, 
+                    /static/img/responsive/${src}-md.webp 3x, 
+                    /static/img/responsive/${src}-lg.webp 4x, 
+                    /static/img/responsive/${src}-xl.webp 5x,"`;
+   });
 
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);

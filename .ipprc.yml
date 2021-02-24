@@ -27,6 +27,12 @@ pipeline:
           format: webp
           convertOptions:
             quality: 80
+        save: "[name]-[breakpoint][ext]"
+        then: 
+          - pipe: convert
+            options:
+              format: webp
+            save: "[name]-[breakpoint][ext]"
         # then:
         #   - pipe:
         #       resolve: "@ipp/compress"
@@ -34,7 +40,4 @@ pipeline:
         #     options:
         #       softFail: true
         #     save: "[source.name]-[breakpoint][ext]"
-      - pipe: convert
-        options:
-          format: webp
-        save: "[source.name]-[breakpoint][ext]"
+      
