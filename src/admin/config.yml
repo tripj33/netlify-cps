@@ -5,19 +5,20 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "src/static/img"
-public_folder: "/static/img"
-
-
-# Please run "npx netlify-cms-proxy-server" for local backend
-local_backend: true
-
-
+  
+  # Please run "npx netlify-cms-proxy-server" for local backend
+  local_backend: true
+  
 media_library:
   name: cloudinary
   config:
     cloud_name: chicagoland-plumbing
     api_key: 231229224968195
+
+
+
+
+
 
 # publish_mode: editorial_workflow
 collections:
