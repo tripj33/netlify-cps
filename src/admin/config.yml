@@ -5,9 +5,12 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "src/static/img"
-public_folder: "/static/img"
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: your_cloud_name
+    api_key: your_api_key
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 
@@ -18,8 +21,6 @@ collections:
     label_singular: "Article"
     folder: "src/articles"
     path: "{{tags}}/{{slug}}"
-    media_folder: "{{media_folder}}/articles"
-    public_folder: "{{public_folder}}/articles"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -156,7 +157,6 @@ collections:
       -  label: "Service Images" 
          name: "image"
          widget: "image"
-         media_folder: "/images"
 
           
   
