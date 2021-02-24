@@ -1,24 +1,19 @@
+# See https://github.com/netlify/netlify-cms/blob/master/example/config.yml
 backend:
-  # Use netlify identity as backend
   name: git-gateway
-  # branch: master
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
-  
-  # Please run "npx netlify-cms-proxy-server" for local backend
-  local_backend: true
-  
+  # branch: master # Branch to update (optional; defaults to master)
+
+# display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
 media_library:
-  name: cloudinary
+  name: uploadcare
   config:
-    cloud_name: chicagoland-plumbing
-    api_key: 231229224968195
-
-
-
-
-
+    publicKey: a73a170cb5cdef662983
+    multiple: false
+    tabs: 'file camera url facebook gdrive'
+    effects: 'crop,rotate,enhance,grayscale'
+    imageShrink: '2000x2000'
+    previewStep: true
+    clearable: true
 
 # publish_mode: editorial_workflow
 collections:
