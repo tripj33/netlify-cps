@@ -1,0 +1,40 @@
+input: src/static/img
+output: _site/static/img/responsive
+
+pipeline:
+  - pipe: resize
+    options:
+      breakpoints:
+        - name: xs
+          resizeOptions:
+            width: 640
+        - name: sm
+          resizeOptions:
+            width: 768
+        - name: md
+          resizeOptions:
+            width: 1024
+        - name: lg
+          resizeOptions:
+            width: 1280
+        - name: xl
+          resizeOptions:
+            width: 1536
+    save: "[name]-[breakpoint][ext]"
+    then:
+      - pipe: convert
+        options:
+          format: webp
+          convertOptions:
+            quality: 80
+        # then:
+        #   - pipe:
+        #       resolve: "@ipp/compress"
+        #       module: CompressPipe
+        #     options:
+        #       softFail: true
+        #     save: "[source.name]-[breakpoint][ext]"
+      - pipe: convert
+        options:
+          format: webp
+        save: "[source.name]-[breakpoint][ext]"

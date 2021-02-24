@@ -3,12 +3,14 @@
     "start": "npm-run-all --parallel css eleventy",
     "eleventy": "eleventy --serve",
     "debug": "set DEBUG=* & eleventy",
+    "build-images": "ipp",
     "css": "postcss src/static/css/tailwind.css --o _tmp/static/css/style.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@ipp/cli": "^1.2.0",
     "@tailwindcss/typography": "^0.3.1",
     "alpinejs": "^2.8.0",
     "cross-env": "^7.0.2",
@@ -26,6 +28,8 @@
     "@11ty/eleventy-img": "^0.8.0",
     "@fec/eleventy-plugin-remark": "^2.1.0",
     "@fec/remark-images": "^0.4.0-alpha",
+    "@ipp/compress": "^1.1.4",
+    "@ipp/core": "^1.1.6",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10.1.0",
