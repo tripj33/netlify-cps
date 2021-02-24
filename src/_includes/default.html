@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
-    <script src="/static/js/alpine.js" async ></script>
-    <!-- <link rel="stylesheet" type="text/css" href="/static/css/animate.css"/> -->
-
+    <link rel="stylesheet" rel="preload" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" rel="preload" type="text/css" href="/static/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    
     <title>
       {{title}}
     </title>
     {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
-    {% block head %}{% endblock %}
-    <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"/> -->
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
+    
+    
   </head>
   <body>
  {% include "./partials/header/header.html" %}
@@ -34,6 +31,7 @@
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
       <!-- Needed only if you are using Netlify Identity feature -->
+      <script src="/static/js/alpine.js" async ></script>
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
     {% endif %}
     <script src="/static/js/header.js" async></script>
@@ -51,34 +49,6 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
-    <script type="text/javascript">
-/* First CSS File */
-var giftofspeed = document.createElement('link');
-giftofspeed.rel = 'stylesheet';
-giftofspeed.href = '/static/css/animate.css';
-giftofspeed.type = 'text/css';
-var godefer = document.getElementsByTagName('meta')[0];
-godefer.parentNode.insertBefore(giftofspeed, godefer);
 
-/* Second CSS File */
-var giftofspeed2 = document.createElement('link');
-giftofspeed2.rel = 'stylesheet';
-giftofspeed2.href = 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css';
-giftofspeed2.type = 'text/css';
-giftofspeed2.setAttribute("integrity", "sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p");
-giftofspeed2.setAttribute("crossorigin", "anonymous")
-var godefer2 = document.getElementsByTagName('link')[0];
-godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
-
-
-/* Third CSS File */
-var giftofspeed3 = document.createElement('link');
-giftofspeed3.rel = 'stylesheet';
-giftofspeed3.href = '/static/css/style.css';
-giftofspeed3.type = 'text/css';
-var godefer3 = document.getElementsByTagName('link')[0];
-godefer3.parentNode.insertBefore(giftofspeed3, godefer3);
-
-</script>
   </body>
 </html>
