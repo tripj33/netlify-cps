@@ -36,15 +36,27 @@ module.exports = function (eleventyConfig) {
   });
 
     // Nunjucks Shortcode
-  eleventyConfig.addShortcode("sourceSet", function(src, filetype) { 
+  eleventyConfig.addNunjucksShortcode("srcset", function(src, transforms) { 
+      let comma = ""
+      if(transforms != ""){
+          let comma = ",";
+      }
     return `
-            src="/static/img/${src}.${filetype}" 
-            srcset="/static/img/responsive/${src}-xs.webp 1x, 
-                    /static/img/responsive/${src}-sm.webp 2x, 
-                    /static/img/responsive/${src}-md.webp 3x, 
-                    /static/img/responsive/${src}-lg.webp 4x, 
-                    /static/img/responsive/${src}-xl.webp 5x,"`;
+            src="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,q_80${comma}${transforms}/${src}.webp" 
+            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_640,q_80${comma}${transforms}/${src}.webp 640w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_768,q_80${comma}${transforms}/${src}.webp 768w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_1024,q_80${comma}${transforms}/${src}.webp 1024w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_1280,q_80${comma}${transforms}/${src}.webp 1280w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_1538,q_80${comma}${transforms}/${src}.webp 1538w"
+            sizes="(min-width: 640px) 768px,
+                    (min-width: 768px) 1024px,
+                    (min-width: 1024px) 1280px,
+                    (min-width: 1280px) 1538px,
+                    100vw"`;
    });
+
+
+   
    
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
