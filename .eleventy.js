@@ -36,22 +36,23 @@ module.exports = function (eleventyConfig) {
   });
 
     // Nunjucks Shortcode
-  eleventyConfig.addNunjucksShortcode("srcset", function(src, transforms) { 
+  eleventyConfig.addNunjucksShortcode("srcset", function(src, transforms, sm, md, lg, xl, xxl) { 
       let comma = ""
       if(transforms != ""){
           let comma = ",";
       }
     return `
             src="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,q_80${comma}${transforms}/${src}.webp" 
-            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_640,q_80${comma}${transforms}/${src}.webp 640w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_768,q_80${comma}${transforms}/${src}.webp 768w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_1024,q_80${comma}${transforms}/${src}.webp 1024w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_1280,q_80${comma}${transforms}/${src}.webp 1280w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_1538,q_80${comma}${transforms}/${src}.webp 1538w"
-            sizes="(min-width: 640px) 768px,
-                    (min-width: 768px) 1024px,
-                    (min-width: 1024px) 1280px,
-                    (min-width: 1280px) 1538px,
+            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${sm},q_80${comma}${transforms}/${src}.webp ${sm}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${md},q_80${comma}${transforms}/${src}.webp ${md}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${lg},q_80${comma}${transforms}/${src}.webp ${lg}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xl},q_80${comma}${transforms}/${src}.webp ${xl}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xxl},q_80${comma}${transforms}/${src}.webp ${xxl}w"
+            sizes="(min-width: 640px) ${sm}px,
+                    (min-width: 768px) ${md}px,
+                    (min-width: 1024px) ${lg}px,
+                    (min-width: 1280px) ${xl}px,
+                    (min-width: 1538px) ${xxl}px,
                     100vw"`;
    });
 
