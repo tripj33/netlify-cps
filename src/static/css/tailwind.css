@@ -19,6 +19,10 @@
 @import "./pages/index.css";
 
 
+/* FONTAWESOME */
+@import "./fontawesome5.css";
+
+
 @layer base{
     /* @font-face {font-family: "Font Awesome 5 Pro"; */
     /* src: url("http://db.onlinewebfonts.com/t/0b28d43e90a11a93d935b305ff2cefb2.eot");  IE9*/ 

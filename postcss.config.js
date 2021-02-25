@@ -7,7 +7,8 @@ module.exports = {
      require('postcss-nested'),
     require(`autoprefixer`),
     purgecss({
-      content: ['./**/*.html', './**/*.njk',]
+      content: ['./src/**/*.html', './src/**/*.njk',],
+      css: ['./src/static/css']
     })
     // ...(process.env.NODE_ENV === "production"
     //   ? [
