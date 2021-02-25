@@ -16,7 +16,7 @@ details: "Drain cleaning also referred to as rodding or snaking a drain, is the
   professional training we are not only able to fix issues that you are
   currently having but also provide solutions on preventing backups from
   happening in the future on trouble drain lines.  "
-image: https://images.homedepot-static.com/catalog/productImages/1000/2c/2c331f79-9b02-41f2-9ad2-0a994ac2ec3b_1000.jpg
+image: https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614279880/residential-service-drain-cleaning.webp
 chatLink: ok
 feature:
   - Premium Quality
