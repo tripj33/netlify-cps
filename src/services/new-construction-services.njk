@@ -62,16 +62,16 @@ tags:
             console.log(this.search)
             //Return the total results of the filters
             this.total = this.myForData.filter((item) => {
-              return item.employee_name
+              return item.service_name
                 .toLowerCase()
                 .includes(this.search.toLowerCase());
             }).length;
             console.log("this.total = " + this.total)
             //Return the filtered data
-            // return item.employee_name&&item.employee_salary
+            // return item.service_name&&item.employee_salary
             return this.myForData
               .filter((item) => {
-                return item.employee_name 
+                return item.service_name 
                   .toLowerCase()
                   .includes(this.search.toLowerCase());
               })
@@ -128,7 +128,7 @@ tags:
             console.log(this.search)
             //Return the total results of the filters
             this.total = this.myForData.filter((item) => {
-              return item.employee_name
+              return item.service_name
                 .toLowerCase()
                 .includes(this.search.toLowerCase());
             }).length;
@@ -136,7 +136,7 @@ tags:
             //Return the filtered data
             return this.myForData
               .filter((item) => {
-                return item.employee_name
+                return item.service_name
                   .toLowerCase()
                   .includes(this.search.toLowerCase());
               })
