@@ -19,9 +19,17 @@ module.exports = function (eleventyConfig) {
    eleventyConfig.addPassthroughCopy({
     "./src/services": "/services",
   });
+
+  eleventyConfig.addPassthroughCopy({
+    "./src/static/webfonts": "/static/webfonts",
+  });
   
     eleventyConfig.addPassthroughCopy({
     "./src/articles": "/articles",
+  });
+
+      eleventyConfig.addPassthroughCopy({
+    "./src/static/css/fontawesome5.css": "/static/css/fontawesome5.css",
   });
   
 
@@ -32,7 +40,7 @@ module.exports = function (eleventyConfig) {
 
   // Animate.css
   eleventyConfig.addPassthroughCopy({
-    "./node_modules/animate.css/animate.min.css": "./static/css/animate.css",
+    "./node_modules/animate.css/animate.min.css": ".src/static/css/animate.css",
   });
 
     // Nunjucks Shortcode
