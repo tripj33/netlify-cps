@@ -105,7 +105,6 @@ collections:
       - label: "SEO"
         name: "seo"
         widget: "list"
-        collapsed: true
         allow_add: false
         description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
         fields:
