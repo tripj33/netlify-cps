@@ -8,71 +8,70 @@
     "addressRegion": "IL",
     "postalCode": "60448"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "19"
-  },
+
   "description": "Trustworthy plumbers providing the highest quality plumbing service.",
   "name": "Chicagoland Plumbing Services, Inc.",
   "openingHoursSpecification": [
-        {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-            "Monday",
-            "Friday"
-        ],
-        "opens": "07:00",
-        "closes": "17:00"
-        },
-        {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "12:00"
-        },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "17:00:00",
+      "dayOfWeek": "https://schema.org/Monday",
+      "opens": "09:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "17:00:00",
+      "dayOfWeek": "https://schema.org/Tuesday",
+      "opens": "09:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "17:00:00",
+      "dayOfWeek":  "https://schema.org/Wednesday",
+      "opens": "09:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes":  "17:00:00",
+      "dayOfWeek": "https://schema.org/Thursday",
+      "opens": "09:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "17:00:00",
+      "dayOfWeek":  "https://schema.org/Friday",
+      "opens": "09:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "12:00:00" ,
+      "dayOfWeek": "https://schema.org/Saturday",
+      "opens": "08:00:00"
+    }
+    
   ],
   "telephone": [
       "708-428-4600",
       "815-463-1900"
   ],
-  "url": "http://www.greatfood.com",
+  "url": "http://www.chicagolandplumbing.com",
   "logo": "https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614289840/schema-logo.jpg",
   "image": "https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614289840/schema-logo.jpg"
-}
+},
+
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Service",
-  "serviceType": "Drain Cleaning",
-  "provider": {
-    "@type": "LocalBusiness",
-    "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Mokena",
-        "addressRegion": "IL",
-        "postalCode": "60448"
-    },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "19"
-  },
-  "description": "Trustworthy plumbers providing the highest quality plumbing service.",
-  "name": "Chicagoland Plumbing Services, Inc.",
-  "openingHoursSpecification": ["Mo-Fr 07:00-17:00"],
-  "telephone": [
-      "708-428-4600",
-      "815-463-1900"
-  ],
-  "url": "http://www.greatfood.com",
-  "logo": "https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614197097/cps-logo-no-bg.png",
-  "image": "https://knoxvilleplumbing.com/wp-content/uploads/2018/07/Leaking-Faucet-part-2.jpg",
-  "areaServed":  ["Mokena", "Frankfort", "Tinley Park", "Orland Park", "Orland Hills", " New Lenox", "Homer Glen", "Lockport", "Joliet", "Crest Hill", "Lemont", "Matteson", "Oak Forest", "Frankfort Square"],
 
-
-}
-  }
-</script>
+{    "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Residential Services",
+        "item": "https://chicagolandplumbing.com/services/residential-services/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Drain Cleaning"
+      }]
+    }
