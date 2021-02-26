@@ -127,15 +127,6 @@ collections:
         fields:
           - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
           - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
-
-      - label: "SEO"
-        name: "seo"
-        collapsed: true
-        widget: "object"
-        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
-        fields:
-          - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
-          - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
