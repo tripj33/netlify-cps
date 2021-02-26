@@ -105,7 +105,6 @@ collections:
       - label: "SEO"
         name: "seo"
         widget: "list"
-        allow_add: false
         description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
         fields:
           - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], description: "The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
