@@ -27,6 +27,15 @@ collections:
     path: "{{tags}}/{{slug}}"
     create: true
     fields:
+      - label: "SEO"
+        name: "seo"
+        collapsed: true
+        widget: "object"
+        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        fields:
+          - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
+          - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
+
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Featured Article", name: "featured", widget: "boolean"}
       - { label: "Page URL", name: "slug", widget: "string"}
@@ -53,7 +62,6 @@ collections:
           - { label: "Section Name", name: "sectionName", widget: "string" }
           - { label: "Section Quick Link", name: "sectionLink", widget: "string" }
           - { label: "Section Content", name: "sectionContent", widget: "markdown"}
-      
 
   - label: "Commercial Services"
     serviceCategory: "Commercial Service"
@@ -65,6 +73,15 @@ collections:
     slug: "{{fields.slug}}"
     create: true
     fields:
+      - label: "SEO"
+        name: "seo"
+        collapsed: true
+        widget: "object"
+        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        fields:
+          - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
+          - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
+
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
@@ -110,10 +127,19 @@ collections:
         fields:
           - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
           - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
+
+      - label: "SEO"
+        name: "seo"
+        collapsed: true
+        widget: "object"
+        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        fields:
+          - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
+          - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Details", name: "details", widget: "text"}
+      - { label: "Details", name: "details", widget: "markdown"}
       - { label: "Service Image", name: "image", widget: "image"}
       - { label: "Image File Name", name: "imageFileName", widget: "string", hint: "The image file name is needed in order to optimize the image across the site. To find where the file name is, visit ==> http://bit.ly/37QtFWh"}
       - label: "Features"
@@ -139,6 +165,15 @@ collections:
     slug: "{{fields.slug}}"
     create: true
     fields:
+      - label: "SEO"
+        name: "seo"
+        collapsed: true
+        widget: "object"
+        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        fields:
+          - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
+          - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
+
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
@@ -170,9 +205,6 @@ collections:
       -  label: "Service Images" 
          name: "image"
          widget: "image"
-
-          
-  
 
   - label: "Settings"
     name: "settings"
