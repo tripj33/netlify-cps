@@ -50,12 +50,12 @@ module.exports = function (eleventyConfig) {
           let comma = ",";
       }
     return `
-            src="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,q_80${comma}${transforms}/${src}.webp" 
-            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${sm},q_80${comma}${transforms}/${src}.webp ${sm}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${md},q_80${comma}${transforms}/${src}.webp ${md}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${lg},q_80${comma}${transforms}/${src}.webp ${lg}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xl},q_80${comma}${transforms}/${src}.webp ${xl}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xxl},q_80${comma}${transforms}/${src}.webp ${xxl}w"
+            src="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,q_90${comma}${transforms}/${src}.webp" 
+            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${sm},q_90${comma}${transforms}/${src}.webp ${sm}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${md},q_90${comma}${transforms}/${src}.webp ${md}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${lg},q_90${comma}${transforms}/${src}.webp ${lg}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xl},q_90${comma}${transforms}/${src}.webp ${xl}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xxl},q_90${comma}${transforms}/${src}.webp ${xxl}w"
             sizes="(min-width: 640px) ${sm}px,
                     (min-width: 768px) ${md}px,
                     (min-width: 1024px) ${lg}px,
