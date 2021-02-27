@@ -1,5 +1,5 @@
 ---
-slug: /Battery-Backup-System-Installation
+slug: /battery-backup-system-installation
 details: Our company prides itself on only using quality materials backed by
   trusted brands. Our battery backup pumps are no acceptation to this
   philosophy. Our company primarily only offers PHCC Pro series pumps for

@@ -10,10 +10,14 @@
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     
     <title>
-      {{title}}
+        {% if seo.metaTitle %}
+        {{seo.metaTitle}}
+        {% else %}
+        {{title}}
+        {% endif %}
     </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
+    {% if seo.metaDescription %}
+      <meta name="description" content="{{seo.metaDescription}}"/>
     {% endif %}
     
     
@@ -29,15 +33,10 @@
 
 
 
-    {% if path == "home" %}
-      <!-- Netlify Identity Widget -->
-      <!-- Needed only if you are using Netlify Identity feature -->
-      
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
-    {% endif %}
+   
     <script src="/static/js/header.js" async></script>
 <!--Start of Tawk.to Script-->
-<script type="text/javascript" defer>
+<script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -50,6 +49,11 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 <script src="/static/js/alpine.js" async ></script>
-
+ {% if path == "home" %}
+      <!-- Netlify Identity Widget -->
+      <!-- Needed only if you are using Netlify Identity feature -->
+      
+      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+    {% endif %}
   </body>
 </html>

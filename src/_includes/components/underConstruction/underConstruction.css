@@ -1,0 +1,59 @@
+.underConstruction{
+    @apply 
+    p-12 
+    container 
+    mx-auto;
+
+    .underConstruction_container{
+        @apply
+        flex 
+        flex-col 
+        lg:flex-row 
+        justify-center 
+        items-center;
+
+        .underConstruction_text{
+            @apply
+            mx-auto 
+            justify-center 
+            items-center 
+            h-full 
+            lg:w-1/2 
+            xl:w-5/12;
+
+            h2{
+                @apply
+                text-blue-500 
+                text-5xl 
+                md:text-6xl 
+                lg:text-5xl 
+                xl:text-7xl 
+                font-bold 
+                mx-auto 
+                xl:w-full 
+                mx-auto;
+            }
+            p{
+                @apply
+                py-8 
+                text-xl 
+                lg:w-full 
+                mx-auto 
+                xl:w-11/12 
+                xl:mx-0;
+            }
+        }
+
+        .underConstruction_image{
+            @apply
+            w-full 
+            mx-auto 
+            lg:w-1/2;
+
+            img{
+                @apply
+                mx-auto;
+            }
+        }
+    }
+}

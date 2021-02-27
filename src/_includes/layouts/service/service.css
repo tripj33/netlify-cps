@@ -167,6 +167,7 @@
                             i{
                                 @apply
                                 text-4xl 
+                                px-1
                                 w-full 
                                 m-auto 
                                 text-cps-blue-600

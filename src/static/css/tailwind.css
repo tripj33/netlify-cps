@@ -4,10 +4,13 @@
 
 
 @import "tailwindcss/utilities";
-
+/* PARTIALS */
 @import "../../_includes/partials/header/header.css";
 @import "../../_includes/partials/footer/footer.css";
 @import "../../_includes/partials/heroCTA/heroCTA.css";
+
+/* COMPONENTS */
+@import "../../_includes/components/underConstruction/underConstruction.css";
 
 /* LAYOUTS */
 @import "../../_includes/layouts/service/service.css";
@@ -39,16 +42,25 @@
 .pageContainer{
     @apply
     relative
-    mt-11
-    lg:mt-40
-    lg:-mb-20;
+    mt-14
+    lg:mt-40;
+    min-height: calc(100vh - 226px);
+        margin-bottom: 0;
     
 }
+@media (min-width: 640px) {
+    .pageContainer{
+        margin-top: 6.5rem;
+        min-height: calc(100vh - 6.5rem - 88px);
+        margin-bottom: 0;
+    }
+ }
 
 @media (min-width: 1024px) {
     .pageContainer{
         margin-top: 6.5rem;
-        min-height: calc(100vh - 12.75rem);
+        min-height: calc(100vh - 6.5rem - 80px);
         margin-bottom: 0;
     }
  }
+

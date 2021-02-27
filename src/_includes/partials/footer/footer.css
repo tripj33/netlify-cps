@@ -1,4 +1,4 @@
-footer{
+/* footer{
     @apply
     text-gray-600
     absolute
@@ -19,46 +19,44 @@ footer{
         xl:mx-auto
         xl:px-20;
 
-        a{
-            @apply
-            flex 
-            font-medium 
-            items-center 
-            md:justify-start 
-            justify-center 
-            text-white;
-
+        .logo{
+            @appy
+            pt-4
+            sm:pt-0;
             img{
                 @apply
                 h-20;
             }
-
-
         }
 
-        p{
+        .copyright{
             @apply
-            text-sm 
-            flex
-            font-medium
-            text-white 
-            sm:ml-4 
-            sm:pl-4 
-            sm:border-l-2 
-            sm:border-white 
-            sm:py-2 
-            sm:mt-0 
-            mt-4;
+            text-center
+            py-4;
+            span{
+                @apply
+                flex 
+                font-medium 
+                items-center 
+                md:justify-start 
+                justify-center 
+                text-white;
+                }
+        }
 
+        .sitemap{
             a{
                 @apply
-                text-white 
-                hover:text-cps-orange-400
-                ml-1;
-            }
+                flex 
+                font-medium 
+                items-center 
+                md:justify-start 
+                justify-center 
+                text-white;
+                }
         }
-
-        span{
+  
+        .icons{
             @apply
             inline-flex 
             sm:ml-auto 
@@ -74,7 +72,158 @@ footer{
                 p-4
                 md:text-xl;
 
-                i{}
+                i{
+                    @apply
+                    text-xl
+                }
+            }
+        }
+    }
+} */
+
+
+footer{
+    @apply
+    text-gray-600
+    absolute
+    mx-auto
+    w-full
+    bg-cps-blue-700;
+    
+    .footer__container{
+        @apply
+        container 
+        grid
+        grid-cols-8
+        sm:grid-rows-2
+        md:grid-cols-10
+        lg:grid-cols-12
+        md:items-center;
+
+        .logo{
+            @apply
+            col-start-1
+            col-end-9
+            mx-auto
+            pt-4
+            sm:col-start-1
+            sm:col-end-4
+            sm:row-start-1
+            sm:row-end-3
+            sm:pt-0
+            lg:col-start-1
+            lg:col-end-4;
+            img{
+                @apply
+                h-20
+                md:py-2;
+            }
+        }
+
+        .copyright{
+            @apply
+            col-start-1
+            col-end-9
+            mx-auto
+            text-center
+            py-4
+            text-white
+
+            sm:col-start-4
+            sm:col-end-9
+            sm:row-start-1
+            sm:row-end-2
+            sm:py-2
+            
+            md:col-start-4
+            md:col-end-8
+            md:text-sm
+
+            lg:col-start-3
+            lg:col-end-8
+            lg:row-start-1
+            lg:row-end-3;
+            span{
+                @apply
+                flex 
+                font-medium 
+                items-center 
+                md:justify-start 
+                justify-center 
+                text-white
+                lg:text-xl;
+                }
+        }
+
+        .sitemap{
+            @apply
+            mx-auto
+            col-start-1
+            col-end-9
+            sm:col-start-4
+            sm:col-end-6
+            sm:row-start-2
+            sm:row-end-3
+            sm:py-2
+            
+            md:col-start-4
+            md:col-end-8
+            md:text-sm
+            
+            lg:col-start-8
+            lg:col-end-10
+            lg:row-start-1
+            lg:row-end-3;
+            a{
+                @apply
+                flex 
+                font-medium 
+                items-center 
+                md:justify-start 
+                justify-center 
+                text-white
+                lg:font-light;
+                }
+        }
+  
+        .icons{
+            @apply
+            col-start-1
+            col-end-9
+            mx-auto
+            my-4 
+            sm:ml-auto 
+            sm:mt-0 
+            sm:col-start-6
+            sm:col-end-9 
+            sm:row-start-2
+            sm:row-end-3
+            sm:mb-0
+            justify-center 
+            sm:justify-start
+            sm:items-center
+            sm:py-2
+            md:col-start-8
+            md:col-end-11
+            md:row-start-1
+            md:row-end-3
+            md:items-center
+            md:justify-center
+            md:text-xl
+            
+            lg:col-start-10
+            lg:col-end-13;
+            a{
+                @apply
+                text-white
+                hover:text-cps-orange-400
+                p-4
+                md:text-xl;
+
+                i{
+                    @apply
+                    text-xl
+                }
             }
         }
     }
