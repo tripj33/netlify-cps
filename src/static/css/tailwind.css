@@ -14,6 +14,7 @@
 
 /* LAYOUTS */
 @import "../../_includes/layouts/service/service.css";
+@import "../../_includes/layouts/service-new/service.css";
 @import "../../_includes/layouts/servicesSearch/servicesSearch.css";
 @import "../../_includes/layouts/article/article.css";
 @import "../../_includes/layouts/articleIndex/articleIndex.css";

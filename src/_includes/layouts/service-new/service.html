@@ -1,0 +1,286 @@
+<section class="serviceInformation">
+  <div class="serviceImage">
+    <img src="https://assets.leesa.com/images/products/product-shots/original/Original_1.jpg?format=pjpg&auto=webp&width=1080&crop=1:0.85&dpr=2" alt="">
+  </div>
+  <div class="serviceContent">
+    <div class="serviceContent__wrapper" x-data="{tab: 'features'}">
+      <div class="title">
+        <h2>
+          Sump Pump Installation
+        </h2>
+      </div>
+      <div class="content">
+        <div class="contentTitle">
+          <h4>Details</h4>
+        </div>
+        <div class="contentParagraph">
+          <p>Our fan-favorite, Original mattress features an all-foam makeup, with a breathable cover and exclusive top layer for cooler sleep and memory foam and a core support layer for comfort and support all night long.</p>
+          <p>Our fan-favorite, Original mattress features an all-foam makeup, with a breathable cover and exclusive top layer for cooler sleep and memory foam and a core support layer for comfort and support all night long.</p>
+        </div>
+        <div class="contenteTitle">
+          <h4>Features</h4>
+        </div>
+        <div class="contentFeatures">
+          <ul>
+
+            {% for feature in serviceFeatures %}
+            <li>
+              <p>
+                {{feature}}
+              </p>
+            </li>
+            {% endfor %}
+  
+          </ul>
+        </div>
+      </div>
+
+      <div class="iconBoxes">
+
+        
+
+
+                {% for icon in featureIcons %}
+
+                    {% if icon === 'Fast Installation' %}
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fal fa-rabbit-fast"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Fast Installation
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Lower Energy Cost' %} 
+                       
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-lightbulb-dollar"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Lower Energy Cost
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Eco-Friendly' %} 
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-seedling"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Eco Friendly
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Annual Inspection Req.' %} 
+                        
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-calendar-check"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Annual Inspection Required
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Special Savings' %} 
+                        
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-usd-circle"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Special Savings
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Cleaner Water' %} 
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-tint"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Cleaner Water
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Instant Hot Water' %} 
+                        
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-thermometer-three-quarters"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Instant Hot Water
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === '1 Year Warranty' %} 
+                        
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-badge-check"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    1 Year Warrant
+                                </span>
+                            </div>
+                        </div>
+                    {% elseif icon === '2 Year Warranty' %} 
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-badge-check"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    2 Year Warrant
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === '3 Year Warranty' %} 
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-badge-check"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    3 Year Warrant
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === '4 Year Warranty' %} 
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-badge-check"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    4 Year Warrant
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === '5 Year Warranty' %} 
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-badge-check"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    5 Year Warrant
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Premium Quality' %} 
+                        
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-award"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Premium Quality
+                                </span>
+                            </div>
+                        </div>
+
+                    {% elseif icon === 'Wifi Enabled' %} 
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-wifi"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Wifi Enabled
+                                </span>
+                            </div>
+                        </div>
+
+                    {% endif %}
+            {% endfor %}
+
+
+        <div class="flex flex-col border rounded justify-center col-span-1 border-gray-200 items-center justify-center p-2">
+          <div class="w-full text-center text-4xl">
+            <i class="fal fa-award"></i>
+          </div>
+          <div class="w-full text-center font-thin leading-tight flex flex-grow items-center justify-center"><span>Fast Installation</span></div>
+        </div>
+
+        <div class="flex flex-col border rounded justify-center col-span-1 border-gray-200 items-center justify-center p-2">
+          <div class="w-full text-center text-4xl">
+            <i class="fal fa-award"></i>
+          </div>
+          <div class="w-full text-center font-thin leading-tight flex flex-grow items-center justify-center"><span>Fast Installation</span></div>
+        </div>
+
+      </div>
+      <div class="pricingButton">
+        <button>
+          <a href="javascript:void(Tawk_API.toggle())">
+              <span>Get Service Pricing</span>
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="serviceFAQs">
+  <div class="serviceFAQs__container">
+    <div class="serviceFAQs__wrapper">
+      <div class="buffer">
+        <div class="content">
+          <div class="info">
+            <div class="infoTitle">Frequently asked <span class="font-medium">Questions</span></div>
+            <div class="infoContent">
+              <p>Have a few questions about this particular service? Take a look at some of our frequently asked questions to learn more.</p>
+            </div>
+          </div>
+          <div class="questions" x-data="{faq:'faq0'}">
+            <div class="questionContainer">
+              {% for question in faqs %}
+                <div class="questionWrap">
+                <div x-on:click="faq = 'faq1'" class="faq">
+                  <div class="faqText">{{question.question}} ?</div>
+                  <div class="faqIconContainer">
+                    <div class="icon">
+                      <i x-bind:class="{'fa-chevron-up': faq === 'faq1', 'fa-chevron-down': faq != 'faq1'}" class="far "></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="answer" x-show="faq === 'faq1'">
+                    {{question.answer}}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

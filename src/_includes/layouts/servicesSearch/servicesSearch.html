@@ -8,7 +8,10 @@ layout: default
             </h1>
             <p>{{headercontent}}</p>
             <div class="buttons">
-                <button  onclick="document.getElementsByTagName('iframe')[0].style.display = 'block'; document.getElementsByTagName('iframe')[0].style.height = '441px';"><i class="{{buttonIcon}}"></i>{{buttonText}}</button>
+                <a href="javascript:void(Tawk_API.toggle())">
+                    <button><i class="{{buttonIcon}}"></i>{{buttonText}}</button>
+                </a>
+                
             </div>
         </div>
         <div class="servicesHero__wrapper__img">
