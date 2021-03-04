@@ -8,7 +8,7 @@ details: Your ejector pump handles the waste water the occures below your sewer,
   best we could find, offering acceptional build quilty along with strong motors
   and blades to handle even thehardest conditions and oftan usage without worry.
 title: Ejector Pump Installation
-slug: /ejector-pumps-installation
+slug: /ejector-pump-installation
 seo:
   metaTitle: Ejector Pump Installation
   metaDescription: If the ejector pump in your home isn't running, waste water
