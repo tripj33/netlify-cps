@@ -23,7 +23,15 @@
             lg:rounded 
             lg:shadow-lg 
             lg:sticky 
+            lg:mx-auto
+            lg:width-auto
             lg:top-48;
+        }
+        
+        @media (min-width: 1024px){
+            img{
+                max-height: 80vh;
+            }
         }
     }
 
