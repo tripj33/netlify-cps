@@ -1,5 +1,5 @@
 {
-    "layout": "layouts/service/service",
+    "layout": "layouts/service-new/service",
     "serviceType": "Residential Plumbing",
     "tags": [
         "residentialServices"

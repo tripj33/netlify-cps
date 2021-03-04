@@ -1,14 +1,37 @@
 ---
-title: Sump Pump Installation
-slug: /sump-pump-installation
-snippet: A strong and quality sump pump is your home's solution to removing
-  ground water and preventing flooding.
 details: >2
       Our company prides itself on only supplying quality materials by trusted brands! Our sump pumps are no exception to this philosophy. We primarily offer Zoller brand sump pumps in all sizes from 1/3 HP, 1/2 HP, and beyond. Zoller offers pumps with some of the highest and output capacities on the market. These pump's motors can stay cool and functional under the hardest conditions due to their encased oil system within the pump. The motor is controlled by a mechanical float directly attached, meaning no more failures and replacements of floats. All of these features are wrapped within a cast iron pump housing making the pump strong and durable. 
 
   Your sump pump is responsible for keeping your home dry and safe from flooding, you only deserve the best protection, and we are here to install it.
-image: http://mobileimages.lowes.com/product/converted/053514/053514023607.jpg
-chatLink: https://tawk.to/chat/602d5945918aa261273fddab/1euqmltmm
+title: Sump Pump Installation
+slug: /sump-pump-installation
+seo:
+  metaTitle: Sump Pump Installation
+  metaDescription: A strong and quality sump pump is your home's solution to
+    removing ground water and protecting your home from flooding.
+serviceInfo:
+  image: https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614197098/Zoeller-M53-Sump-Pump.jpg
+  imageTitle: Zoeller-M53-Sump-Pump
+  details: >-
+    Our company prides itself on only supplying quality materials by trusted
+    brands! Our sump pumps are no exception to this philosophy. We primarily
+    offer Zoller brand sump pumps in all sizes from 1/3 HP, 1/2 HP, and beyond. 
+
+
+    Zoller offers pumps with some of the highest and output capacities on the market. These pump's motors can stay cool and functional under the hardest conditions due to their encased oil system within the pump. The motor is controlled by a mechanical float directly attached, meaning no more failures and replacements of floats. All of these features are wrapped within a cast iron pump housing making the pump strong and durable. 
+
+
+    Your sump pump is responsible for keeping your home dry and safe from flooding. You deserve only the best protection, and we are here to install it for you.
+  featureIcons:
+    - 3 Year Warranty
+    - Fast Installation
+    - Premium Quality
+  serviceFeatures:
+    - feature: We'll remove and recycle your old sump pump for you.
+    - feature: "You new sump pump will be professionally installed to Illinois's
+        plumbing code. "
+    - feature: The new Zoeller sump pump will be tested to ensure it is in proper
+        working order, giving you peace of mind.
 serviceFaqs:
   - question: What is the difference between a sump pump and an ejector pump?
     answer: This is a common question asked by many people. The purpose of the sump
@@ -16,12 +39,13 @@ serviceFaqs:
       water seeping into your basement. While an ejector pump is responsible for
       removing the waste from your homes drainage system and moving it into a
       sewer.
-  - question: Why do you use Zoller Pumps?
+  - question: Does Zoeller make reliable sump pumps?
     answer: At Chicagoland Plumbing, we believe in utilizing the highest quality
       materials to get the job done right. We have found that Zoeller pumps are
       some of the best that many can by. They have many features that set them
       apart from other pumps such as the cast iron housing and oil-cooled
       components. Both of which help to extend the life of the pump.
+chatLink: https://tawk.to/chat/602d5945918aa261273fddab/1euqmltmm
 service-faqs:
   - faqs:
       answer: A sump pump handles ground water that collects around your foundation
@@ -49,4 +73,7 @@ feature:
   - 3 Year Warranty
   - Fast Installation
   - Premium Quality
+image: http://mobileimages.lowes.com/product/converted/053514/053514023607.jpg
+snippet: A strong and quality sump pump is your home's solution to removing
+  ground water and preventing flooding.
 ---

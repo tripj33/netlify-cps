@@ -31,7 +31,18 @@ module.exports = function (eleventyConfig) {
       eleventyConfig.addPassthroughCopy({
     "./src/static/css/fontawesome5.css": "/static/css/fontawesome5.css",
   });
+
+  eleventyConfig.addPassthroughCopy({
+    "./src/static/css/tailwind.css": "/static/css/style.css",
+  });
   
+  // Markdown Filter
+  eleventyConfig.addFilter('markdown', function(value) {
+    let markdown = require('markdown-it')({
+        html: true
+    });
+    return markdown.render(value);
+});
 
   // Alpine JS
   eleventyConfig.addPassthroughCopy({
@@ -45,17 +56,20 @@ module.exports = function (eleventyConfig) {
 
     // Nunjucks Shortcode
   eleventyConfig.addNunjucksShortcode("srcset", function(src, transforms, sm, md, lg, xl, xxl) { 
-      let comma = ""
-      if(transforms != ""){
-          let comma = ",";
-      }
+    transforms === undefined || transforms === "" ? transforms = "" : transforms;
+      // let comma = transforms = "" || transforms === undefined ? "": ",";
+       
+      // if(transforms != ""){
+      //     let comma = ",";
+      //     return comma;
+      // }
     return `
-            src="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,q_90${comma}${transforms}/${src}.webp" 
-            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${sm},q_90${comma}${transforms}/${src}.webp ${sm}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${md},q_90${comma}${transforms}/${src}.webp ${md}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${lg},q_90${comma}${transforms}/${src}.webp ${lg}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xl},q_90${comma}${transforms}/${src}.webp ${xl}w, 
-                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/f_webp,w_${xxl},q_90${comma}${transforms}/${src}.webp ${xxl}w"
+            src="https://res.cloudinary.com/chicagoland-plumbing/image/upload/${transforms}f_webp,q_90/${src}.webp" 
+            srcset="https://res.cloudinary.com/chicagoland-plumbing/image/upload/${transforms}f_webp,w_${sm},q_90/${src}.webp ${sm}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/${transforms}f_webp,w_${md},q_90/${src}.webp ${md}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/${transforms}f_webp,w_${lg},q_90/${src}.webp ${lg}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/${transforms}f_webp,w_${xl},q_90/${src}.webp ${xl}w, 
+                    https://res.cloudinary.com/chicagoland-plumbing/image/upload/${transforms}f_webp,w_${xxl},q_90/${src}.webp ${xxl}w"
             sizes="(min-width: 640px) ${sm}px,
                     (min-width: 768px) ${md}px,
                     (min-width: 1024px) ${lg}px,
@@ -118,6 +132,7 @@ eleventyConfig.addPlugin(eleventyResponsivePicturePlugin, {
     "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
+      
   });
 
   // Copy Image Folder to /_site
@@ -125,6 +140,8 @@ eleventyConfig.addPlugin(eleventyResponsivePicturePlugin, {
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+
+
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

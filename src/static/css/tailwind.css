@@ -39,7 +39,9 @@
 }
 
 /*Your Custom CSS Goes here*/
-
+body{
+    margin:0;
+}
 .pageContainer{
     @apply
     relative

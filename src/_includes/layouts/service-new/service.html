@@ -1,32 +1,37 @@
+---
+layout: default
+---
+
+
 <section class="serviceInformation">
   <div class="serviceImage">
-    <img src="https://assets.leesa.com/images/products/product-shots/original/Original_1.jpg?format=pjpg&auto=webp&width=1080&crop=1:0.85&dpr=2" alt="">
+    <img {% srcset serviceInfo.imageTitle, serviceInfo.imageMod, "640", "767", '1023', '747', '896' %} loading="lazy" alt="{{title}}" />
   </div>
   <div class="serviceContent">
     <div class="serviceContent__wrapper" x-data="{tab: 'features'}">
       <div class="title">
         <h2>
-          Sump Pump Installation
+          {{title}}
         </h2>
       </div>
       <div class="content">
         <div class="contentTitle">
-          <h4>Details</h4>
+          <h4>Service Details</h4>
         </div>
         <div class="contentParagraph">
-          <p>Our fan-favorite, Original mattress features an all-foam makeup, with a breathable cover and exclusive top layer for cooler sleep and memory foam and a core support layer for comfort and support all night long.</p>
-          <p>Our fan-favorite, Original mattress features an all-foam makeup, with a breathable cover and exclusive top layer for cooler sleep and memory foam and a core support layer for comfort and support all night long.</p>
+            {% set snippet %} {{serviceInfo.details}} {% endset %}
+          {{snippet | markdown | safe}}
         </div>
-        <div class="contenteTitle">
-          <h4>Features</h4>
+        <div class="contentTitle">
+          <h4>Service Features</h4>
         </div>
         <div class="contentFeatures">
           <ul>
 
-            {% for feature in serviceFeatures %}
+            {% for feature in serviceInfo.serviceFeatures %}
             <li>
               <p>
-                {{feature}}
+                {{feature.feature}}
               </p>
             </li>
             {% endfor %}
@@ -40,7 +45,7 @@
         
 
 
-                {% for icon in featureIcons %}
+                {% for icon in serviceInfo.featureIcons %}
 
                     {% if icon === 'Fast Installation' %}
 
@@ -220,29 +225,68 @@
                             </div>
                         </div>
 
+                        {% elseif icon === 'Regular Home Maintenance' %} 
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-home-lg"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Regular Home Maintenance
+                                </span>
+                            </div>
+                        </div>
+
+                        {% elseif icon === 'Regular Maintenance' %} 
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fad fa-wrench"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Regular Maintenance
+                                </span>
+                            </div>
+
+                            {% elseif icon === 'Fast Repair' %} 
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fal fa-rabbit-fast"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Fast Repair
+                                </span>
+                            </div>
+                        </div>
+
+                        {% elseif icon === 'Fast Service' %} 
+
+                        <div class="iconBox">
+                            <div class="icon">
+                                <i class="fal fa-rabbit-fast"></i>
+                            </div>
+                            <div class="iconTitle">
+                                <span>
+                                    Fast Service
+                                </span>
+                            </div>
+                        </div>
+
                     {% endif %}
             {% endfor %}
 
 
-        <div class="flex flex-col border rounded justify-center col-span-1 border-gray-200 items-center justify-center p-2">
-          <div class="w-full text-center text-4xl">
-            <i class="fal fa-award"></i>
-          </div>
-          <div class="w-full text-center font-thin leading-tight flex flex-grow items-center justify-center"><span>Fast Installation</span></div>
-        </div>
-
-        <div class="flex flex-col border rounded justify-center col-span-1 border-gray-200 items-center justify-center p-2">
-          <div class="w-full text-center text-4xl">
-            <i class="fal fa-award"></i>
-          </div>
-          <div class="w-full text-center font-thin leading-tight flex flex-grow items-center justify-center"><span>Fast Installation</span></div>
-        </div>
+  
 
       </div>
       <div class="pricingButton">
         <button>
           <a href="javascript:void(Tawk_API.toggle())">
-              <span>Get Service Pricing</span>
+              <span><i class="fal fa-usd-circle"></i>Get Service Pricing</span>
           </a>
         </button>
       </div>
@@ -262,18 +306,21 @@
           </div>
           <div class="questions" x-data="{faq:'faq0'}">
             <div class="questionContainer">
-              {% for question in faqs %}
+                
+              {% for faq in serviceFaqs %}
+
                 <div class="questionWrap">
-                <div x-on:click="faq = 'faq1'" class="faq">
-                  <div class="faqText">{{question.question}} ?</div>
+                <div x-on:click="faq = (faq === 'faq{{loop.index}}') ? '' : 'faq{{loop.index}}'" class="faq">
+                  <div class="faqText">{{faq.question}}</div>
                   <div class="faqIconContainer">
                     <div class="icon">
-                      <i x-bind:class="{'fa-chevron-up': faq === 'faq1', 'fa-chevron-down': faq != 'faq1'}" class="far "></i>
+                      <i x-bind:class="{'fa-chevron-up': faq === 'faq{{loop.index}}', 'fa-chevron-down': faq != 'faq{{loop.index}}'}" class="far "></i>
                     </div>
                   </div>
                 </div>
-                <div class="answer" x-show="faq === 'faq1'">
-                    {{question.answer}}
+                <div class="answer" x-show="faq === 'faq{{loop.index}}'">
+                    <!-- {{service-faqs.faq.answer}} -->
+                    {{faq.answer}}
                 </div>
               </div>
               {% endfor %}
@@ -284,3 +331,127 @@
     </div>
   </div>
 </section>
+<section class="serviceCTA">
+    <div class="ctaWrapper">
+        <h3>Ready to talk to a plumber you can trust?</h3>
+        <p>Get in touch with one of our plumbers and we'll take care of whatever plumbing issue you're experience.</p>
+        <button>
+            <a href="tel:708-428-4600"><i class="fas fa-mobile-alt"></i>Talk To A Plumber</a>
+        </button>
+        <div class="cta">
+            <span>
+                <a href="javascript:void(Tawk_API.toggle())">
+                    <i class="fal fa-comment-dots"></i>Chat Now
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mokena",
+        "addressRegion": "IL",
+        "postalCode": "60448"
+      },
+    
+      "description": "Trustworthy plumbers providing the highest quality plumbing service.",
+      "name": "Chicagoland Plumbing Services, Inc.",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "17:00:00",
+          "dayOfWeek": "https://schema.org/Monday",
+          "opens": "09:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "17:00:00",
+          "dayOfWeek": "https://schema.org/Tuesday",
+          "opens": "09:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "17:00:00",
+          "dayOfWeek":  "https://schema.org/Wednesday",
+          "opens": "09:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes":  "17:00:00",
+          "dayOfWeek": "https://schema.org/Thursday",
+          "opens": "09:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "17:00:00",
+          "dayOfWeek":  "https://schema.org/Friday",
+          "opens": "09:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "12:00:00" ,
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "08:00:00"
+        }
+        
+      ],
+      "telephone": [
+          "708-428-4600",
+          "815-463-1900"
+      ],
+      "url": "http://www.chicagolandplumbing.com",
+      "logo": "https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614289840/schema-logo.jpg",
+      "image": "https://res.cloudinary.com/chicagoland-plumbing/image/upload/v1614289840/schema-logo.jpg"
+    },
+    
+    </script>
+    
+
+<script type="application/ld+json">
+    {    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Residential Services",
+      "item": "https://chicagolandplumbing.com/services/{{serviceParentSlug}}"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{title}}"
+    }]
+  }
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+        {% for faq in serviceFaqs %}
+            {% if loop.last %}
+            {
+                "@type": "Question",
+                "name": "{{faq.question}}",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "{{faq.answer}}"
+                }
+              }
+              {% else %}
+              {
+                "@type": "Question",
+                "name": "{{faq.question}}",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "{{faq.answer}}"
+                }
+              },
+            {% endif %}
+        {% endfor %}
+        ]}
+</script>
