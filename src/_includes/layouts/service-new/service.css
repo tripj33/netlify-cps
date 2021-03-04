@@ -30,7 +30,7 @@
         
         @media (min-width: 1024px){
             img{
-                max-height: 80vh;
+                max-height: 75vh;
             }
         }
     }
