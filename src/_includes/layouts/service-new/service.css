@@ -3,7 +3,9 @@
         lg:container 
         lg:mx-auto 
         lg:flex 
-        lg:flex-row;
+        lg:flex-row
+        lg:my-8
+        lg:pt-12;
 
     .serviceImage{
         @apply
@@ -17,10 +19,11 @@
 
         img{
             @apply
+            w-full
             lg:rounded 
             lg:shadow-lg 
             lg:sticky 
-            lg:top-9;
+            lg:top-48;
         }
     }
 
@@ -50,10 +53,9 @@
                     @apply
                     text-cps-blue-700 
                     capitalize 
-                    font-medium  
+                    font-bold  
                     text-4xl 
-                    mb-4 
-                    text-center;
+                    mb-4;
                 }
             }
 
@@ -70,8 +72,8 @@
                     transition 
                     duration-300 
                     ease-in-out 
-                    border-cps-orange-500 
-                    text-cps-orange-500 
+                    border-cps-blue-500 
+                    text-cps-blue-700 
                     mt-2 
                     lg:mt-0 
                     xl:mt-2;
@@ -95,6 +97,7 @@
                         py-2 
                         px-4 
                         text-sm 
+                        text-gray-700
                         sm:text-base;
                     }
                 }
@@ -116,88 +119,119 @@
                             p{
                                 @apply
                                 text-sm 
+                                text-gray-700
                                 sm:text-base;
                             }
                         }
                     }
                 }
 
-                .iconBoxes{
-                    @apply
-                    grid 
-                    grid-cols-3 
-                    gap-2 
-                    space-around 
-                    mt-8;
+                
+            }
 
-                    .iconBox{
+            .iconBoxes{
+                @apply
+                grid 
+                grid-cols-3 
+                gap-2 
+                content-around 
+                mt-8;
+
+                .iconBox{
+                    @apply
+                    flex 
+                    flex-col 
+                    border 
+                    rounded 
+                    justify-center 
+                    col-span-1 
+                    border-gray-200 
+                    items-center 
+                    justify-center 
+                    hover:shadow-lg
+                    transition
+                    duration-300
+                    p-2;
+
+                    .icon{
                         @apply
                         flex 
                         flex-col 
-                        border 
                         rounded 
                         justify-center 
-                        col-span-1 
-                        border-gray-200 
+                        col-span-1
                         items-center 
                         justify-center 
-                        p-2;
+                        p-1
+                        text-cps-blue-500
+                        transition
+                        duration-300;
 
-                        .icon{
+                        i{
                             @apply
-                            flex 
-                            flex-col 
-                            border 
-                            rounded 
-                            justify-center 
-                            col-span-1 
-                            border-gray-200 
-                            items-center 
-                            justify-center 
-                            p-2;
+                            
+                            text-4xl;
                         }
-
-                        .iconTitle{
-                            @apply
-                            w-full 
-                            text-center 
-                            font-thin 
-                            leading-tight 
-                            flex 
-                            flex-grow 
-                            items-center 
-                            justify-center;
-                        }
+                    }
+                
+                .iconBox:hover{
+                    .icon{
+                        @apply
+                        text-cps-orange-500;
                     }
                 }
 
-                .pricingButton{
-                    @apply
-                    flex
-                    my-8;
-
-                    button{
+                    .iconTitle{
                         @apply
-                        p-4 
-                        flex 
-                        bg-red-600 
-                        rounded 
-                        justify-center 
                         w-full 
-                        items-center;
-                        a{
-                            span{
+                        text-center 
+                        font-thin 
+                        leading-tight 
+                        flex 
+                        flex-grow 
+                        items-center 
+                        justify-center;
+                    }
+                }
+            }
+
+            .pricingButton{
+                @apply
+                flex
+                my-8
+                hover:shadow-lg
+                    transition
+                    duration-300;
+
+                button{
+                    @apply
+                    p-4 
+                    flex 
+                    bg-cps-orange-500 
+                    hover:bg-cps-orange-400
+                    transition
+                    duration-300
+                    rounded 
+                    justify-center 
+                    w-full 
+                    items-center;
+                    a{
+                        span{
+                            @apply
+                            font-bold 
+                            text-white 
+                            capitalize 
+                            text-center 
+                            text-2xl;
+
+                            i{
                                 @apply
-                                font-bold 
-                                text-white 
-                                capitalize 
-                                text-center 
-                                text-2xl;
+                                pr-4
                             }
                         }
                     }
-
                 }
+
             }
         }
     }
@@ -206,7 +240,7 @@
 .serviceFAQs{
     .serviceFAQs__container{
         @apply
-        cps-blue-500
+        bg-cps-blue-700
         py-10;
 
         .serviceFAQs__wrapper{
@@ -296,6 +330,101 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.serviceCTA{
+    @apply
+    w-full 
+    
+    mx-auto
+    py-16
+    bg-gray-200
+    md:py-24;
+    
+    .ctaWrapper{
+        @apply
+        mx-auto
+        container
+        px-8
+        flex
+        flex-col;
+        h3{
+            @apply
+            text-3xl
+            md:text-4xl
+            font-bold
+            text-center
+            capitalize
+            text-cps-blue-700
+            pb-6;
+        }
+        p{
+            @apply
+            text-lg
+            text-gray-700
+            text-center
+            pb-6;
+        }
+        button{
+            @apply
+            mt-6
+            bg-cps-orange-500
+            hover:bg-cps-orange-400
+            transition
+            duration-300
+            p-4
+            mx-auto
+            rounded
+            shadow-lg
+            text-white
+            text-2xl
+            flex
+            justify-center
+            items-center
+            mx-auto
+            w-full
+            px-12
+            shadow-lg
+            md:hidden;
+
+            a{
+                i{
+                    @apply
+                    text-2xl
+                    pr-4;
+                }
+            }
+        }
+        .cta{
+            @apply
+            mt-8
+            hidden
+            bg-cps-orange-500
+            hover:bg-cps-orange-400
+            transition
+            duration-300
+            p-4
+            rounded
+            shadow-lg
+            text-white
+            text-3xl
+            md:flex
+            mx-auto
+            md:w-72
+            justify-center
+            items-center;
+
+            span{
+                a{
+                    i{
+                        @apply
+                        text-3xl
+                        pr-4;
                     }
                 }
             }

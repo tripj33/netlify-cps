@@ -1,6 +1,7 @@
 {
-    "layout": "layouts/service/service",
+    "layout": "layouts/service-new/service",
     "serviceType": "Commercial Plumbing",
+    "serviceParentSlug": "commercial-services",
     "tags": [
         "commercialServices"
     ]

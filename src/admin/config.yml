@@ -1,10 +1,11 @@
 backend:
   # Use netlify identity as backend
   name: git-gateway
-  # branch: master
+  branch: master
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
+  
 
 media_library:
   name: cloudinary
@@ -73,33 +74,51 @@ collections:
     slug: "{{fields.slug}}"
     create: true
     fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "slug", widget: "string"}
+
       - label: "SEO"
         name: "seo"
         collapsed: true
         widget: "object"
-        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        hint: "These fields are for Search Engine Optimization. They will not directly impact the page content."
         fields:
           - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
           - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
-
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Page URL", name: "slug", widget: "string"}
-      - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Details", name: "details", widget: "text"}
-      - { label: "Service Images", name: "image", widget: "image"}
-      - { label: "Chat Link", name: "chatLink", widget: "string"}
-      - label: "Features"
-        name: "feature"
-        widget: "select"
-        multiple: true
-        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
-      - label: "Service FAQs"
-        name: "service-faqs"
-        widget: "list"
-        summary: '{{fields.Question}}}'
+      
+      - label: "Service Info"
+        name: "serviceInfo"
+        collapsed: true
+        widget: "object"
+        hint: "These fields are for providing information about the service."
         fields:
-            - {label: "Question", name: "question", widget: string}
-            - {label: "Answer", name: "answer", widget: string}
+          - { label: "Service Image", name: "image", widget: "image", hint: "Remember to copy the image title when you choose your image."}
+          - { label: "Image Title", name: "imageTitle", widget: "string", hint: "Place the image title the you copied here."}
+          - { label: "Image Modifications", name: "imageMod", widget: "string", required: false, hint: "KEEP THIS BLANK UNLESS YOU KNOW WHAT YOU'RE DOING"}
+          - { label: "Details", name: "details", widget: "markdown"}
+          - label: "Service Bullet Points"
+            name: "serviceFeatures"
+            widget: "list"
+            collapsed: true
+            summary: '{{fields.feature}}'
+            hint: "Provide a few bullet point descriptions about the service.(example for rodding -> 'Measure and document the location of the obstruction and the distance from rodding source.')"
+            fields:
+                - {label: "Feature", name: "feature", widget: string }
+          - label: "Features Icons"
+            name: "featureIcons"
+            widget: "select"
+            multiple: true
+            hint: "Choose a few icons that may apply to this service. If you don't see something you're looking for, it can always be added."
+            options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled", "Regular Home Maintenance", "Regular Maintenance", "Fast Repair", "Fast Service"]
+      
+      - label: "Service FAQs"
+        name: "serviceFaqs"
+        widget: "list"
+        summary: '{{fields.question}}'
+        hint: "Add a few FAQs here. For the question, try to think about what someone might type into google. For example - 'Why does my toilet run continuously?' "
+        fields:
+            - {label: "Question", name: "question", widget: "string"}
+            - {label: "Answer", name: "answer", widget: "string"}
       
       # - label: "Icons"
       #   name: "serviceIcons"
@@ -119,33 +138,60 @@ collections:
     slug: "{{fields.slug}}"
     create: true
     fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "slug", widget: "string"}
+
       - label: "SEO"
         name: "seo"
         collapsed: true
         widget: "object"
-        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        hint: "These fields are for Search Engine Optimization. They will not directly impact the page content."
         fields:
           - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
           - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Page URL", name: "slug", widget: "string"}
-      - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Details", name: "details", widget: "markdown"}
-      - { label: "Service Image", name: "image", widget: "image"}
-      - { label: "Image File Name", name: "imageFileName", widget: "string", hint: "The image file name is needed in order to optimize the image across the site. To find where the file name is, visit ==> http://bit.ly/37QtFWh"}
-      - label: "Features"
-        name: "feature"
-        widget: "select"
-        multiple: true
-        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
+      
+      - label: "Service Info"
+        name: "serviceInfo"
+        collapsed: true
+        widget: "object"
+        hint: "These fields are for providing information about the service."
+        fields:
+          - { label: "Service Image", name: "image", widget: "image", hint: "Remember to copy the image title when you choose your image."}
+          - { label: "Image Title", name: "imageTitle", widget: "string", hint: "Place the image title the you copied here."}
+          - { label: "Image Modifications", name: "imageMod", widget: "string", required: false, hint: "KEEP THIS BLANK UNLESS YOU KNOW WHAT YOU'RE DOING"}
+          - { label: "Details", name: "details", widget: "markdown"}
+          - label: "Service Bullet Points"
+            name: "serviceFeatures"
+            widget: "list"
+            collapsed: true
+            summary: '{{fields.feature}}'
+            hint: "Provide a few bullet point descriptions about the service.(example for rodding -> 'Measure and document the location of the obstruction and the distance from rodding source.')"
+            fields:
+                - {label: "Feature", name: "feature", widget: string }
+          - label: "Features Icons"
+            name: "featureIcons"
+            widget: "select"
+            multiple: true
+            hint: "Choose a few icons that may apply to this service. If you don't see something you're looking for, it can always be added."
+            options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled", "Regular Home Maintenance", "Regular Maintenance", "Fast Repair", "Fast Service"]
+      
       - label: "Service FAQs"
         name: "serviceFaqs"
         widget: "list"
-        collapsed: true
         summary: '{{fields.question}}'
+        hint: "Add a few FAQs here. For the question, try to think about what someone might type into google. For example - 'Why does my toilet run continuously?' "
         fields:
-            - {label: "Question", name: "question", widget: string}
-            - {label: "Answer", name: "answer", widget: string}
+            - {label: "Question", name: "question", widget: "string"}
+            - {label: "Answer", name: "answer", widget: "string"}
+      
+      # - label: "Icons"
+      #   name: "serviceIcons"
+      #   widget: "list"
+      #   label_singular: "icon"
+      #   collapsed: true
+      #   fields: 
+      #     - { label: "Service Icon", name: "serviceIcon", widget: "string" }
+      #     - { label: "Icon Title", name: "iconTitle", widget: "string" }
 
   - label: "New Construction Services"
     serviceCategory: "New Construction Service"
@@ -156,33 +202,60 @@ collections:
     slug: "{{fields.slug}}"
     create: true
     fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page URL", name: "slug", widget: "string"}
+
       - label: "SEO"
         name: "seo"
         collapsed: true
         widget: "object"
-        description: "These fields are for Search Engine Optimization. They will not directly impact the page content."
+        hint: "These fields are for Search Engine Optimization. They will not directly impact the page content."
         fields:
           - {label: "Meta Title", name: "metaTitle", widget: "string", pattern: ["^.{5,60}$", "Must be between 5 and 60 characters long."], hint: "Make it between 5 - 60 characters. The meta title will display the title of the page in the page tab. For more info visit ==>  https://www.searchmetrics.com/glossary/page-title/"}
           - {label: "Meta Description", name: "metaDescription", widget: "text", pattern: ["^.{50,160}$", "Must be between 50 and 160 characters long."], hint: "Make it between 50 - 160 characters. The meta description will display a description of the page in search engines. For more info visit ==>  https://www.searchmetrics.com/glossary/meta-description/"}
-
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Page URL", name: "slug", widget: "string"}
-      - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Details", name: "details", widget: "text"}
-      - { label: "Service Images", name: "image", widget: "image"}
-      - { label: "Chat Link", name: "chatLink", widget: "string"}
-      - label: "Features"
-        name: "feature"
-        widget: "select"
-        multiple: true
-        options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled"]
-      - label: "Frequently Asked Questions"
-        name: "service-faqs"
+      
+      - label: "Service Info"
+        name: "serviceInfo"
+        collapsed: true
+        widget: "object"
+        hint: "These fields are for providing information about the service."
+        fields:
+          - { label: "Service Image", name: "image", widget: "image", hint: "Remember to copy the image title when you choose your image."}
+          - { label: "Image Title", name: "imageTitle", widget: "string", hint: "Place the image title the you copied here."}
+          - { label: "Image Modifications", name: "imageMod", widget: "string", required: false, hint: "KEEP THIS BLANK UNLESS YOU KNOW WHAT YOU'RE DOING"}
+          - { label: "Details", name: "details", widget: "markdown"}
+          - label: "Service Bullet Points"
+            name: "serviceFeatures"
+            widget: "list"
+            collapsed: true
+            summary: '{{fields.feature}}'
+            hint: "Provide a few bullet point descriptions about the service.(example for rodding -> 'Measure and document the location of the obstruction and the distance from rodding source.')"
+            fields:
+                - {label: "Feature", name: "feature", widget: string }
+          - label: "Features Icons"
+            name: "featureIcons"
+            widget: "select"
+            multiple: true
+            hint: "Choose a few icons that may apply to this service. If you don't see something you're looking for, it can always be added."
+            options: ["Fast Installation", "Lower Energy Cost","Eco-Friendly", "Annual Inspection Req.", "Special Savings", "Cleaner Water", "Instant Hot Water", "Lifetime Warranty", "1 Year Warranty", "2 Year Warranty", "3 Year Warranty", 4 Year Warranty", "5 Year Warranty", "Premium Quality", "Wifi Enabled", "Regular Home Maintenance", "Regular Maintenance", "Fast Repair", "Fast Service"]
+      
+      - label: "Service FAQs"
+        name: "serviceFaqs"
         widget: "list"
         summary: '{{fields.question}}'
+        hint: "Add a few FAQs here. For the question, try to think about what someone might type into google. For example - 'Why does my toilet run continuously?' "
         fields:
-            - {label: "Question", name: "question", widget: string}
-            - {label: "Answer", name: "answer", widget: string}
+            - {label: "Question", name: "question", widget: "string"}
+            - {label: "Answer", name: "answer", widget: "string"}
+      
+      # - label: "Icons"
+      #   name: "serviceIcons"
+      #   widget: "list"
+      #   label_singular: "icon"
+      #   collapsed: true
+      #   fields: 
+      #     - { label: "Service Icon", name: "serviceIcon", widget: "string" }
+      #     - { label: "Icon Title", name: "iconTitle", widget: "string" }
 
   - label: "Authors"
     name: "authors"
